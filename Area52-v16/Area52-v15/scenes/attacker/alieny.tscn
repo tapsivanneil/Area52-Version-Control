@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://biw8tx3yatevf"]
+
+[ext_resource type="Script" path="res://scripts/attackers/alieny.gd" id="1_p2yyh"]
+[ext_resource type="Texture2D" uid="uid://vnsjy4bmjwql" path="res://assets/attacker/ALIEN Y/WALK/ALIENY1.png" id="2_oc141"]
+[ext_resource type="Texture2D" uid="uid://dhv3mif72pqeu" path="res://assets/attacker/ALIEN Y/ATTACK/ALIENYA1.png" id="2_yr4c5"]
+[ext_resource type="Texture2D" uid="uid://b3i27c87b32rm" path="res://assets/attacker/ALIEN Y/WALK/ALIENY2.png" id="3_a81nw"]
+[ext_resource type="Texture2D" uid="uid://dvxx0n1ixus1x" path="res://assets/attacker/ALIEN Y/ATTACK/ALIENYA2.png" id="3_cvlp5"]
+[ext_resource type="Texture2D" uid="uid://cdr3o7lwa706a" path="res://assets/attacker/ALIEN Y/WALK/ALIENY3.png" id="4_swnll"]
+[ext_resource type="Texture2D" uid="uid://codyd5l4vk6wi" path="res://assets/attacker/ALIEN Y/ATTACK/ALIENYA3.png" id="4_yiwl6"]
+[ext_resource type="Texture2D" uid="uid://cngw6mcgljyc7" path="res://assets/attacker/ALIEN Y/DEAD/ALIENYD1.png" id="5_ahrbl"]
+[ext_resource type="Texture2D" uid="uid://cfd8rqj7q0a2q" path="res://assets/attacker/ALIEN Y/DEAD/ALIENYD2.png" id="6_qscot"]
+[ext_resource type="Texture2D" uid="uid://ce4blk34m6vw1" path="res://assets/attacker/ALIEN Y/DEAD/ALIENYD3.png" id="7_xdwcs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yr4c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cvlp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yiwl6")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ahrbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qscot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xdwcs")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oc141")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a81nw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_swnll")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8sk7w"]
+size = Vector2(50, 50)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_p2yyh")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -8)
+scale = Vector2(0.048, 0.048)
+sprite_frames = SubResource("SpriteFrames_8ngby")
+animation = &"Death"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8sk7w")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_8sk7w")
+debug_color = Color(0.163598, 0.617001, 0.528005, 0.42)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="animation_delay" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="animation_delay" to="." method="_on_animation_delay_timeout"]

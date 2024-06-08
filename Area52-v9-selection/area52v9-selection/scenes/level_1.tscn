@@ -1,0 +1,121 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5p5uqweuc4im"]
+
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_ueli1"]
+[ext_resource type="PackedScene" uid="uid://bttfpe66johb0" path="res://buttons/back_button.tscn" id="2_5qqlq"]
+[ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://buttons/menu_button.tscn" id="3_jykob"]
+[ext_resource type="PackedScene" uid="uid://de3653ltp7x64" path="res://buttons/object.tscn" id="4_1j764"]
+[ext_resource type="PackedScene" uid="uid://k416ef3mk4dy" path="res://buttons/grid.tscn" id="5_87ckv"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_ueli1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 650.0
+color = Color(0.101961, 0.101961, 0.101961, 1)
+
+[node name="object" parent="." instance=ExtResource("4_1j764")]
+position = Vector2(712, 96)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 368.0
+offset_top = 8.0
+offset_right = 472.0
+offset_bottom = 48.0
+text = "Level 1"
+
+[node name="BackButton" parent="." instance=ExtResource("2_5qqlq")]
+position = Vector2(11, 35)
+
+[node name="MenuButton" parent="." instance=ExtResource("3_jykob")]
+position = Vector2(139, 32)
+
+[node name="grid" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(168, 224)
+
+[node name="grid2" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(168, 304)
+
+[node name="grid3" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(168, 384)
+
+[node name="grid4" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(168, 464)
+
+[node name="grid5" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(256, 224)
+
+[node name="grid6" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(256, 304)
+
+[node name="grid7" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(256, 384)
+
+[node name="grid8" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(256, 464)
+
+[node name="grid9" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(344, 224)
+
+[node name="grid10" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(344, 304)
+
+[node name="grid11" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(344, 384)
+
+[node name="grid12" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(344, 464)
+
+[node name="grid13" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(432, 224)
+
+[node name="grid14" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(432, 304)
+
+[node name="grid15" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(432, 384)
+
+[node name="grid16" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(432, 464)
+
+[node name="grid17" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(520, 224)
+
+[node name="grid18" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(520, 304)
+
+[node name="grid19" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(520, 384)
+
+[node name="grid20" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(520, 464)
+
+[node name="grid21" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(608, 224)
+
+[node name="grid22" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(608, 304)
+
+[node name="grid23" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(608, 384)
+
+[node name="grid24" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(608, 464)
+
+[node name="grid25" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(168, 544)
+
+[node name="grid26" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(256, 544)
+
+[node name="grid27" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(344, 544)
+
+[node name="grid28" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(432, 544)
+
+[node name="grid29" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(520, 544)
+
+[node name="grid30" parent="." instance=ExtResource("5_87ckv")]
+position = Vector2(608, 544)

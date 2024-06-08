@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://5203tlw2qe7m"]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_aonbc"]
+[ext_resource type="Texture2D" uid="uid://dt11p4dkmh13g" path="res://assets/icon.svg" id="2_321kd"]
+[ext_resource type="Texture2D" uid="uid://bmsnbwvu0fhov" path="res://assets/defenders/player sprites/spritesheet (6).png" id="3_ouw8n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ii60u"]
+size = Vector2(77, 79)
+
+[sub_resource type="Animation" id="Animation_tkxpy"]
+resource_name = "idle"
+length = 0.42
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ih3w2"]
+_data = {
+"idle": SubResource("Animation_tkxpy")
+}
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_aonbc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, 1)
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 1)
+scale = Vector2(0.59375, 0.59375)
+texture = ExtResource("2_321kd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_ii60u")
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+position = Vector2(-4.76837e-07, -1.19209e-07)
+scale = Vector2(0.115875, 0.115875)
+texture = ExtResource("3_ouw8n")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSprite"]
+libraries = {
+"": SubResource("AnimationLibrary_ih3w2")
+}

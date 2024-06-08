@@ -1,0 +1,45 @@
+{
+	"0" : {
+		"texture" : "Pistoleer.png",
+		"scene": "defender/pistoleer.tscn",
+		"slot_type" : 2,
+		"ATK" : 3
+	},
+	"1" : {
+		"texture" : "Bomber.png",
+		"scene": "defender/bomber.tscn",
+		"slot_type" : 2,
+		"ATK" : 3
+	},
+	"2" : {
+		"texture" : "Defender.png",
+		"scene": "defender/defender.tscn",
+		"slot_type" : 3,
+		"ATK" : 1
+	},
+	"3" : {
+		"texture" : "Flamethrower.png",
+		"scene": "defender/flamethrower.tscn",
+		"slot_type" : 4,
+		"ATK" : 2
+	},
+	"4" : {
+		"texture" : "Sniper.png",
+		"scene": "defender/sniper.tscn",
+		"slot_type" : 4,
+		"ATK" : 6
+	},
+	
+	"5" : {
+		"texture" : "RailGunner.png",
+		"scene": "defender/railgunner.tscn",
+		"slot_type" : 5,
+		"ATK" : 6
+	},
+	"6" : {
+		"texture" : "MachineGunner.png",
+		"scene": "defender/machinegunner.tscn",
+		"slot_type" : 6,
+		"ATK" : 6
+	}
+}

@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvls14o2bg56v"]
+
+[ext_resource type="Script" path="res://scripts/panels/pause_panel.gd" id="1_ncird"]
+[ext_resource type="Texture2D" uid="uid://c2e6rpsk4o1au" path="res://assets/game-pause-bg.png" id="2_32o6v"]
+[ext_resource type="Theme" uid="uid://dr8v00v31ayoo" path="res://scenes/structure/pause_panel_preset.tres" id="3_efy85"]
+[ext_resource type="Texture2D" uid="uid://bmnx3xtjaggcy" path="res://assets/icons/home-icon.png" id="4_phwao"]
+[ext_resource type="Texture2D" uid="uid://ccwut5xyl5434" path="res://assets/game-pause-text.png" id="4_ufw66"]
+[ext_resource type="Texture2D" uid="uid://dnlakiqrg7iu3" path="res://assets/icons/replay-icon.png" id="5_h4y38"]
+[ext_resource type="Texture2D" uid="uid://dc8lg4w0kegn2" path="res://assets/icons/level-select-icon.png" id="6_agjry"]
+
+[node name="PausePanel" type="Node2D"]
+script = ExtResource("1_ncird")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1160.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.376471)
+
+[node name="Game-pause-bg" type="Sprite2D" parent="."]
+position = Vector2(576, 320)
+scale = Vector2(0.558333, 0.518518)
+texture = ExtResource("2_32o6v")
+
+[node name="HomeButton" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 360.0
+offset_right = 392.0
+offset_bottom = 496.0
+theme = ExtResource("3_efy85")
+text = "Home"
+
+[node name="Home-icon" type="Sprite2D" parent="HomeButton"]
+position = Vector2(68, 64)
+scale = Vector2(0.209649, 0.209649)
+texture = ExtResource("4_phwao")
+
+[node name="CloseButton" type="Button" parent="."]
+offset_left = 848.0
+offset_top = 112.0
+offset_right = 1032.0
+offset_bottom = 160.0
+text = "Close"
+
+[node name="ReplayButton" type="Button" parent="."]
+offset_left = 509.0
+offset_top = 360.0
+offset_right = 645.0
+offset_bottom = 496.0
+theme = ExtResource("3_efy85")
+
+[node name="Replay-icon" type="Sprite2D" parent="ReplayButton"]
+position = Vector2(68, 70)
+scale = Vector2(0.238667, 0.238667)
+texture = ExtResource("5_h4y38")
+
+[node name="LevelSelectionButton" type="Button" parent="."]
+offset_left = 760.0
+offset_top = 360.0
+offset_right = 896.0
+offset_bottom = 496.0
+theme = ExtResource("3_efy85")
+
+[node name="Level-select-icon" type="Sprite2D" parent="LevelSelectionButton"]
+position = Vector2(67.25, 69.25)
+scale = Vector2(0.245, 0.245)
+texture = ExtResource("6_agjry")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 368.0
+offset_top = 248.0
+offset_right = 792.0
+offset_bottom = 328.0
+text = "PAUSE"
+horizontal_alignment = 1
+
+[node name="Game-pause-text" type="Sprite2D" parent="."]
+position = Vector2(577.667, 280)
+scale = Vector2(0.398264, 0.404861)
+texture = ExtResource("4_ufw66")
+
+[connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="ReplayButton" to="." method="_on_replay_button_pressed"]
+[connection signal="pressed" from="LevelSelectionButton" to="." method="_on_level_selection_button_pressed"]

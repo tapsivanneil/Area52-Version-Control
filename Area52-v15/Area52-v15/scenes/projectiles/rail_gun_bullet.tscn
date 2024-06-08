@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm1doesfrxgge"]
+
+[ext_resource type="Script" path="res://scripts/projectiles/rail_gun_bullet.gd" id="1_2g2fh"]
+[ext_resource type="Texture2D" uid="uid://cvy6lmooevcrc" path="res://assets/projectiles/rail-gun-bullet.png" id="2_wbadh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vvf8y"]
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_2g2fh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CircleShape2D_vvf8y")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Rail-gun-bullet" type="Sprite2D" parent="."]
+position = Vector2(-40, -1.52588e-05)
+scale = Vector2(0.086, 0.086)
+texture = ExtResource("2_wbadh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://du5m84ymrpspn"]
+
+[ext_resource type="Script" path="res://scripts/character.gd" id="1_f24s2"]
+[ext_resource type="Texture2D" uid="uid://dtb3pvws32ydp" path="res://assets/defenders/RailGunner.png" id="2_frbod"]
+[ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://scenes/shooting_area.tscn" id="2_qpbwq"]
+[ext_resource type="Texture2D" uid="uid://be37bd6148pwg" path="res://assets/defenders/pistol.png" id="4_vxk84"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ok3u"]
+size = Vector2(55, 53)
+
+[node name="Character" type="Area2D"]
+script = ExtResource("1_f24s2")
+
+[node name="RailGunner" type="Sprite2D" parent="."]
+position = Vector2(-8, -24)
+scale = Vector2(0.118603, 0.118603)
+texture = ExtResource("2_frbod")
+
+[node name="Shooting_area" parent="." instance=ExtResource("2_qpbwq")]
+position = Vector2(40, 0)
+scale = Vector2(1.09427, 0.766947)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_1ok3u")
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, -1.90735e-06)
+scale = Vector2(0.1115, 0.1115)
+texture = ExtResource("4_vxk84")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

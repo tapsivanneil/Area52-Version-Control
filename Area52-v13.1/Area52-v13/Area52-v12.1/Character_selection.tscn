@@ -1,0 +1,151 @@
+[gd_scene load_steps=6 format=3 uid="uid://cokx7e71ebjms"]
+
+[ext_resource type="Script" path="res://scripts/Inv.gd" id="1_cxq88"]
+[ext_resource type="PackedScene" uid="uid://c1awm8lao6gyu" path="res://placeholder.tscn" id="1_mh4gc"]
+[ext_resource type="Script" path="res://scripts/Inventory.gd" id="2_stoin"]
+[ext_resource type="PackedScene" uid="uid://ukd0p6pxlooc" path="res://passive_slot.tscn" id="3_4uwha"]
+[ext_resource type="Script" path="res://scripts/characters.gd" id="4_iwru1"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 632.0
+script = ExtResource("1_cxq88")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1216.0
+offset_bottom = 712.0
+color = Color(0.988235, 0.921569, 0.901961, 1)
+
+[node name="Inventory" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -172.0
+offset_right = 376.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+script = ExtResource("2_stoin")
+
+[node name="Placeholder" parent="Inventory" instance=ExtResource("1_mh4gc")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Placeholder3" parent="Inventory" instance=ExtResource("1_mh4gc")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Placeholder4" parent="Inventory" instance=ExtResource("1_mh4gc")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Placeholder5" parent="Inventory" instance=ExtResource("1_mh4gc")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Placeholder6" parent="Inventory" instance=ExtResource("1_mh4gc")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Placeholder7" parent="Inventory" instance=ExtResource("1_mh4gc")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Placeholder8" parent="Inventory" instance=ExtResource("1_mh4gc")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Placeholder9" parent="Inventory" instance=ExtResource("1_mh4gc")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="hotbar" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 72.0
+offset_top = 32.0
+offset_right = 304.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("4_iwru1")
+
+[node name="PassiveSlot" parent="hotbar" instance=ExtResource("3_4uwha")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = -192.0
+offset_top = -328.0
+offset_right = -132.0
+offset_bottom = -268.0
+
+[node name="PassiveSlot2" parent="hotbar" instance=ExtResource("3_4uwha")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = -120.0
+offset_top = -328.0
+offset_right = -60.0
+offset_bottom = -268.0
+slot_index = 1
+
+[node name="PassiveSlot3" parent="hotbar" instance=ExtResource("3_4uwha")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = -48.0
+offset_top = -328.0
+offset_right = 12.0
+offset_bottom = -268.0
+slot_index = 2
+
+[node name="PassiveSlot4" parent="hotbar" instance=ExtResource("3_4uwha")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 24.0
+offset_top = -328.0
+offset_right = 84.0
+offset_bottom = -268.0
+slot_index = 3
+
+[node name="PassiveSlot5" parent="hotbar" instance=ExtResource("3_4uwha")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 96.0
+offset_top = -328.0
+offset_right = 156.0
+offset_bottom = -268.0
+slot_index = 4
+
+[node name="ATK" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 432.0
+offset_right = 680.0
+offset_bottom = 472.0
+text = "START"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

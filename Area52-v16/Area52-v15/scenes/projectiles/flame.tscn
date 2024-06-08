@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cchyqn8rqorsl"]
+
+[ext_resource type="Script" path="res://scripts/projectiles/flame.gd" id="1_157vh"]
+[ext_resource type="Texture2D" uid="uid://pjgu5b0e5lrp" path="res://assets/projectiles/flame.png" id="2_rsa6f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vvf8y"]
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_157vh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CircleShape2D_vvf8y")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Flame" type="Sprite2D" parent="."]
+position = Vector2(-24, 0)
+scale = Vector2(0.062, 0.062)
+texture = ExtResource("2_rsa6f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

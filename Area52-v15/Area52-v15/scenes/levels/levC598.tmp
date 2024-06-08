@@ -1,0 +1,448 @@
+[gd_scene load_steps=21 format=3 uid="uid://uuuq2dmpt4dc"]
+
+[ext_resource type="Script" path="res://scripts/level_1_scene.gd" id="1_cpdk8"]
+[ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_r25te"]
+[ext_resource type="PackedScene" uid="uid://0ylviwxcfcef" path="res://scenes/tile.tscn" id="4_jc3yh"]
+[ext_resource type="PackedScene" uid="uid://5203tlw2qe7m" path="res://scenes/player.tscn" id="5_3nqkg"]
+[ext_resource type="PackedScene" uid="uid://bkdghj7xakjws" path="res://scenes/barrier.tscn" id="7_7s383"]
+[ext_resource type="PackedScene" uid="uid://buq8anlvndhfv" path="res://scenes/defender/pistoleer.tscn" id="8_xnrnn"]
+[ext_resource type="Script" path="res://scripts/Hotbar.gd" id="9_1d0or"]
+[ext_resource type="PackedScene" uid="uid://kmtcq2r071eq" path="res://scenes/slot.tscn" id="10_srdqr"]
+[ext_resource type="PackedScene" uid="uid://bxdqvxcd77h1f" path="res://scenes/attacker/dungbeetle.tscn" id="10_ttmv0"]
+[ext_resource type="PackedScene" uid="uid://boeiqbwn75xh3" path="res://scenes/defender/bomber.tscn" id="11_hjqq8"]
+[ext_resource type="PackedScene" uid="uid://da11alxwr8dog" path="res://scenes/defender/defender.tscn" id="12_7kuhh"]
+[ext_resource type="PackedScene" uid="uid://dlko8km15b8qe" path="res://scenes/defender/flamethrower.tscn" id="13_86wxs"]
+[ext_resource type="PackedScene" uid="uid://d0wdsr22md8yk" path="res://scenes/defender/machinegunner.tscn" id="14_topxt"]
+[ext_resource type="PackedScene" uid="uid://du5m84ymrpspn" path="res://scenes/defender/railgunner.tscn" id="15_xb1xb"]
+[ext_resource type="PackedScene" uid="uid://d13l16psqi467" path="res://scenes/defender/sniper.tscn" id="16_ed27w"]
+[ext_resource type="PackedScene" uid="uid://c3bkqjer131nu" path="res://scenes/endline.tscn" id="16_kxbka"]
+[ext_resource type="PackedScene" uid="uid://pk0dyp5doh51" path="res://scenes/structure/defeat_panel.tscn" id="17_p8kgv"]
+[ext_resource type="PackedScene" uid="uid://bvls14o2bg56v" path="res://scenes/structure/pause_panel.tscn" id="18_fglr0"]
+[ext_resource type="PackedScene" uid="uid://bavj4xfxsd4u6" path="res://scenes/structure/victory_panel.tscn" id="19_yequg"]
+
+[sub_resource type="SystemFont" id="SystemFont_faswr"]
+
+[node name="Level_1" type="Node2D"]
+script = ExtResource("1_cpdk8")
+metadata/_edit_horizontal_guides_ = [264.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.65098, 0.658824, 0.572549, 0.698039)
+offset_left = 8.0
+offset_top = -80.0
+offset_right = 2616.0
+offset_bottom = 1341.0
+scale = Vector2(0.518425, 0.551397)
+texture = ExtResource("2_r25te")
+expand_mode = 2
+
+[node name="Player" parent="." instance=ExtResource("5_3nqkg")]
+position = Vector2(107, 170)
+
+[node name="Tiles" type="Node" parent="."]
+
+[node name="Tile1" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(288, 160)
+
+[node name="Tile2" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(288, 256)
+
+[node name="Tile3" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(288, 352)
+
+[node name="Tile4" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(288, 456)
+
+[node name="Tile5" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(288, 544)
+
+[node name="Tile6" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(384, 160)
+
+[node name="Tile7" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(384, 256)
+
+[node name="Tile8" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(384, 352)
+
+[node name="Tile9" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(384, 456)
+
+[node name="Tile10" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(384, 544)
+
+[node name="Tile11" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(480, 160)
+
+[node name="Tile12" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(480, 256)
+
+[node name="Tile13" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(480, 352)
+
+[node name="Tile14" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(480, 456)
+
+[node name="Tile15" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(480, 544)
+
+[node name="Tile16" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(576, 160)
+
+[node name="Tile17" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(576, 256)
+
+[node name="Tile18" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(576, 352)
+
+[node name="Tile19" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(576, 456)
+
+[node name="Tile20" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(576, 544)
+
+[node name="Tile21" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(672, 160)
+
+[node name="Tile22" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(672, 256)
+
+[node name="Tile23" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(672, 352)
+
+[node name="Tile24" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(672, 456)
+
+[node name="Tile25" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(672, 544)
+
+[node name="Tile26" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(768, 160)
+
+[node name="Tile27" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(768, 256)
+
+[node name="Tile28" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(768, 352)
+
+[node name="Tile29" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(768, 456)
+
+[node name="Tile30" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(768, 544)
+
+[node name="Tile31" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(864, 160)
+
+[node name="Tile32" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(864, 256)
+
+[node name="Tile33" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(864, 352)
+
+[node name="Tile34" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(864, 456)
+
+[node name="Tile35" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(864, 544)
+
+[node name="Tile36" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(960, 160)
+
+[node name="Tile37" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(960, 256)
+
+[node name="Tile38" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(960, 352)
+
+[node name="Tile39" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(960, 456)
+
+[node name="Tile40" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(960, 544)
+
+[node name="Tile41" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(1056, 160)
+
+[node name="Tile42" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(1056, 256)
+
+[node name="Tile43" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(1056, 352)
+
+[node name="Tile44" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(1056, 456)
+
+[node name="Tile45" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(1056, 544)
+
+[node name="Tile46" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(1224, 160)
+
+[node name="Tile47" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(1224, 256)
+
+[node name="Tile48" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(1224, 352)
+
+[node name="Tile49" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(1224, 456)
+
+[node name="Tile50" parent="Tiles" instance=ExtResource("4_jc3yh")]
+position = Vector2(1224, 544)
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy1" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 160)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 160)
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 160)
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 160)
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 160)
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 160)
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 160)
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 160)
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 160)
+
+[node name="Enemy10" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 160)
+
+[node name="Enemy11" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 256)
+
+[node name="Enemy12" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 256)
+
+[node name="Enemy13" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 256)
+
+[node name="Enemy14" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 256)
+
+[node name="Enemy15" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 256)
+
+[node name="Enemy16" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 256)
+
+[node name="Enemy17" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 256)
+
+[node name="Enemy18" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 256)
+
+[node name="Enemy19" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 256)
+
+[node name="Enemy20" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 256)
+
+[node name="Enemy21" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 352)
+
+[node name="Enemy22" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 352)
+
+[node name="Enemy23" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 352)
+
+[node name="Enemy24" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 352)
+
+[node name="Enemy25" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 352)
+
+[node name="Enemy26" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 352)
+
+[node name="Enemy27" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 352)
+
+[node name="Enemy28" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 352)
+
+[node name="Enemy29" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 352)
+
+[node name="Enemy30" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 352)
+
+[node name="Enemy31" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 456)
+
+[node name="Enemy32" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 456)
+
+[node name="Enemy33" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 456)
+
+[node name="Enemy34" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 456)
+
+[node name="Enemy35" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 456)
+
+[node name="Enemy36" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 456)
+
+[node name="Enemy37" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 456)
+
+[node name="Enemy38" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 456)
+
+[node name="Enemy39" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 456)
+
+[node name="Enemy40" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 456)
+
+[node name="Enemy41" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 552)
+
+[node name="Enemy42" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 552)
+
+[node name="Enemy43" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 552)
+
+[node name="Enemy44" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 552)
+
+[node name="Enemy45" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 552)
+
+[node name="Enemy46" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 552)
+
+[node name="Enemy47" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 552)
+
+[node name="Enemy48" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 552)
+
+[node name="Enemy49" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 552)
+
+[node name="Enemy50" parent="Enemies" instance=ExtResource("10_ttmv0")]
+position = Vector2(1280, 552)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Character_attack_timer" type="Timer" parent="."]
+
+[node name="Barrier" parent="." instance=ExtResource("7_7s383")]
+position = Vector2(1152, 64)
+
+[node name="Character" parent="." instance=ExtResource("8_xnrnn")]
+visible = false
+position = Vector2(424, 616)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hotbar" type="HBoxContainer" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.988
+anchor_right = 0.5
+anchor_bottom = 0.988
+offset_left = -108.0
+offset_top = -48.224
+offset_right = 108.0
+offset_bottom = 1.776
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 10
+script = ExtResource("9_1d0or")
+
+[node name="Slot" parent="UI/Hotbar" instance=ExtResource("10_srdqr")]
+layout_mode = 2
+
+[node name="Slot2" parent="UI/Hotbar" instance=ExtResource("10_srdqr")]
+layout_mode = 2
+
+[node name="Slot3" parent="UI/Hotbar" instance=ExtResource("10_srdqr")]
+layout_mode = 2
+
+[node name="Slot4" parent="UI/Hotbar" instance=ExtResource("10_srdqr")]
+layout_mode = 2
+
+[node name="Slot5" parent="UI/Hotbar" instance=ExtResource("10_srdqr")]
+layout_mode = 2
+
+[node name="Slot6" parent="UI/Hotbar" instance=ExtResource("10_srdqr")]
+layout_mode = 2
+
+[node name="Defender_List" type="Node2D" parent="."]
+position = Vector2(2152, 408)
+
+[node name="bomber" parent="Defender_List" instance=ExtResource("11_hjqq8")]
+
+[node name="defender" parent="Defender_List" instance=ExtResource("12_7kuhh")]
+
+[node name="flamethrower" parent="Defender_List" instance=ExtResource("13_86wxs")]
+
+[node name="machinegunner" parent="Defender_List" instance=ExtResource("14_topxt")]
+
+[node name="pistoleer" parent="Defender_List" instance=ExtResource("8_xnrnn")]
+
+[node name="railgunner" parent="Defender_List" instance=ExtResource("15_xb1xb")]
+
+[node name="sniper" parent="Defender_List" instance=ExtResource("16_ed27w")]
+
+[node name="Hotbar_Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="Hotbar_Timer"]
+offset_left = 328.0
+offset_top = 600.0
+offset_right = 420.0
+offset_bottom = 647.0
+theme_override_fonts/font = SubResource("SystemFont_faswr")
+text = "Placeholder"
+
+[node name="Endline" parent="." instance=ExtResource("16_kxbka")]
+position = Vector2(96, 24)
+
+[node name="Panels" type="Node" parent="."]
+
+[node name="DefeatPanel" parent="Panels" instance=ExtResource("17_p8kgv")]
+visible = false
+top_level = true
+position = Vector2(264, 80)
+scale = Vector2(0.7, 0.7)
+
+[node name="PausePanel" parent="Panels" instance=ExtResource("18_fglr0")]
+visible = false
+position = Vector2(264, 88)
+scale = Vector2(0.7, 0.7)
+
+[node name="VictoryPanel" parent="Panels" instance=ExtResource("19_yequg")]
+visible = false
+position = Vector2(264, 80)
+scale = Vector2(0.7, 0.7)
+
+[node name="PauseButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Character_attack_timer" to="." method="_on_character_attack_timer_timeout"]
+[connection signal="timeout" from="Hotbar_Timer" to="." method="_on_hotbar_timer_timeout"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

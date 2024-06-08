@@ -1,0 +1,145 @@
+[gd_scene load_steps=3 format=3 uid="uid://uuuq2dmpt4dc"]
+
+[ext_resource type="PackedScene" uid="uid://5203tlw2qe7m" path="res://player.tscn" id="1_dcfqs"]
+[ext_resource type="PackedScene" uid="uid://0ylviwxcfcef" path="res://tile.tscn" id="2_ukoob"]
+
+[node name="MainScene" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [264.0]
+
+[node name="Player" parent="." instance=ExtResource("1_dcfqs")]
+position = Vector2(107, 170)
+
+[node name="Tile1" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(288, 160)
+
+[node name="Tile2" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(288, 256)
+
+[node name="Tile3" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(288, 352)
+
+[node name="Tile4" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(288, 456)
+
+[node name="Tile5" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(288, 544)
+
+[node name="Tile6" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(384, 160)
+
+[node name="Tile7" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(384, 256)
+
+[node name="Tile8" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(384, 352)
+
+[node name="Tile9" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(384, 456)
+
+[node name="Tile10" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(384, 544)
+
+[node name="Tile11" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(480, 160)
+
+[node name="Tile12" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(480, 256)
+
+[node name="Tile13" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(480, 352)
+
+[node name="Tile14" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(480, 456)
+
+[node name="Tile15" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(480, 544)
+
+[node name="Tile16" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(576, 160)
+
+[node name="Tile17" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(576, 256)
+
+[node name="Tile18" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(576, 352)
+
+[node name="Tile19" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(576, 456)
+
+[node name="Tile20" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(576, 544)
+
+[node name="Tile21" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(672, 160)
+
+[node name="Tile22" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(672, 256)
+
+[node name="Tile23" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(672, 352)
+
+[node name="Tile24" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(672, 456)
+
+[node name="Tile25" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(672, 544)
+
+[node name="Tile26" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(768, 160)
+
+[node name="Tile27" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(768, 256)
+
+[node name="Tile28" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(768, 352)
+
+[node name="Tile29" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(768, 456)
+
+[node name="Tile30" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(768, 544)
+
+[node name="Tile31" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(864, 160)
+
+[node name="Tile32" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(864, 256)
+
+[node name="Tile33" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(864, 352)
+
+[node name="Tile34" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(864, 456)
+
+[node name="Tile35" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(864, 544)
+
+[node name="Tile36" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(960, 160)
+
+[node name="Tile37" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(960, 256)
+
+[node name="Tile38" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(960, 352)
+
+[node name="Tile39" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(960, 456)
+
+[node name="Tile40" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(960, 544)
+
+[node name="Tile41" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(1056, 160)
+
+[node name="Tile42" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(1056, 256)
+
+[node name="Tile43" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(1056, 352)
+
+[node name="Tile44" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(1056, 456)
+
+[node name="Tile45" parent="." instance=ExtResource("2_ukoob")]
+position = Vector2(1056, 544)

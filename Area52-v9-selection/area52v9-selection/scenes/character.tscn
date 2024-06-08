@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://buq8anlvndhfv"]
+
+[ext_resource type="Script" path="res://scripts/character.gd" id="1_557fe"]
+[ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://scenes/shooting_area.tscn" id="2_oo4cv"]
+[ext_resource type="Texture2D" uid="uid://daog4q0cm1w67" path="res://assets/defenders/player sprites/pistoleer sprite sheet.png" id="3_v020s"]
+[ext_resource type="Texture2D" uid="uid://be37bd6148pwg" path="res://assets/defenders/pistol.png" id="4_8vp2f"]
+
+[sub_resource type="Animation" id="Animation_2y6cj"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3xe0k"]
+_data = {
+"idle": SubResource("Animation_2y6cj")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ok3u"]
+size = Vector2(55, 53)
+
+[node name="Character" type="Area2D"]
+script = ExtResource("1_557fe")
+
+[node name="Shooting_area" parent="." instance=ExtResource("2_oo4cv")]
+position = Vector2(42, -8)
+scale = Vector2(1.09427, 0.766947)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.112, 0.112)
+texture = ExtResource("3_v020s")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_3xe0k")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_1ok3u")
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, -1.90735e-06)
+scale = Vector2(0.1115, 0.1115)
+texture = ExtResource("4_8vp2f")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

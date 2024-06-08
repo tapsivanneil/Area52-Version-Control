@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=3 uid="uid://cokx7e71ebjms"]
+
+[ext_resource type="Script" path="res://Inventory.gd" id="1_jd3o2"]
+[ext_resource type="PackedScene" uid="uid://c1awm8lao6gyu" path="res://placeholder.tscn" id="1_mh4gc"]
+[ext_resource type="Script" path="res://test_scene.gd" id="1_nd6d3"]
+[ext_resource type="PackedScene" uid="uid://kmtcq2r071eq" path="res://scenes/slot.tscn" id="2_fscbo"]
+[ext_resource type="Script" path="res://characters.gd" id="2_twkmg"]
+[ext_resource type="PackedScene" uid="uid://ukd0p6pxlooc" path="res://passive_slot.tscn" id="3_4uwha"]
+
+[node name="TestScene" type="Node2D"]
+script = ExtResource("1_nd6d3")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 192.0
+
+[node name="Inventory" type="GridContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_right = 64.0
+offset_bottom = 128.0
+grow_horizontal = 2
+columns = 3
+script = ExtResource("1_jd3o2")
+
+[node name="Placeholder" parent="UI/Inventory" instance=ExtResource("1_mh4gc")]
+layout_mode = 2
+
+[node name="Placeholder2" parent="UI/Inventory" instance=ExtResource("1_mh4gc")]
+layout_mode = 2
+
+[node name="Placeholder3" parent="UI/Inventory" instance=ExtResource("1_mh4gc")]
+layout_mode = 2
+
+[node name="Placeholder4" parent="UI/Inventory" instance=ExtResource("1_mh4gc")]
+layout_mode = 2
+
+[node name="Placeholder5" parent="UI/Inventory" instance=ExtResource("1_mh4gc")]
+layout_mode = 2
+
+[node name="Placeholder6" parent="UI/Inventory" instance=ExtResource("1_mh4gc")]
+layout_mode = 2
+
+[node name="Placeholder7" parent="UI/Inventory" instance=ExtResource("1_mh4gc")]
+layout_mode = 2
+
+[node name="Placeholder8" parent="UI/Inventory" instance=ExtResource("1_mh4gc")]
+layout_mode = 2
+
+[node name="Placeholder9" parent="UI/Inventory" instance=ExtResource("1_mh4gc")]
+layout_mode = 2
+
+[node name="hotbar" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -40.0
+offset_right = 120.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_twkmg")
+
+[node name="slot" parent="UI/hotbar" instance=ExtResource("2_fscbo")]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="slot2" parent="UI/hotbar" instance=ExtResource("2_fscbo")]
+layout_mode = 0
+offset_left = 48.0
+offset_right = 88.0
+offset_bottom = 40.0
+
+[node name="slot3" parent="UI/hotbar" instance=ExtResource("2_fscbo")]
+layout_mode = 0
+offset_left = 96.0
+offset_right = 136.0
+offset_bottom = 40.0
+
+[node name="slot4" parent="UI/hotbar" instance=ExtResource("2_fscbo")]
+layout_mode = 0
+offset_left = 144.0
+offset_right = 184.0
+offset_bottom = 40.0
+
+[node name="slot5" parent="UI/hotbar" instance=ExtResource("2_fscbo")]
+layout_mode = 0
+offset_left = 192.0
+offset_right = 232.0
+offset_bottom = 40.0
+
+[node name="PassiveSlot" parent="UI/hotbar" instance=ExtResource("3_4uwha")]
+layout_mode = 0
+offset_top = -64.0
+offset_bottom = -24.0
+
+[node name="PassiveSlot2" parent="UI/hotbar" instance=ExtResource("3_4uwha")]
+layout_mode = 0
+offset_left = 192.0
+offset_top = -72.0
+offset_right = 232.0
+offset_bottom = -32.0
+
+[node name="PassiveSlot3" parent="UI/hotbar" instance=ExtResource("3_4uwha")]
+layout_mode = 0
+offset_left = 192.0
+offset_top = -120.0
+offset_right = 232.0
+offset_bottom = -80.0
+
+[node name="PassiveSlot4" parent="UI/hotbar" instance=ExtResource("3_4uwha")]
+layout_mode = 0
+offset_top = -160.0
+offset_bottom = -120.0
+
+[node name="PassiveSlot5" parent="UI/hotbar" instance=ExtResource("3_4uwha")]
+layout_mode = 0
+offset_top = -112.0
+offset_bottom = -72.0
+
+[node name="ATK" type="Label" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

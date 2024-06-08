@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq8j2l7qria7g"]
+
+[ext_resource type="PackedScene" uid="uid://k416ef3mk4dy" path="res://buttons/grid.tscn" id="1_jfwxb"]
+[ext_resource type="PackedScene" uid="uid://de3653ltp7x64" path="res://buttons/object.tscn" id="2_glpyw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 645.0
+mouse_filter = 2
+color = Color(0.384314, 0, 0.384314, 1)
+
+[node name="grid" parent="." instance=ExtResource("1_jfwxb")]
+position = Vector2(349, 333)
+
+[node name="grid2" parent="." instance=ExtResource("1_jfwxb")]
+position = Vector2(607, 149)
+
+[node name="grid3" parent="." instance=ExtResource("1_jfwxb")]
+position = Vector2(822, 412)
+
+[node name="object" parent="." instance=ExtResource("2_glpyw")]
+position = Vector2(825, 220)

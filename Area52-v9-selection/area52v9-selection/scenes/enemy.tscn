@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://db5igbxjtnnfr"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_ft26f"]
+[ext_resource type="Texture2D" uid="uid://ci71wyo8nutqa" path="res://assets/attacker/Crawler/CRAWLER1.png" id="2_b450h"]
+[ext_resource type="Texture2D" uid="uid://bggylfw11mh0o" path="res://assets/attacker/Crawler/CRAWLER2.png" id="3_oumck"]
+[ext_resource type="Texture2D" uid="uid://ca217ti7egrd1" path="res://assets/attacker/Crawler/CRAWLER3.png" id="4_i8fxy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b450h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oumck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i8fxy")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8sk7w"]
+size = Vector2(50, 50)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_ft26f")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -8)
+scale = Vector2(0.048, 0.048)
+sprite_frames = SubResource("SpriteFrames_8ngby")
+animation = &"Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8sk7w")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_8sk7w")
+debug_color = Color(0.163598, 0.617001, 0.528005, 0.42)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

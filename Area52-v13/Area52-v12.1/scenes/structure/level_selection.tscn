@@ -1,0 +1,381 @@
+[gd_scene load_steps=31 format=3 uid="uid://dow7fuxoqadl7"]
+
+[ext_resource type="Script" path="res://scripts/level_selection.gd" id="1_valy6"]
+[ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="7_85u42"]
+
+[sub_resource type="GDScript" id="GDScript_ve0ai"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l34gv"]
+size = Vector2(84, 84)
+
+[sub_resource type="PackedScene" id="PackedScene_7j6nw"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("grid", "StaticBody2D", "dropable", "script", "ColorRect", "ColorRect", "offset_left", "offset_top", "offset_right", "offset_bottom", "mouse_filter", "CollisionShape2D", "CollisionShape2D", "position", "shape"),
+"node_count": 3,
+"node_paths": [NodePath("."), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 1, 3, 0, 1, 2, 1073741824, 0, 5, 4, -1, 5, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 0, 1073741825, 0, 12, 11, -1, 2, 13, 6, 14, 7, 0),
+"variants": [SubResource("GDScript_ve0ai"), -37.0, -38.0, 35.0, 34.0, 2, Vector2(-1, -2), SubResource("RectangleShape2D_l34gv")],
+"version": 3
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_naul7"]
+size = Vector2(44, 45)
+
+[sub_resource type="PackedScene" id="PackedScene_bkx06"]
+_bundled = {
+"conn_count": 4,
+"conns": PackedInt32Array(1073741828, 1073741827, 15, 14, 2, 0, 0, 1073741830, 1073741829, 17, 16, 2, 0, 0, 1073741832, 1073741831, 19, 18, 2, 0, 0, 1073741834, 1073741833, 21, 20, 2, 0, 0),
+"editable_instances": [],
+"names": PackedStringArray("object", "Node2D", "script", "Sprite2D", "Sprite2D", "position", "scale", "texture", "Area2D", "Area2D", "CollisionShape2D", "CollisionShape2D", "position", "shape", "_on_area_2d_body_entered", "body_entered", "_on_area_2d_body_exited", "body_exited", "_on_area_2d_mouse_entered", "mouse_entered", "_on_area_2d_mouse_exited", "mouse_exited"),
+"node_count": 4,
+"node_paths": [NodePath("."), NodePath("."), NodePath("./Area2D"), NodePath("."), NodePath("Area2D"), NodePath("."), NodePath("Area2D"), NodePath("."), NodePath("Area2D"), NodePath("."), NodePath("Area2D")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 1, 2, 0, 0, 1073741824, 0, 4, 3, -1, 3, 5, 1, 6, 2, 7, 3, 0, 1073741825, 0, 9, 8, -1, 0, 0, 1073741826, 0, 11, 10, -1, 2, 12, 4, 13, 5, 0),
+"variants": [null, Vector2(0, -3), Vector2(0.369141, 0.369141), null, Vector2(0, -3), SubResource("RectangleShape2D_naul7")],
+"version": 3
+}
+
+[sub_resource type="PackedScene" id="PackedScene_ca7bk"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("Node2D", "Node2D", "ColorRect", "ColorRect", "offset_right", "offset_bottom", "mouse_filter", "color", "grid", "position", "grid2", "position", "grid4", "position", "grid3", "position", "grid6", "position", "grid7", "position", "grid8", "position", "grid10", "position", "grid11", "position", "grid12", "position", "grid13", "position", "grid15", "position", "object", "position"),
+"node_count": 15,
+"node_paths": [NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 0, 0, 1073741824, 0, 3, 2, -1, 4, 4, 0, 5, 1, 6, 2, 7, 3, 0, 1073741825, 0, 2147483647, 8, 4, 1, 9, 5, 0, 1073741826, 0, 2147483647, 10, 6, 1, 11, 7, 0, 1073741827, 0, 2147483647, 12, 8, 1, 13, 9, 0, 1073741828, 0, 2147483647, 14, 10, 1, 15, 11, 0, 1073741829, 0, 2147483647, 16, 12, 1, 17, 13, 0, 1073741830, 0, 2147483647, 18, 14, 1, 19, 15, 0, 1073741831, 0, 2147483647, 20, 16, 1, 21, 17, 0, 1073741832, 0, 2147483647, 22, 18, 1, 23, 19, 0, 1073741833, 0, 2147483647, 24, 20, 1, 25, 21, 0, 1073741834, 0, 2147483647, 26, 22, 1, 27, 23, 0, 1073741835, 0, 2147483647, 28, 24, 1, 29, 25, 0, 1073741836, 0, 2147483647, 30, 26, 1, 31, 27, 0, 1073741837, 0, 2147483647, 32, 28, 1, 33, 29, 0),
+"variants": [1153.0, 645.0, 2, Color(0.384314, 0, 0.384314, 1), SubResource("PackedScene_7j6nw"), Vector2(168, 144), SubResource("PackedScene_7j6nw"), Vector2(168, 272), SubResource("PackedScene_7j6nw"), Vector2(168, 544), SubResource("PackedScene_7j6nw"), Vector2(168, 408), SubResource("PackedScene_7j6nw"), Vector2(304, 144), SubResource("PackedScene_7j6nw"), Vector2(304, 272), SubResource("PackedScene_7j6nw"), Vector2(304, 544), SubResource("PackedScene_7j6nw"), Vector2(304, 408), SubResource("PackedScene_7j6nw"), Vector2(456, 144), SubResource("PackedScene_7j6nw"), Vector2(456, 272), SubResource("PackedScene_7j6nw"), Vector2(456, 544), SubResource("PackedScene_7j6nw"), Vector2(456, 408), SubResource("PackedScene_bkx06"), Vector2(824, 152)],
+"version": 3
+}
+
+[sub_resource type="Theme" id="Theme_q57qp"]
+
+[sub_resource type="SystemFont" id="SystemFont_f7dkm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3a2oe"]
+bg_color = Color(2.71939e-06, 0.404761, 0.187682, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0o35"]
+bg_color = Color(0, 0.65098, 0.317647, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m8pno"]
+bg_color = Color(0, 0.65098, 0.317647, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="Theme" id="Theme_dpotj"]
+Button/styles/hover = SubResource("StyleBoxFlat_3a2oe")
+Button/styles/normal = SubResource("StyleBoxFlat_i0o35")
+Button/styles/pressed = SubResource("StyleBoxFlat_m8pno")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qoha"]
+bg_color = Color(0, 0.403922, 0.188235, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m77fe"]
+bg_color = Color(0, 0.65098, 0.317647, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ips76"]
+bg_color = Color(0, 0.65098, 0.317647, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="Theme" id="Theme_6k1na"]
+Button/styles/hover = SubResource("StyleBoxFlat_7qoha")
+Button/styles/normal = SubResource("StyleBoxFlat_m77fe")
+Button/styles/pressed = SubResource("StyleBoxFlat_ips76")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0x1bu"]
+bg_color = Color(0, 0.403922, 0.188235, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jm8xj"]
+bg_color = Color(0, 0.65098, 0.317647, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jsox"]
+bg_color = Color(0, 0.65098, 0.317647, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="Theme" id="Theme_t0t5x"]
+Button/styles/hover = SubResource("StyleBoxFlat_0x1bu")
+Button/styles/normal = SubResource("StyleBoxFlat_jm8xj")
+Button/styles/pressed = SubResource("StyleBoxFlat_3jsox")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ydf2"]
+bg_color = Color(0, 0.403922, 0.188235, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yikl6"]
+bg_color = Color(0, 0.65098, 0.317647, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sk6si"]
+bg_color = Color(0, 0.65098, 0.317647, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="Theme" id="Theme_m7c2n"]
+Button/styles/hover = SubResource("StyleBoxFlat_1ydf2")
+Button/styles/normal = SubResource("StyleBoxFlat_yikl6")
+Button/styles/pressed = SubResource("StyleBoxFlat_sk6si")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ljw5"]
+bg_color = Color(0, 0.403922, 0.188235, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtlmt"]
+bg_color = Color(0, 0.65098, 0.317647, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuuk8"]
+bg_color = Color(0, 0.65098, 0.317647, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="Theme" id="Theme_i6muf"]
+Button/styles/hover = SubResource("StyleBoxFlat_3ljw5")
+Button/styles/normal = SubResource("StyleBoxFlat_gtlmt")
+Button/styles/pressed = SubResource("StyleBoxFlat_tuuk8")
+
+[node name="LevelSelect" type="Node2D"]
+script = ExtResource("1_valy6")
+level1 = SubResource("PackedScene_ca7bk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 646.0
+color = Color(0.254902, 0.690196, 0.431373, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 424.0
+offset_top = 64.0
+offset_right = 904.0
+offset_bottom = 144.0
+theme = SubResource("Theme_q57qp")
+theme_override_fonts/font = SubResource("SystemFont_f7dkm")
+theme_override_font_sizes/font_size = 56
+text = "LEVEL SELECTION"
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 136.0
+offset_top = 192.0
+offset_right = 1024.0
+offset_bottom = 552.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Level1_btn" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 360.0
+theme = SubResource("Theme_dpotj")
+
+[node name="ColorRect" type="ColorRect" parent="Control/Level1_btn"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 145.0
+offset_bottom = 40.0
+color = Color(2.71939e-06, 0.404761, 0.187682, 1)
+
+[node name="Level" type="Label" parent="Control/Level1_btn"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 89.0
+offset_right = 121.0
+offset_bottom = 131.0
+theme_override_font_sizes/font_size = 30
+text = "LEVEL"
+
+[node name="Level-number" type="Label" parent="Control/Level1_btn"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 152.0
+offset_right = 96.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 64
+text = "1"
+
+[node name="Level2_btn" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 184.0
+offset_right = 334.0
+offset_bottom = 360.0
+theme = SubResource("Theme_6k1na")
+
+[node name="ColorRect" type="ColorRect" parent="Control/Level2_btn"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 145.0
+offset_bottom = 40.0
+color = Color(2.71939e-06, 0.404761, 0.187682, 1)
+
+[node name="Level" type="Label" parent="Control/Level2_btn"]
+offset_left = 36.0
+offset_top = 89.0
+offset_right = 121.0
+offset_bottom = 131.0
+theme_override_font_sizes/font_size = 30
+text = "LEVEL"
+
+[node name="Level-number" type="Label" parent="Control/Level2_btn"]
+offset_left = 56.0
+offset_top = 152.0
+offset_right = 96.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 64
+text = "2"
+
+[node name="Level3_btn" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 368.0
+offset_right = 518.0
+offset_bottom = 360.0
+theme = SubResource("Theme_t0t5x")
+
+[node name="ColorRect" type="ColorRect" parent="Control/Level3_btn"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 145.0
+offset_bottom = 40.0
+color = Color(2.71939e-06, 0.404761, 0.187682, 1)
+
+[node name="Level" type="Label" parent="Control/Level3_btn"]
+offset_left = 36.0
+offset_top = 89.0
+offset_right = 121.0
+offset_bottom = 131.0
+theme_override_font_sizes/font_size = 30
+text = "LEVEL"
+
+[node name="Level-number" type="Label" parent="Control/Level3_btn"]
+offset_left = 56.0
+offset_top = 152.0
+offset_right = 96.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 64
+text = "3"
+
+[node name="Level4_btn" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 552.0
+offset_right = 702.0
+offset_bottom = 360.0
+theme = SubResource("Theme_m7c2n")
+
+[node name="ColorRect" type="ColorRect" parent="Control/Level4_btn"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 145.0
+offset_bottom = 40.0
+color = Color(2.71939e-06, 0.404761, 0.187682, 1)
+
+[node name="Level" type="Label" parent="Control/Level4_btn"]
+offset_left = 36.0
+offset_top = 89.0
+offset_right = 121.0
+offset_bottom = 131.0
+theme_override_font_sizes/font_size = 30
+text = "LEVEL"
+
+[node name="Level-number" type="Label" parent="Control/Level4_btn"]
+offset_left = 56.0
+offset_top = 152.0
+offset_right = 96.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 64
+text = "4"
+
+[node name="Level5_btn" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 736.0
+offset_right = 886.0
+offset_bottom = 360.0
+theme = SubResource("Theme_i6muf")
+
+[node name="ColorRect" type="ColorRect" parent="Control/Level5_btn"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 145.0
+offset_bottom = 40.0
+color = Color(2.71939e-06, 0.404761, 0.187682, 1)
+
+[node name="Level" type="Label" parent="Control/Level5_btn"]
+offset_left = 36.0
+offset_top = 89.0
+offset_right = 121.0
+offset_bottom = 131.0
+theme_override_font_sizes/font_size = 30
+text = "LEVEL"
+
+[node name="Level-number" type="Label" parent="Control/Level5_btn"]
+offset_left = 56.0
+offset_top = 152.0
+offset_right = 96.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 64
+text = "5"
+
+[node name="MenuButton" parent="." instance=ExtResource("7_85u42")]
+position = Vector2(136, 64)
+
+[connection signal="pressed" from="Control/Level1_btn" to="." method="_on_level_1_btn_pressed"]
+[connection signal="pressed" from="Control/Level2_btn" to="." method="_on_level_2_btn_pressed"]
+[connection signal="pressed" from="Control/Level3_btn" to="." method="_on_level_3_btn_pressed"]
+[connection signal="pressed" from="Control/Level4_btn" to="." method="_on_level_4_btn_pressed"]
+[connection signal="pressed" from="Control/Level5_btn" to="." method="_on_level_5_btn_pressed"]

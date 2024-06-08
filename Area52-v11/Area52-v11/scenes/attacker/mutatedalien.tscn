@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5l1eg3dlaqok"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_ey41w"]
+[ext_resource type="Texture2D" uid="uid://dsudy3sddo25l" path="res://assets/attacker/MUTATEDALIEN/WALK/ALIENY1.png" id="2_gou18"]
+[ext_resource type="Texture2D" uid="uid://blayn7ktjf3ta" path="res://assets/attacker/MUTATEDALIEN/WALK/ALIENY2.png" id="3_57r3b"]
+[ext_resource type="Texture2D" uid="uid://dlkwkhbsrgiwt" path="res://assets/attacker/MUTATEDALIEN/WALK/ALIENY3.png" id="4_w8hsa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gou18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_57r3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w8hsa")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8sk7w"]
+size = Vector2(50, 50)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_ey41w")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -8)
+scale = Vector2(0.048, 0.048)
+sprite_frames = SubResource("SpriteFrames_8ngby")
+animation = &"Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8sk7w")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_8sk7w")
+debug_color = Color(0.163598, 0.617001, 0.528005, 0.42)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

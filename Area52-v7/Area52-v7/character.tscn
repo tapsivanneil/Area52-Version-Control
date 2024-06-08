@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://buq8anlvndhfv"]
+
+[ext_resource type="Script" path="res://character.gd" id="1_c513q"]
+[ext_resource type="Texture2D" uid="uid://be37bd6148pwg" path="res://defenders/pistol.png" id="2_p112g"]
+[ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://shooting_area.tscn" id="3_gtcvp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ok3u"]
+size = Vector2(55, 53)
+
+[node name="Character" type="Area2D"]
+script = ExtResource("1_c513q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_1ok3u")
+
+[node name="Shooting_area" parent="." instance=ExtResource("3_gtcvp")]
+position = Vector2(42, -8)
+scale = Vector2(1.09427, 0.766947)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-1, -1.90735e-06)
+scale = Vector2(0.1115, 0.1115)
+texture = ExtResource("2_p112g")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

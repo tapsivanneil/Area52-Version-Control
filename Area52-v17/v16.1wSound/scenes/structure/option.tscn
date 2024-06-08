@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://db0amwqvokcrj"]
+
+[ext_resource type="PackedScene" uid="uid://uxdhfu7vmarj" path="res://volume.tscn" id="1_b4gm1"]
+[ext_resource type="Script" path="res://scenes/structure/Back.gd" id="2_f8g7c"]
+
+[node name="Option" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 264.0
+offset_top = 40.0
+offset_right = 310.0
+offset_bottom = 63.0
+text = "Music"
+
+[node name="Volume" parent="." instance=ExtResource("1_b4gm1")]
+offset_left = 320.0
+offset_right = 552.0
+
+[node name="Back" type="Button" parent="."]
+offset_left = 536.0
+offset_top = 320.0
+offset_right = 608.0
+offset_bottom = 360.0
+text = "Back"
+script = ExtResource("2_f8g7c")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 280.0
+offset_top = 128.0
+offset_right = 326.0
+offset_bottom = 151.0
+text = "Sfx
+"
+
+[node name="Volume2" parent="." instance=ExtResource("1_b4gm1")]
+offset_left = 320.0
+offset_top = 152.0
+offset_right = 552.0
+offset_bottom = 204.0
+bus_name = "sfx"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 280.0
+offset_top = 216.0
+offset_right = 336.0
+offset_bottom = 239.0
+text = "System
+"
+
+[node name="Volume3" parent="." instance=ExtResource("1_b4gm1")]
+offset_left = 320.0
+offset_top = 240.0
+offset_right = 552.0
+offset_bottom = 292.0
+bus_name = "System"

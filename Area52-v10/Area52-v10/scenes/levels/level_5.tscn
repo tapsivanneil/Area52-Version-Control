@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://drdq6mfkmxmts"]
+
+[ext_resource type="PackedScene" uid="uid://bttfpe66johb0" path="res://buttons/back_button.tscn" id="1_8ohbv"]
+[ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://buttons/menu_button.tscn" id="2_f1cyf"]
+
+[node name="Level5" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 651.0
+color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 542.0
+offset_top = 59.0
+offset_right = 596.0
+offset_bottom = 82.0
+text = "Level 5"
+
+[node name="BackButton" parent="." instance=ExtResource("1_8ohbv")]
+position = Vector2(44, 41)
+
+[node name="MenuButton" parent="." instance=ExtResource("2_f1cyf")]
+position = Vector2(201, 38)
