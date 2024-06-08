@@ -1,0 +1,105 @@
+[gd_scene load_steps=17 format=3 uid="uid://bv686yrr6qo0e"]
+
+[ext_resource type="Script" path="res://scripts/attackers/grimer.gd" id="1_be2e0"]
+[ext_resource type="Texture2D" uid="uid://b2xf8el2kf2de" path="res://assets/attacker/GRIMER/WALKING/GRIMER1.png" id="2_iwej6"]
+[ext_resource type="Texture2D" uid="uid://cplag0grggceq" path="res://assets/attacker/GRIMER/ATTACK/GRIMERA1.png" id="2_y7jgq"]
+[ext_resource type="Texture2D" uid="uid://cai2mdlyq7l70" path="res://assets/attacker/GRIMER/WALKING/GRIMER2.png" id="3_c7pk4"]
+[ext_resource type="Texture2D" uid="uid://dwtoy3fndy2fo" path="res://assets/attacker/GRIMER/ATTACK/GRIMERA2.png" id="3_iv8gv"]
+[ext_resource type="Texture2D" uid="uid://bs56hpn5qqji7" path="res://assets/attacker/GRIMER/ATTACK/GRIMERA3.png" id="4_1yfb2"]
+[ext_resource type="Texture2D" uid="uid://ccvaxqtevj0ic" path="res://assets/attacker/GRIMER/WALKING/GRIMER3.png" id="4_aw0md"]
+[ext_resource type="Texture2D" uid="uid://gtagcpq75q8p" path="res://assets/attacker/GRIMER/DEAD/GRIMERD1.png" id="5_1qd45"]
+[ext_resource type="Texture2D" uid="uid://3612ra56ryel" path="res://assets/attacker/GRIMER/DEAD/GRIMERD2.png" id="6_wixpv"]
+[ext_resource type="Texture2D" uid="uid://o0ne6pceb4pg" path="res://assets/attacker/GRIMER/DEAD/GRIMERD3.png" id="7_iyjwe"]
+[ext_resource type="Texture2D" uid="uid://r0xok0yi0dj7" path="res://assets/attacker/GRIMER/DEAD/GRIMERD4.png" id="8_ed4al"]
+[ext_resource type="Texture2D" uid="uid://br5xgtsip6o0s" path="res://assets/attacker/GRIMER/DEAD/GRIMERD5.png" id="9_toygl"]
+[ext_resource type="Texture2D" uid="uid://brewjnkgdjkm5" path="res://assets/attacker/GRIMER/DEAD/GRIMERD6.png" id="10_vvt2v"]
+[ext_resource type="AudioStream" uid="uid://lf8tdy3kaf2q" path="res://assets/slime-monster-noises-66776_xm5FIBZv.mp3" id="14_anh32"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y7jgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iv8gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1yfb2")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1qd45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wixpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iyjwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ed4al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_toygl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vvt2v")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_iwej6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c7pk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_aw0md")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8sk7w"]
+size = Vector2(50, 50)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_be2e0")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -8)
+scale = Vector2(0.048, 0.048)
+sprite_frames = SubResource("SpriteFrames_8ngby")
+animation = &"Death"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8sk7w")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_8sk7w")
+debug_color = Color(0.163598, 0.617001, 0.528005, 0.42)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="animation_delay" type="Timer" parent="."]
+
+[node name="slime" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_anh32")
+pitch_scale = 1.13
+bus = &"sfx"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="animation_delay" to="." method="_on_animation_delay_timeout"]

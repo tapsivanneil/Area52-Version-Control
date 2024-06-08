@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://d13l16psqi467"]
+
+[ext_resource type="Script" path="res://scripts/defenders/sniper.gd" id="1_ndptr"]
+[ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://scenes/shooting_area.tscn" id="2_fs75k"]
+[ext_resource type="Texture2D" uid="uid://be37bd6148pwg" path="res://assets/defenders/pistol.png" id="4_nacm5"]
+[ext_resource type="Texture2D" uid="uid://b3kqmc12062g3" path="res://assets/defenders/Sniper.png" id="4_ofmla"]
+[ext_resource type="AudioStream" uid="uid://bwaq1jcwxju6u" path="res://assets/shoot02wav-14562.mp3" id="5_i7aad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ok3u"]
+size = Vector2(55, 53)
+
+[sub_resource type="Animation" id="Animation_37ayx"]
+resource_name = "idle"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tjpup"]
+_data = {
+"idle": SubResource("Animation_37ayx")
+}
+
+[node name="Character" type="Area2D"]
+position = Vector2(192, 144)
+script = ExtResource("1_ndptr")
+
+[node name="Shooting_area" parent="." instance=ExtResource("2_fs75k")]
+position = Vector2(42, -8)
+scale = Vector2(1.09427, 0.766947)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_1ok3u")
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, -1.90735e-06)
+scale = Vector2(0.1115, 0.1115)
+texture = ExtResource("4_nacm5")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, -15)
+scale = Vector2(0.117, 0.117)
+texture = ExtResource("4_ofmla")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_tjpup")
+}
+
+[node name="snipe" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_i7aad")
+pitch_scale = 3.1
+bus = &"sfx"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

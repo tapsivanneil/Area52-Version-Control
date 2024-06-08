@@ -1,0 +1,204 @@
+[gd_scene load_steps=16 format=3 uid="uid://cyx73ty5be522"]
+
+[ext_resource type="Script" path="res://scripts/almanac.gd" id="1_kt7kx"]
+[ext_resource type="Texture2D" uid="uid://wnohb4ig4lwf" path="res://assets/defenders/Bomber.png" id="8_p5nwt"]
+[ext_resource type="Texture2D" uid="uid://dhv3mif72pqeu" path="res://assets/attacker/ALIEN Y/ATTACK/ALIENYA1.png" id="9_fsnn5"]
+[ext_resource type="Texture2D" uid="uid://c7kdwubxaqldb" path="res://assets/defenders/Defender.png" id="9_kx3ma"]
+[ext_resource type="Texture2D" uid="uid://d1ilke4f7lhp2" path="res://assets/defenders/Flamethrower.png" id="10_hhsne"]
+[ext_resource type="Texture2D" uid="uid://bcor4g24aysp3" path="res://assets/attacker/MUTATEDALIEN/WALK/MUTATED1.png" id="10_ikui0"]
+[ext_resource type="Texture2D" uid="uid://cib6tfodeivnk" path="res://assets/defenders/MachineGunner.png" id="11_lta7h"]
+[ext_resource type="Texture2D" uid="uid://ci71wyo8nutqa" path="res://assets/attacker/CRAWLER/CRAWLER1.png" id="11_t8muh"]
+[ext_resource type="Texture2D" uid="uid://cegeicer568v2" path="res://assets/attacker/DUNG BEETLE/WALKING/BEETLE1.png" id="12_lgawx"]
+[ext_resource type="Texture2D" uid="uid://cyo4tiv0clod0" path="res://assets/defenders/Pistoleer.png" id="12_qtenf"]
+[ext_resource type="Texture2D" uid="uid://dtb3pvws32ydp" path="res://assets/defenders/RailGunner.png" id="13_0bks5"]
+[ext_resource type="Texture2D" uid="uid://b2xf8el2kf2de" path="res://assets/attacker/GRIMER/WALKING/GRIMER1.png" id="13_x5il7"]
+[ext_resource type="Texture2D" uid="uid://b3kqmc12062g3" path="res://assets/defenders/Sniper.png" id="14_6tsp8"]
+[ext_resource type="Texture2D" uid="uid://vgtiemsb6k1c" path="res://assets/attacker/SWARM/WALKING/SWARM1.png" id="14_eyyfd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_klrvg"]
+size = Vector2(120, 120)
+
+[node name="Almanac" type="Node2D"]
+script = ExtResource("1_kt7kx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 1160.0
+offset_bottom = 688.0
+mouse_filter = 2
+color = Color(0.423651, 0.423651, 0.423651, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 712.0
+offset_top = 64.0
+offset_right = 1048.0
+offset_bottom = 616.0
+
+[node name="Attacker" type="Node" parent="."]
+
+[node name="Alieny" type="Area2D" parent="Attacker"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attacker/Alieny"]
+position = Vector2(196, 420)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Alienya1" type="Sprite2D" parent="Attacker/Alieny"]
+position = Vector2(196, 424)
+scale = Vector2(0.0472, 0.0472)
+texture = ExtResource("9_fsnn5")
+
+[node name="Mutatedalien" type="Area2D" parent="Attacker"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Attacker/Mutatedalien"]
+position = Vector2(464, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Mutated1" type="Sprite2D" parent="Attacker/Mutatedalien"]
+position = Vector2(466, 552)
+scale = Vector2(0.0692, 0.0692)
+texture = ExtResource("10_ikui0")
+
+[node name="Crawler" type="Area2D" parent="Attacker"]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Attacker/Crawler"]
+position = Vector2(336, 416)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Crawler1" type="Sprite2D" parent="Attacker/Crawler"]
+position = Vector2(344, 416)
+scale = Vector2(0.052, 0.052)
+texture = ExtResource("11_t8muh")
+
+[node name="Dungbeetle" type="Area2D" parent="Attacker"]
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Attacker/Dungbeetle"]
+position = Vector2(466, 416)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Beetle1" type="Sprite2D" parent="Attacker/Dungbeetle"]
+position = Vector2(456, 416)
+scale = Vector2(0.0516, 0.0516)
+texture = ExtResource("12_lgawx")
+
+[node name="Grimer" type="Area2D" parent="Attacker"]
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Attacker/Grimer"]
+position = Vector2(200, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Grimer1" type="Sprite2D" parent="Attacker/Grimer"]
+position = Vector2(196, 552)
+scale = Vector2(0.0877953, 0.0877953)
+texture = ExtResource("13_x5il7")
+
+[node name="Swarm" type="Area2D" parent="Attacker"]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Attacker/Swarm"]
+position = Vector2(336, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Swarm1" type="Sprite2D" parent="Attacker/Swarm"]
+position = Vector2(328, 544)
+scale = Vector2(0.058, 0.058)
+texture = ExtResource("14_eyyfd")
+
+[node name="Defender" type="Node" parent="."]
+
+[node name="Bomber" type="Area2D" parent="Defender"]
+position = Vector2(8, -280)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Defender/Bomber"]
+position = Vector2(196, 420)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Bomber" type="Sprite2D" parent="Defender/Bomber"]
+position = Vector2(196, 416)
+scale = Vector2(0.123667, 0.123667)
+texture = ExtResource("8_p5nwt")
+
+[node name="Defender" type="Area2D" parent="Defender"]
+position = Vector2(8, -280)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Defender/Defender"]
+position = Vector2(464, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Defender2" type="Sprite2D" parent="Defender/Defender"]
+position = Vector2(456, 544)
+scale = Vector2(0.168976, 0.168976)
+texture = ExtResource("9_kx3ma")
+
+[node name="Flamethrower" type="Area2D" parent="Defender"]
+position = Vector2(8, -280)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Defender/Flamethrower"]
+position = Vector2(336, 416)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Flamethrower" type="Sprite2D" parent="Defender/Flamethrower"]
+position = Vector2(332.75, 410.75)
+scale = Vector2(0.126333, 0.126333)
+texture = ExtResource("10_hhsne")
+
+[node name="Machinegunner" type="Area2D" parent="Defender"]
+position = Vector2(8, -280)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Defender/Machinegunner"]
+position = Vector2(466, 416)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="MachineGunner" type="Sprite2D" parent="Defender/Machinegunner"]
+position = Vector2(466.875, 413.125)
+scale = Vector2(0.13033, 0.13033)
+texture = ExtResource("11_lta7h")
+
+[node name="Pistoleer" type="Area2D" parent="Defender"]
+position = Vector2(8, -280)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Defender/Pistoleer"]
+position = Vector2(200, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Pistoleer2" type="Sprite2D" parent="Defender/Pistoleer"]
+position = Vector2(208, 544)
+scale = Vector2(0.144989, 0.144989)
+texture = ExtResource("12_qtenf")
+
+[node name="Railgunner" type="Area2D" parent="Defender"]
+position = Vector2(8, -280)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Defender/Railgunner"]
+position = Vector2(336, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="RailGunner" type="Sprite2D" parent="Defender/Railgunner"]
+position = Vector2(333.25, 549.25)
+scale = Vector2(0.125267, 0.125267)
+texture = ExtResource("13_0bks5")
+
+[node name="Sniper" type="Area2D" parent="Defender"]
+position = Vector2(272, -280)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Defender/Sniper"]
+position = Vector2(336, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Sniper" type="Sprite2D" parent="Defender/Sniper"]
+position = Vector2(342.5, 550.5)
+scale = Vector2(0.115, 0.115)
+texture = ExtResource("14_6tsp8")
+
+[connection signal="mouse_entered" from="Attacker/Alieny" to="." method="_on_alieny_mouse_entered"]
+[connection signal="mouse_entered" from="Attacker/Mutatedalien" to="." method="_on_mutatedalien_mouse_entered"]
+[connection signal="mouse_entered" from="Attacker/Crawler" to="." method="_on_crawler_mouse_entered"]
+[connection signal="mouse_entered" from="Attacker/Dungbeetle" to="." method="_on_dungbeetle_mouse_entered"]
+[connection signal="mouse_entered" from="Attacker/Grimer" to="." method="_on_grimer_mouse_entered"]
+[connection signal="mouse_entered" from="Attacker/Swarm" to="." method="_on_swarm_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Bomber" to="." method="_on_bomber_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Defender" to="." method="_on_defender_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Flamethrower" to="." method="_on_flamethrower_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Machinegunner" to="." method="_on_machinegunner_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Pistoleer" to="." method="_on_pistoleer_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Railgunner" to="." method="_on_railgunner_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Sniper" to="." method="_on_sniper_mouse_entered"]

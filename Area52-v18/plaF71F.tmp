@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1awm8lao6gyu"]
+
+[ext_resource type="Script" path="res://placeholder.gd" id="1_81egt"]
+[ext_resource type="Script" path="res://Stats.gd" id="2_6c8vh"]
+
+[node name="Placeholder" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_81egt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+expand_mode = 1
+script = ExtResource("2_6c8vh")
+
+[node name="debug" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 8
+text = "0"
