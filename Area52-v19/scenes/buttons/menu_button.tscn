@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://xnqbypxxfiob"]
+
+[ext_resource type="Script" path="res://scripts/menu_button.gd" id="1_pb73d"]
+[ext_resource type="Texture2D" uid="uid://bmnx3xtjaggcy" path="res://assets/icons/home-icon.png" id="2_yx3mo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mh4fc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oekik"]
+texture = ExtResource("2_yx3mo")
+modulate_color = Color(0, 0.403922, 0.188235, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dkvdn"]
+texture = ExtResource("2_yx3mo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2l30g"]
+texture = ExtResource("2_yx3mo")
+modulate_color = Color(0, 0.403922, 0.188235, 1)
+
+[sub_resource type="Theme" id="Theme_gwcgs"]
+Button/styles/focus = SubResource("StyleBoxEmpty_mh4fc")
+Button/styles/hover = SubResource("StyleBoxTexture_oekik")
+Button/styles/normal = SubResource("StyleBoxTexture_dkvdn")
+Button/styles/pressed = SubResource("StyleBoxTexture_2l30g")
+
+[node name="MenuButton" type="Node2D"]
+script = ExtResource("1_pb73d")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 150.0
+offset_bottom = 150.0
+scale = Vector2(0.863564, 0.856098)
+theme = SubResource("Theme_gwcgs")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

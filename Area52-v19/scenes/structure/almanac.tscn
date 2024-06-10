@@ -1,0 +1,348 @@
+[gd_scene load_steps=24 format=3 uid="uid://cyx73ty5be522"]
+
+[ext_resource type="Script" path="res://scripts/almanac.gd" id="1_kt7kx"]
+[ext_resource type="FontFile" uid="uid://cwc64a8usnhu3" path="res://assets/fonts/LeagueSpartan-Regular.ttf" id="2_4rbxp"]
+[ext_resource type="Texture2D" uid="uid://dx0mmeptevcvq" path="res://assets/almanac-bg.png" id="2_pgcfw"]
+[ext_resource type="FontFile" uid="uid://cpuej7dj5e74f" path="res://assets/fonts/LeagueSpartan-SemiBold.ttf" id="3_b5v3v"]
+[ext_resource type="Texture2D" uid="uid://0sgmwucl78oy" path="res://assets/almanac-assets/alien-y.png" id="4_inij2"]
+[ext_resource type="Texture2D" uid="uid://cdoosobjq1pxn" path="res://assets/almanac-assets/mutated.png" id="5_qon7j"]
+[ext_resource type="Texture2D" uid="uid://c8wgnssdg417w" path="res://assets/almanac-assets/crawler.png" id="6_780ew"]
+[ext_resource type="Texture2D" uid="uid://cpaabk2yexvof" path="res://assets/almanac-assets/beetle.png" id="7_iq2kw"]
+[ext_resource type="Texture2D" uid="uid://b2kwkl8id13yo" path="res://assets/almanac-assets/grimer.png" id="8_m4vwa"]
+[ext_resource type="Texture2D" uid="uid://cqd22u32e4iiw" path="res://assets/almanac-assets/fly.png" id="9_x0thp"]
+[ext_resource type="Texture2D" uid="uid://cpt8fxpgjucqq" path="res://assets/almanac-assets/bomber.png" id="10_41cx0"]
+[ext_resource type="Texture2D" uid="uid://bvvbtceaqq1kw" path="res://assets/almanac-assets/defender.png" id="11_bpqqf"]
+[ext_resource type="Texture2D" uid="uid://bg57afxvo47gr" path="res://assets/almanac-assets/flamethrower.png" id="12_rc52d"]
+[ext_resource type="Texture2D" uid="uid://by868bodtlvqr" path="res://assets/almanac-assets/machinegunner.png" id="13_knhca"]
+[ext_resource type="Texture2D" uid="uid://0hd0nxw6mdmy" path="res://assets/almanac-assets/pistoleer.png" id="14_row24"]
+[ext_resource type="Texture2D" uid="uid://brqrauuj24g13" path="res://assets/almanac-assets/railgunner.png" id="15_bynsv"]
+[ext_resource type="Texture2D" uid="uid://bti37vgrov4m0" path="res://assets/almanac-assets/sniper.png" id="16_8u13l"]
+[ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="17_upysu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vgajj"]
+bg_color = Color(0.0313726, 0.364706, 0.211765, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_e8kfh"]
+color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_237wk"]
+Panel/styles/panel = SubResource("StyleBoxFlat_vgajj")
+PanelContainer/styles/panel = SubResource("StyleBoxLine_e8kfh")
+
+[sub_resource type="Theme" id="Theme_5egoy"]
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("3_b5v3v")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_klrvg"]
+size = Vector2(120, 120)
+
+[node name="Almanac" type="Node2D"]
+script = ExtResource("1_kt7kx")
+
+[node name="Almanac-bg" type="Sprite2D" parent="."]
+position = Vector2(572.639, 323.57)
+scale = Vector2(0.603501, 0.600796)
+texture = ExtResource("2_pgcfw")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 763.0
+offset_top = 69.0
+offset_right = 1088.0
+offset_bottom = 580.0
+theme = SubResource("Theme_237wk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 776.0
+offset_top = 88.0
+offset_right = 1075.0
+offset_bottom = 574.0
+scale = Vector2(0.988545, 0.988545)
+theme = SubResource("Theme_5egoy")
+theme_override_fonts/font = ExtResource("2_4rbxp")
+theme_override_font_sizes/font_size = 24
+
+[node name="Attacker" type="Node" parent="."]
+
+[node name="Alieny" type="Area2D" parent="Attacker"]
+position = Vector2(72, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attacker/Alieny"]
+position = Vector2(196, 420)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Attacker/Alieny"]
+offset_left = 136.0
+offset_top = 360.0
+offset_right = 266.0
+offset_bottom = 490.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Alienya1" type="Sprite2D" parent="Attacker/Alieny"]
+position = Vector2(196, 424)
+scale = Vector2(0.409589, 0.409589)
+texture = ExtResource("4_inij2")
+
+[node name="Mutatedalien" type="Area2D" parent="Attacker"]
+position = Vector2(88, 16)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Attacker/Mutatedalien"]
+position = Vector2(464, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Attacker/Mutatedalien"]
+offset_left = 400.0
+offset_top = 480.0
+offset_right = 530.0
+offset_bottom = 610.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Mutated1" type="Sprite2D" parent="Attacker/Mutatedalien"]
+position = Vector2(466, 546)
+scale = Vector2(0.392674, 0.392674)
+texture = ExtResource("5_qon7j")
+
+[node name="Crawler" type="Area2D" parent="Attacker"]
+position = Vector2(72, 0)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Attacker/Crawler"]
+position = Vector2(336, 416)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Attacker/Crawler"]
+offset_left = 272.0
+offset_top = 352.0
+offset_right = 402.0
+offset_bottom = 482.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Crawler1" type="Sprite2D" parent="Attacker/Crawler"]
+position = Vector2(338, 418)
+scale = Vector2(0.391207, 0.391207)
+texture = ExtResource("6_780ew")
+
+[node name="Dungbeetle" type="Area2D" parent="Attacker"]
+position = Vector2(88, 0)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Attacker/Dungbeetle"]
+position = Vector2(466, 416)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Attacker/Dungbeetle"]
+offset_left = 400.0
+offset_top = 352.0
+offset_right = 530.0
+offset_bottom = 482.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Beetle1" type="Sprite2D" parent="Attacker/Dungbeetle"]
+position = Vector2(456, 416)
+scale = Vector2(0.404443, 0.404443)
+texture = ExtResource("7_iq2kw")
+
+[node name="Grimer" type="Area2D" parent="Attacker"]
+position = Vector2(72, 16)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Attacker/Grimer"]
+position = Vector2(200, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Attacker/Grimer"]
+offset_left = 136.0
+offset_top = 480.0
+offset_right = 266.0
+offset_bottom = 610.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Grimer1" type="Sprite2D" parent="Attacker/Grimer"]
+position = Vector2(205, 545)
+scale = Vector2(0.395904, 0.395904)
+texture = ExtResource("8_m4vwa")
+
+[node name="Swarm" type="Area2D" parent="Attacker"]
+position = Vector2(72, 16)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Attacker/Swarm"]
+position = Vector2(336, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Attacker/Swarm"]
+offset_left = 272.0
+offset_top = 480.0
+offset_right = 402.0
+offset_bottom = 610.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Swarm1" type="Sprite2D" parent="Attacker/Swarm"]
+position = Vector2(336, 544)
+scale = Vector2(0.408481, 0.408481)
+texture = ExtResource("9_x0thp")
+
+[node name="Defender" type="Node" parent="."]
+
+[node name="Bomber" type="Area2D" parent="Defender"]
+position = Vector2(72, -288)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Defender/Bomber"]
+position = Vector2(200, 416)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Defender/Bomber"]
+offset_left = 136.0
+offset_top = 352.0
+offset_right = 266.0
+offset_bottom = 482.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Bomber" type="Sprite2D" parent="Defender/Bomber"]
+position = Vector2(200, 416)
+scale = Vector2(0.390437, 0.390437)
+texture = ExtResource("10_41cx0")
+
+[node name="Defender" type="Area2D" parent="Defender"]
+position = Vector2(224, -416)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Defender/Defender"]
+position = Vector2(464, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Defender/Defender"]
+offset_left = 400.0
+offset_top = 480.0
+offset_right = 530.0
+offset_bottom = 610.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Defender2" type="Sprite2D" parent="Defender/Defender"]
+position = Vector2(464, 544)
+scale = Vector2(0.387322, 0.387322)
+texture = ExtResource("11_bpqqf")
+
+[node name="Flamethrower" type="Area2D" parent="Defender"]
+position = Vector2(72, -288)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Defender/Flamethrower"]
+position = Vector2(336, 416)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Defender/Flamethrower"]
+offset_left = 272.0
+offset_top = 352.0
+offset_right = 402.0
+offset_bottom = 482.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Flamethrower" type="Sprite2D" parent="Defender/Flamethrower"]
+position = Vector2(336, 416)
+scale = Vector2(0.399483, 0.399483)
+texture = ExtResource("12_rc52d")
+
+[node name="Machinegunner" type="Area2D" parent="Defender"]
+position = Vector2(72, -288)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Defender/Machinegunner"]
+position = Vector2(476.25, 416)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Defender/Machinegunner"]
+offset_left = 416.0
+offset_top = 352.0
+offset_right = 546.0
+offset_bottom = 482.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="MachineGunner" type="Sprite2D" parent="Defender/Machinegunner"]
+position = Vector2(479, 416)
+scale = Vector2(0.410273, 0.410273)
+texture = ExtResource("13_knhca")
+
+[node name="Pistoleer" type="Area2D" parent="Defender"]
+position = Vector2(72, -288)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Defender/Pistoleer"]
+position = Vector2(196, 564)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Defender/Pistoleer"]
+offset_left = 136.0
+offset_top = 496.0
+offset_right = 266.0
+offset_bottom = 626.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Pistoleer2" type="Sprite2D" parent="Defender/Pistoleer"]
+position = Vector2(201, 562)
+scale = Vector2(0.395557, 0.395557)
+texture = ExtResource("14_row24")
+
+[node name="Railgunner" type="Area2D" parent="Defender"]
+position = Vector2(72, -272)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Defender/Railgunner"]
+position = Vector2(336, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Defender/Railgunner"]
+offset_left = 272.0
+offset_top = 480.0
+offset_right = 402.0
+offset_bottom = 610.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="RailGunner" type="Sprite2D" parent="Defender/Railgunner"]
+position = Vector2(336, 544)
+scale = Vector2(0.404696, 0.404696)
+texture = ExtResource("15_bynsv")
+
+[node name="Sniper" type="Area2D" parent="Defender"]
+position = Vector2(216, -272)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Defender/Sniper"]
+position = Vector2(336, 544)
+shape = SubResource("RectangleShape2D_klrvg")
+
+[node name="Panel2" type="Panel" parent="Defender/Sniper"]
+offset_left = 272.0
+offset_top = 480.0
+offset_right = 402.0
+offset_bottom = 610.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Sniper" type="Sprite2D" parent="Defender/Sniper"]
+position = Vector2(336, 544)
+scale = Vector2(0.403127, 0.403127)
+texture = ExtResource("16_8u13l")
+
+[node name="MenuButton" parent="." instance=ExtResource("17_upysu")]
+position = Vector2(64, 64)
+scale = Vector2(0.495171, 0.492952)
+
+[connection signal="mouse_entered" from="Attacker/Alieny" to="." method="_on_alieny_mouse_entered"]
+[connection signal="mouse_entered" from="Attacker/Mutatedalien" to="." method="_on_mutatedalien_mouse_entered"]
+[connection signal="mouse_entered" from="Attacker/Crawler" to="." method="_on_crawler_mouse_entered"]
+[connection signal="mouse_entered" from="Attacker/Dungbeetle" to="." method="_on_dungbeetle_mouse_entered"]
+[connection signal="mouse_entered" from="Attacker/Grimer" to="." method="_on_grimer_mouse_entered"]
+[connection signal="mouse_entered" from="Attacker/Swarm" to="." method="_on_swarm_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Bomber" to="." method="_on_bomber_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Defender" to="." method="_on_defender_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Flamethrower" to="." method="_on_flamethrower_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Machinegunner" to="." method="_on_machinegunner_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Pistoleer" to="." method="_on_pistoleer_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Railgunner" to="." method="_on_railgunner_mouse_entered"]
+[connection signal="mouse_entered" from="Defender/Sniper" to="." method="_on_sniper_mouse_entered"]

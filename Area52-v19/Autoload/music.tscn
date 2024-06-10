@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3xa1rrqdnvu"]
+
+[ext_resource type="AudioStream" uid="uid://cc0iuldp6lj2e" path="res://assets/hot-loop-by-jtwayne-213315.ogg" id="1_t0tgg"]
+[ext_resource type="Script" path="res://music.gd" id="2_nn7o1"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_t0tgg")
+volume_db = 14.0
+autoplay = true
+bus = &"Music"
+script = ExtResource("2_nn7o1")

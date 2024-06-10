@@ -1,0 +1,106 @@
+[gd_scene load_steps=17 format=3 uid="uid://b5l1eg3dlaqok"]
+
+[ext_resource type="Script" path="res://scripts/attackers/mutatedalien.gd" id="1_ey41w"]
+[ext_resource type="Texture2D" uid="uid://dldr27f418g1h" path="res://assets/attacker/MUTATEDALIEN/ATTACK/MUTATEDA1.png" id="2_nihio"]
+[ext_resource type="Texture2D" uid="uid://dpdbeaorleaey" path="res://assets/attacker/MUTATEDALIEN/ATTACK/MUTATEDA2.png" id="3_7erb0"]
+[ext_resource type="Texture2D" uid="uid://bly0sh3jv2cug" path="res://assets/attacker/MUTATEDALIEN/ATTACK/MUTATEDA3.png" id="4_esm0u"]
+[ext_resource type="Texture2D" uid="uid://b8gf7u2qjgif1" path="res://assets/attacker/MUTATEDALIEN/ATTACK/MUTATEDA4.png" id="5_tl3qj"]
+[ext_resource type="Texture2D" uid="uid://brkwf15k20s14" path="res://assets/attacker/MUTATEDALIEN/DEAD/MUTATEDD1.png" id="6_x2d58"]
+[ext_resource type="Texture2D" uid="uid://dhfkekn1k0wr" path="res://assets/attacker/MUTATEDALIEN/DEAD/MUTATEDD2.png" id="7_aai2p"]
+[ext_resource type="Texture2D" uid="uid://bryg4vyf26l02" path="res://assets/attacker/MUTATEDALIEN/DEAD/MUTATEDD3.png" id="8_6hyo5"]
+[ext_resource type="Texture2D" uid="uid://dmdxvfaf5fx60" path="res://assets/attacker/MUTATEDALIEN/DEAD/MUTATEDD4.png" id="9_4l1vj"]
+[ext_resource type="Texture2D" uid="uid://dmioa37vdgypk" path="res://assets/attacker/MUTATEDALIEN/DEAD/MUTATEDD5.png" id="10_i43lk"]
+[ext_resource type="Texture2D" uid="uid://bcor4g24aysp3" path="res://assets/attacker/MUTATEDALIEN/WALK/MUTATED1.png" id="11_xgh2p"]
+[ext_resource type="Texture2D" uid="uid://danwvl83e4tj0" path="res://assets/attacker/MUTATEDALIEN/WALK/MUTATED2.png" id="12_66iy8"]
+[ext_resource type="Texture2D" uid="uid://nhxuxajpdniu" path="res://assets/attacker/MUTATEDALIEN/WALK/MUTATED3.png" id="13_nt3jg"]
+[ext_resource type="AudioStream" uid="uid://b877xx2iqqmsr" path="res://assets/alien-cackle-99968_1ajutUFx.mp3" id="14_1p5vh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nihio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7erb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_esm0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tl3qj")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_x2d58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_aai2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6hyo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4l1vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_i43lk")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_xgh2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_66iy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nt3jg")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8sk7w"]
+size = Vector2(50, 50)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_ey41w")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -8)
+scale = Vector2(0.048, 0.048)
+sprite_frames = SubResource("SpriteFrames_8ngby")
+animation = &"Walk"
+frame_progress = 0.787962
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8sk7w")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_8sk7w")
+debug_color = Color(0.163598, 0.617001, 0.528005, 0.42)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="animation_delay" type="Timer" parent="."]
+
+[node name="slime" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_1p5vh")
+pitch_scale = 0.71
+bus = &"sfx"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="animation_delay" to="." method="_on_animation_delay_timeout"]

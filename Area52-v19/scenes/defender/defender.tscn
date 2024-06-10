@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://da11alxwr8dog"]
+
+[ext_resource type="Script" path="res://scripts/defenders/defender.gd" id="1_ewm5o"]
+[ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://scenes/shooting_area.tscn" id="2_jhv3c"]
+[ext_resource type="Texture2D" uid="uid://bolph13aj2ubk" path="res://assets/defenders/player sprites/defender-spritesheet.png" id="4_8lp5m"]
+[ext_resource type="Texture2D" uid="uid://be37bd6148pwg" path="res://assets/defenders/pistol.png" id="4_dhq7h"]
+[ext_resource type="Texture2D" uid="uid://c7kdwubxaqldb" path="res://assets/defenders/Defender.png" id="4_shey4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ok3u"]
+size = Vector2(55, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyary"]
+atlas = ExtResource("4_8lp5m")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5gba"]
+atlas = ExtResource("4_8lp5m")
+region = Rect2(1000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8n765"]
+atlas = ExtResource("4_8lp5m")
+region = Rect2(2000, 0, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4j1m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyary")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5gba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8n765")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Character" type="Area2D"]
+script = ExtResource("1_ewm5o")
+
+[node name="Shooting_area" parent="." instance=ExtResource("2_jhv3c")]
+position = Vector2(42, -8)
+scale = Vector2(1.09427, 0.766947)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_1ok3u")
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, -1.90735e-06)
+scale = Vector2(0.1115, 0.1115)
+texture = ExtResource("4_dhq7h")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Defender" type="Sprite2D" parent="."]
+position = Vector2(-8.00001, -8.00001)
+scale = Vector2(0.127132, 0.127132)
+texture = ExtResource("4_shey4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, -8)
+scale = Vector2(0.127, 0.127)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(-7.87401, -7.87399)
+scale = Vector2(0.921681, 0.921681)
+sprite_frames = SubResource("SpriteFrames_o4j1m")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

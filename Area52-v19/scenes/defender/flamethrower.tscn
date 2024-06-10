@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlko8km15b8qe"]
+
+[ext_resource type="Script" path="res://scripts/defenders/flamethrower.gd" id="1_8c31c"]
+[ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://scenes/shooting_area.tscn" id="2_psrwj"]
+[ext_resource type="Texture2D" uid="uid://be37bd6148pwg" path="res://assets/defenders/pistol.png" id="4_bx83j"]
+[ext_resource type="Texture2D" uid="uid://d1ilke4f7lhp2" path="res://assets/defenders/Flamethrower.png" id="4_dwg3p"]
+[ext_resource type="AudioStream" uid="uid://cabeuju5hqov7" path="res://assets/sniper-rifle-firing-shot-1-39789_W2S8jgMN.mp3" id="5_j7ie3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ok3u"]
+size = Vector2(55, 53)
+
+[node name="Character" type="Area2D"]
+script = ExtResource("1_8c31c")
+
+[node name="Shooting_area" parent="." instance=ExtResource("2_psrwj")]
+position = Vector2(42, -8)
+scale = Vector2(1.09427, 0.766947)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_1ok3u")
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, -1.90735e-06)
+scale = Vector2(0.1115, 0.1115)
+texture = ExtResource("4_bx83j")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Flamethrower" type="Sprite2D" parent="."]
+position = Vector2(-8, -16)
+scale = Vector2(0.124334, 0.124334)
+texture = ExtResource("4_dwg3p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, -16)
+scale = Vector2(0.124, 0.124)
+texture = ExtResource("4_dwg3p")
+
+[node name="fire" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_j7ie3")
+pitch_scale = 0.65
+bus = &"sfx"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

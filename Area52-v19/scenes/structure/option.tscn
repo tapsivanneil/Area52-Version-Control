@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=3 uid="uid://db0amwqvokcrj"]
+
+[ext_resource type="PackedScene" uid="uid://uxdhfu7vmarj" path="res://volume.tscn" id="1_b4gm1"]
+[ext_resource type="Texture2D" uid="uid://dx0mmeptevcvq" path="res://assets/almanac-bg.png" id="1_y7n0m"]
+[ext_resource type="Script" path="res://scenes/structure/Back.gd" id="2_f8g7c"]
+[ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="2_nnvpk"]
+[ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="3_o8fv6"]
+
+[node name="Option" type="Node2D"]
+position = Vector2(-88, 32)
+scale = Vector2(1.54865, 1.54865)
+
+[node name="Almanac-bg" type="Sprite2D" parent="."]
+position = Vector2(428.364, 189.059)
+scale = Vector2(0.387847, 0.386495)
+texture = ExtResource("1_y7n0m")
+
+[node name="MenuButton" parent="." instance=ExtResource("2_nnvpk")]
+position = Vector2(98.15, 20.6632)
+scale = Vector2(0.321826, 0.320704)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 189.0
+offset_top = 58.0
+offset_right = 265.0
+offset_bottom = 97.0
+scale = Vector2(7.49979, 7.49979)
+color = Color(0.113725, 0.796078, 0.364706, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 258.289
+offset_top = 41.3263
+offset_right = 354.289
+offset_bottom = 72.3263
+theme_override_fonts/font = ExtResource("3_o8fv6")
+theme_override_font_sizes/font_size = 32
+text = "MUSIC"
+
+[node name="Volume" parent="." instance=ExtResource("1_b4gm1")]
+offset_left = 314.289
+offset_top = 88.8237
+offset_right = 546.289
+offset_bottom = 140.824
+
+[node name="Back" type="Button" parent="."]
+visible = false
+offset_left = 536.0
+offset_top = 320.0
+offset_right = 608.0
+offset_bottom = 360.0
+text = "Back"
+script = ExtResource("2_f8g7c")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 258.289
+offset_top = 149.808
+offset_right = 316.289
+offset_bottom = 214.808
+theme_override_fonts/font = ExtResource("3_o8fv6")
+theme_override_font_sizes/font_size = 32
+text = "SFX"
+
+[node name="Volume2" parent="." instance=ExtResource("1_b4gm1")]
+offset_left = 315.113
+offset_top = 196.3
+offset_right = 547.113
+offset_bottom = 248.3
+bus_name = "sfx"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 258.289
+offset_top = 258.289
+offset_right = 374.289
+offset_bottom = 289.289
+theme_override_fonts/font = ExtResource("3_o8fv6")
+theme_override_font_sizes/font_size = 32
+text = "SYSTEM
+"
+
+[node name="Volume3" parent="." instance=ExtResource("1_b4gm1")]
+offset_left = 315.113
+offset_top = 299.616
+offset_right = 547.113
+offset_bottom = 351.616
+bus_name = "System"
