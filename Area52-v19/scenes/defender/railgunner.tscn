@@ -1,34 +1,154 @@
-[gd_scene load_steps=9 format=3 uid="uid://du5m84ymrpspn"]
+[gd_scene load_steps=28 format=3 uid="uid://du5m84ymrpspn"]
 
 [ext_resource type="Script" path="res://scripts/defenders/railgunner.gd" id="1_mrdkk"]
 [ext_resource type="Texture2D" uid="uid://dtb3pvws32ydp" path="res://assets/defenders/RailGunner.png" id="2_frbod"]
 [ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://scenes/shooting_area.tscn" id="2_qpbwq"]
 [ext_resource type="Texture2D" uid="uid://be37bd6148pwg" path="res://assets/defenders/pistol.png" id="4_vxk84"]
 [ext_resource type="AudioStream" uid="uid://drftetbguoeui" path="res://assets/laser-gun-72558_VTRWPpUR.mp3" id="5_i40ng"]
+[ext_resource type="Texture2D" uid="uid://755x8ki5wwsk" path="res://assets/defenders/player sprites/railgunner-spritesheet.png" id="5_xh4cm"]
+[ext_resource type="Texture2D" uid="uid://bdwsfto2npj6h" path="res://assets/defenders/player sprites/rail-gunner-idle.png" id="6_nv73e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ok3u"]
 size = Vector2(55, 53)
 
-[sub_resource type="Animation" id="Animation_ojha8"]
-resource_name = "idle"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_h88t1"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(0, 0, 899, 976)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_pv7gt"]
-_data = {
-"idle": SubResource("Animation_ojha8")
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7nmf"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(899, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0thu4"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(1798, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1oev"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(2697, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ordcb"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(3596, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hckcc"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(4495, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7jtq"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(5394, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvr7c"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(6293, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lf4w"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(7192, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv14x"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(8091, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crjq7"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(8990, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8or7"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(9889, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrhh5"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(10788, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2vsm"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(11687, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ftmm"]
+atlas = ExtResource("5_xh4cm")
+region = Rect2(12586, 0, 899, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13osh"]
+atlas = ExtResource("6_nv73e")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igt47"]
+atlas = ExtResource("6_nv73e")
+region = Rect2(1000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkusk"]
+atlas = ExtResource("6_nv73e")
+region = Rect2(2000, 0, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hnikt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h88t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7nmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0thu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1oev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ordcb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hckcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7jtq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvr7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lf4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv14x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crjq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8or7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrhh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2vsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ftmm")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13osh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igt47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkusk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Character" type="Area2D"]
 position = Vector2(152, 120)
@@ -56,14 +176,16 @@ texture = ExtResource("4_vxk84")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-8, -24)
+position = Vector2(-7, -28)
 scale = Vector2(0.118603, 0.118603)
-texture = ExtResource("2_frbod")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
-libraries = {
-"": SubResource("AnimationLibrary_pv7gt")
-}
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(-8.43149, 33.726)
+scale = Vector2(0.975479, 0.975479)
+sprite_frames = SubResource("SpriteFrames_hnikt")
+animation = &"idle"
+frame = 1
+frame_progress = 0.296124
 
 [node name="laser" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_i40ng")

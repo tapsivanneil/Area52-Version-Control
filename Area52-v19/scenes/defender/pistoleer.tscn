@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://buq8anlvndhfv"]
+[gd_scene load_steps=12 format=3 uid="uid://buq8anlvndhfv"]
 
 [ext_resource type="Script" path="res://scripts/defenders/pistoleer.gd" id="1_bnnmg"]
 [ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://scenes/shooting_area.tscn" id="2_ij0hb"]
@@ -6,26 +6,41 @@
 [ext_resource type="Texture2D" uid="uid://be37bd6148pwg" path="res://assets/defenders/pistol.png" id="4_lwbjj"]
 [ext_resource type="AudioStream" uid="uid://5mqml5oj7cnb" path="res://assets/GUN_SHOT.mp3" id="5_5vxuq"]
 
-[sub_resource type="Animation" id="Animation_2y6cj"]
-resource_name = "idle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4dj4"]
+atlas = ExtResource("3_s1yl4")
+region = Rect2(0, 0, 1000, 1000)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3xe0k"]
-_data = {
-"idle": SubResource("Animation_2y6cj")
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_3i7nx"]
+atlas = ExtResource("3_s1yl4")
+region = Rect2(1000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0182"]
+atlas = ExtResource("3_s1yl4")
+region = Rect2(2000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cfil"]
+atlas = ExtResource("3_s1yl4")
+region = Rect2(3000, 0, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1br0f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4dj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3i7nx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0182")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cfil")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ok3u"]
 size = Vector2(55, 53)
@@ -40,13 +55,11 @@ scale = Vector2(1.09427, 0.766947)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.112, 0.112)
-texture = ExtResource("3_s1yl4")
 hframes = 4
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
-libraries = {
-"": SubResource("AnimationLibrary_3xe0k")
-}
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_1br0f")
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -0.5)

@@ -16,9 +16,9 @@ var reload_time = 8
 var path
 
 func _ready():
-	$Sprite2D/AnimationPlayer.play("idle")
+	#$Sprite2D/AnimatedSprite2D.play("idle")
 	#path = preload("res://path.tscn")
-	
+	pass
 	#$Timer.wait_time = attack_speed
 
 #func _process(delta):

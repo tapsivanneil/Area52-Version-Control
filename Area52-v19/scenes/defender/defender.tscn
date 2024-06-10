@@ -34,7 +34,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_8n765")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -70,6 +70,7 @@ scale = Vector2(0.127, 0.127)
 position = Vector2(-7.87401, -7.87399)
 scale = Vector2(0.921681, 0.921681)
 sprite_frames = SubResource("SpriteFrames_o4j1m")
+animation = &"idle"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
