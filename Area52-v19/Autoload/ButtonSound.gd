@@ -30,7 +30,8 @@ func play_button_sound() -> void:
 
 func connect_buttons(node: Node) -> void:
 	if node is Button:
-		node.connect("pressed", Callable(self, "_on_button_pressed"))
+		if not node.is_connected("pressed", Callable(self, "_on_button_pressed")):
+			node.connect("pressed", Callable(self, "_on_button_pressed"))
 
 	for child in node.get_children():
 		if child is Node:
