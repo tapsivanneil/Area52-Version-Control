@@ -1,9 +1,10 @@
-[gd_scene load_steps=33 format=3 uid="uid://dow7fuxoqadl7"]
+[gd_scene load_steps=34 format=3 uid="uid://dow7fuxoqadl7"]
 
 [ext_resource type="Script" path="res://scripts/level_selection.gd" id="1_valy6"]
 [ext_resource type="FontFile" uid="uid://c2jev1gbnyma5" path="res://assets/AubetteArchiType Normal Regular.otf" id="2_g3xtt"]
 [ext_resource type="Texture2D" uid="uid://mbnnk3v04nn1" path="res://assets/level-select-bg.png" id="2_kmdlv"]
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="3_x6s51"]
+[ext_resource type="PackedScene" uid="uid://6mawp222ixfx" path="res://scenes/buttons/almanac.tscn" id="6_w0esu"]
 [ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="7_85u42"]
 
 [sub_resource type="GDScript" id="GDScript_ve0ai"]
@@ -364,6 +365,9 @@ text = "5"
 [node name="MenuButton" parent="." instance=ExtResource("7_85u42")]
 position = Vector2(56, 56)
 scale = Vector2(0.580969, 0.580969)
+
+[node name="AlmanacButton" parent="." instance=ExtResource("6_w0esu")]
+position = Vector2(939, 546)
 
 [connection signal="pressed" from="Control/Level1_btn" to="." method="_on_level_1_btn_pressed"]
 [connection signal="pressed" from="Control/Level2_btn" to="." method="_on_level_2_btn_pressed"]

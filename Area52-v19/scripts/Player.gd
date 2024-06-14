@@ -19,25 +19,25 @@ var moving
 func _physics_process(delta):
 	current_scene.update_timer_label_text()
 	
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("left"):
 		position.x -= SPEED * delta
 		moving = true
 		if not is_looking_left:
 			is_looking_left = true
 			$PlayerSprite.flip_h = true  # Flip horizontally
 			walk()
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("right"):
 		position.x += SPEED * delta
 		moving = true
 		if is_looking_left:
 			is_looking_left = false
 			$PlayerSprite.flip_h = false  # Reset flip
 			walk()
-	elif Input.is_action_pressed("ui_up"):
+	elif Input.is_action_pressed("up"):
 		position.y -= SPEED * delta
 		moving = true
 		walk()
-	elif Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("down"):
 		position.y += SPEED * delta
 		moving = true
 		walk()
