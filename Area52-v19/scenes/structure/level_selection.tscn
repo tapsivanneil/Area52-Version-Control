@@ -367,7 +367,7 @@ position = Vector2(56, 56)
 scale = Vector2(0.580969, 0.580969)
 
 [node name="AlmanacButton" parent="." instance=ExtResource("6_w0esu")]
-position = Vector2(939, 546)
+position = Vector2(1024, 512)
 
 [connection signal="pressed" from="Control/Level1_btn" to="." method="_on_level_1_btn_pressed"]
 [connection signal="pressed" from="Control/Level2_btn" to="." method="_on_level_2_btn_pressed"]

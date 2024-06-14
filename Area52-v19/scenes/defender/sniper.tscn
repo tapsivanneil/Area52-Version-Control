@@ -132,7 +132,8 @@ scale = Vector2(0.117, 0.117)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 sprite_frames = SubResource("SpriteFrames_k165i")
-animation = &"idle"
+animation = &"attack"
+frame_progress = 0.0230069
 
 [node name="snipe" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_i7aad")

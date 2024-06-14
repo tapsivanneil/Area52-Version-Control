@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cjoxowca2f0ah"]
+[gd_scene load_steps=28 format=3 uid="uid://cjoxowca2f0ah"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_2_scene.gd" id="1_bvjfg"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_58ntl"]
@@ -20,8 +20,28 @@
 [ext_resource type="PackedScene" uid="uid://pk0dyp5doh51" path="res://scenes/structure/defeat_panel.tscn" id="17_butgh"]
 [ext_resource type="PackedScene" uid="uid://bvls14o2bg56v" path="res://scenes/structure/pause_panel.tscn" id="18_fhcr0"]
 [ext_resource type="PackedScene" uid="uid://bavj4xfxsd4u6" path="res://scenes/structure/victory_panel.tscn" id="19_h5p5o"]
+[ext_resource type="Texture2D" uid="uid://busia4y08tl6e" path="res://assets/icons/pause-icon.png" id="21_wwi7r"]
 
 [sub_resource type="SystemFont" id="SystemFont_faswr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mh4fc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tbqed"]
+texture = ExtResource("21_wwi7r")
+modulate_color = Color(0.566298, 0.566298, 0.566298, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prmno"]
+texture = ExtResource("21_wwi7r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ko3q"]
+texture = ExtResource("21_wwi7r")
+modulate_color = Color(0.566298, 0.566298, 0.566298, 1)
+
+[sub_resource type="Theme" id="Theme_5t4f4"]
+Button/styles/focus = SubResource("StyleBoxEmpty_mh4fc")
+Button/styles/hover = SubResource("StyleBoxTexture_tbqed")
+Button/styles/normal = SubResource("StyleBoxTexture_prmno")
+Button/styles/pressed = SubResource("StyleBoxTexture_6ko3q")
 
 [node name="Level_2" type="Node2D"]
 script = ExtResource("1_bvjfg")
@@ -436,13 +456,13 @@ z_index = 2
 scale = Vector2(0.999549, 0.999549)
 
 [node name="PauseButton" type="Button" parent="."]
-offset_left = 1008.0
-offset_top = 16.0
-offset_right = 1067.0
-offset_bottom = 47.0
-text = "PAUSE"
+offset_left = 1024.0
+offset_top = 10.0
+offset_right = 1152.0
+offset_bottom = 82.0
+scale = Vector2(0.429844, 0.75577)
+theme = SubResource("Theme_5t4f4")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Character_attack_timer" to="." method="_on_character_attack_timer_timeout"]
 [connection signal="timeout" from="Hotbar_Timer" to="." method="_on_hotbar_timer_timeout"]
-[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

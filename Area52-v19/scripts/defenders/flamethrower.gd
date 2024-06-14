@@ -16,7 +16,7 @@ var reload_time = 8
 var path
 
 func _ready():
-	#$Sprite2D/AnimatedSprite2D.play("idle")
+	$Sprite2D/AnimatedSprite2D.play("idle")
 	#path = preload("res://path.tscn")
 	pass
 	#$Timer.wait_time = attack_speed
@@ -57,6 +57,7 @@ func stop_attack():
 
 func attack():
 	#$Timer.start()
+	$Sprite2D/AnimatedSprite2D.play("attack")
 	call_deferred("_do_attack")
 
 func _do_attack():

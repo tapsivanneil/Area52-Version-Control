@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://shji4q8dialv"
-path="res://.godot/imported/flamethrower-spritesheet.png-937d2cbd05484d961c96f12befe026f4.ctex"
+uid="uid://busia4y08tl6e"
+path="res://.godot/imported/pause-icon.png-c4d79c9d131fd90acb79a84598f6da05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/defenders/player sprites/flamethrower-spritesheet.png"
-dest_files=["res://.godot/imported/flamethrower-spritesheet.png-937d2cbd05484d961c96f12befe026f4.ctex"]
+source_file="res://assets/icons/pause-icon.png"
+dest_files=["res://.godot/imported/pause-icon.png-c4d79c9d131fd90acb79a84598f6da05.ctex"]
 
 [params]
 

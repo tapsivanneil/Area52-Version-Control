@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://uuuq2dmpt4dc"]
+[gd_scene load_steps=27 format=3 uid="uid://uuuq2dmpt4dc"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_1_scene.gd" id="1_cpdk8"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_r25te"]
@@ -20,6 +20,26 @@
 [ext_resource type="PackedScene" uid="uid://pk0dyp5doh51" path="res://scenes/structure/defeat_panel.tscn" id="17_p8kgv"]
 [ext_resource type="PackedScene" uid="uid://bvls14o2bg56v" path="res://scenes/structure/pause_panel.tscn" id="18_fglr0"]
 [ext_resource type="PackedScene" uid="uid://bavj4xfxsd4u6" path="res://scenes/structure/victory_panel.tscn" id="19_yequg"]
+[ext_resource type="Texture2D" uid="uid://busia4y08tl6e" path="res://assets/icons/pause-icon.png" id="21_4dykb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b77yr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rfi10"]
+texture = ExtResource("21_4dykb")
+modulate_color = Color(0.566298, 0.566298, 0.566298, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rm6kb"]
+texture = ExtResource("21_4dykb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_66iau"]
+texture = ExtResource("21_4dykb")
+modulate_color = Color(0.566298, 0.566298, 0.566298, 1)
+
+[sub_resource type="Theme" id="Theme_2vvg5"]
+Button/styles/focus = SubResource("StyleBoxEmpty_b77yr")
+Button/styles/hover = SubResource("StyleBoxTexture_rfi10")
+Button/styles/normal = SubResource("StyleBoxTexture_rm6kb")
+Button/styles/pressed = SubResource("StyleBoxTexture_66iau")
 
 [node name="Level_1" type="Node2D"]
 script = ExtResource("1_cpdk8")
@@ -362,12 +382,13 @@ anchor_left = 0.5
 anchor_top = 0.988
 anchor_right = 0.5
 anchor_bottom = 0.988
-offset_left = -108.0
-offset_top = -48.224
-offset_right = 108.0
-offset_bottom = 1.776
+offset_left = -448.0
+offset_top = -639.224
+offset_right = -232.0
+offset_bottom = -589.224
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(1.98172, 1.69236)
 size_flags_horizontal = 8
 size_flags_vertical = 10
 script = ExtResource("9_1d0or")
@@ -437,11 +458,12 @@ z_index = 2
 scale = Vector2(0.999549, 0.999549)
 
 [node name="PauseButton" type="Button" parent="."]
-offset_left = 1008.0
-offset_top = 16.0
-offset_right = 1067.0
-offset_bottom = 47.0
-text = "PAUSE"
+offset_left = 1024.0
+offset_top = 10.0
+offset_right = 1152.0
+offset_bottom = 82.0
+scale = Vector2(0.429844, 0.75577)
+theme = SubResource("Theme_2vvg5")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Character_attack_timer" to="." method="_on_character_attack_timer_timeout"]
