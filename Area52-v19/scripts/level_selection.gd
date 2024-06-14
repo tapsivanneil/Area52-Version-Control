@@ -7,8 +7,11 @@ extends Node2D
 @export var level5 = preload("res://scenes/levels/level_5.tscn")
 
 func _ready():
-	pass
-
+	for i in range(Global.opened_level):
+		var button_name = "Control/Level" + str(i+1) + "_btn"  
+		var button = get_node(button_name)
+		button.disabled = false
+	
 func _on_level_1_btn_pressed():
 	Global.player_level = 1
 	print(Global.player_level)

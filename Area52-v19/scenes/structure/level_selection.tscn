@@ -232,6 +232,7 @@ layout_mode = 0
 offset_right = 150.0
 offset_bottom = 360.0
 theme = SubResource("Theme_dpotj")
+disabled = true
 
 [node name="ColorRect" type="ColorRect" parent="Control/Level1_btn"]
 visible = false
@@ -258,6 +259,7 @@ offset_left = 184.0
 offset_right = 334.0
 offset_bottom = 360.0
 theme = SubResource("Theme_6k1na")
+disabled = true
 
 [node name="ColorRect" type="ColorRect" parent="Control/Level2_btn"]
 visible = false
@@ -284,6 +286,7 @@ offset_left = 368.0
 offset_right = 518.0
 offset_bottom = 360.0
 theme = SubResource("Theme_t0t5x")
+disabled = true
 
 [node name="ColorRect" type="ColorRect" parent="Control/Level3_btn"]
 visible = false
@@ -310,6 +313,7 @@ offset_left = 552.0
 offset_right = 702.0
 offset_bottom = 360.0
 theme = SubResource("Theme_m7c2n")
+disabled = true
 
 [node name="ColorRect" type="ColorRect" parent="Control/Level4_btn"]
 visible = false
@@ -336,6 +340,7 @@ offset_left = 736.0
 offset_right = 886.0
 offset_bottom = 360.0
 theme = SubResource("Theme_i6muf")
+disabled = true
 
 [node name="ColorRect" type="ColorRect" parent="Control/Level5_btn"]
 visible = false

@@ -82,6 +82,7 @@ func after_death_animation(enemy):
 	print(main_scene.default_num_of_spawns)		
 	if main_scene.total_kills >= main_scene.default_num_of_spawns:
 		victory_panel.visible = true
+		Global.opened_level += 1
 		
 	main_scene.enemy_on_stage.erase(enemy)
 	print(main_scene.enemy_on_stage)
