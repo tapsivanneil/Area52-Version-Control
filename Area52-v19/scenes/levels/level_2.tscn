@@ -1,8 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://cjoxowca2f0ah"]
+[gd_scene load_steps=29 format=3 uid="uid://cjoxowca2f0ah"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_2_scene.gd" id="1_bvjfg"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_58ntl"]
 [ext_resource type="PackedScene" uid="uid://5203tlw2qe7m" path="res://scenes/player.tscn" id="3_ood4h"]
+[ext_resource type="Texture2D" uid="uid://cags3h0ymnrwd" path="res://assets/level-2-bg.png" id="3_xqd2i"]
 [ext_resource type="PackedScene" uid="uid://0ylviwxcfcef" path="res://scenes/tile.tscn" id="4_gnyli"]
 [ext_resource type="PackedScene" uid="uid://by5kh4t7we0tt" path="res://scenes/attacker/swarm.tscn" id="5_e6xx7"]
 [ext_resource type="PackedScene" uid="uid://bxdqvxcd77h1f" path="res://scenes/attacker/dungbeetle.tscn" id="5_evxi6"]
@@ -11,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/Hotbar.gd" id="8_i7owq"]
 [ext_resource type="PackedScene" uid="uid://kmtcq2r071eq" path="res://scenes/slot.tscn" id="9_n4iw5"]
 [ext_resource type="PackedScene" uid="uid://boeiqbwn75xh3" path="res://scenes/defender/bomber.tscn" id="10_v2bdy"]
+[ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="11_0rnm4"]
 [ext_resource type="PackedScene" uid="uid://da11alxwr8dog" path="res://scenes/defender/defender.tscn" id="11_4e62b"]
 [ext_resource type="PackedScene" uid="uid://dlko8km15b8qe" path="res://scenes/defender/flamethrower.tscn" id="12_5yngc"]
 [ext_resource type="PackedScene" uid="uid://d0wdsr22md8yk" path="res://scenes/defender/machinegunner.tscn" id="13_5fl6a"]
@@ -21,8 +23,6 @@
 [ext_resource type="PackedScene" uid="uid://bvls14o2bg56v" path="res://scenes/structure/pause_panel.tscn" id="18_fhcr0"]
 [ext_resource type="PackedScene" uid="uid://bavj4xfxsd4u6" path="res://scenes/structure/victory_panel.tscn" id="19_h5p5o"]
 [ext_resource type="Texture2D" uid="uid://busia4y08tl6e" path="res://assets/icons/pause-icon.png" id="21_wwi7r"]
-
-[sub_resource type="SystemFont" id="SystemFont_faswr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mh4fc"]
 
@@ -56,6 +56,11 @@ offset_bottom = 1341.0
 scale = Vector2(0.518425, 0.551397)
 texture = ExtResource("2_58ntl")
 expand_mode = 2
+
+[node name="Level-2-bg" type="Sprite2D" parent="."]
+position = Vector2(542, 328)
+scale = Vector2(0.632682, 0.656)
+texture = ExtResource("3_xqd2i")
 
 [node name="Tiles" type="Node" parent="."]
 
@@ -378,21 +383,23 @@ position = Vector2(424, 616)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Hotbar" type="HBoxContainer" parent="UI"]
+[node name="Hotbar" type="VBoxContainer" parent="UI"]
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.988
 anchor_right = 0.5
 anchor_bottom = 0.988
-offset_left = -108.0
-offset_top = -48.224
-offset_right = 108.0
-offset_bottom = 1.776
+offset_left = -560.0
+offset_top = -518.224
+offset_right = -520.0
+offset_bottom = -268.224
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(2.41511, 2.32864)
 size_flags_horizontal = 8
 size_flags_vertical = 10
 script = ExtResource("8_i7owq")
+metadata/_edit_use_anchors_ = true
 
 [node name="Slot" parent="UI/Hotbar" instance=ExtResource("9_n4iw5")]
 layout_mode = 2
@@ -408,6 +415,21 @@ layout_mode = 2
 
 [node name="Slot5" parent="UI/Hotbar" instance=ExtResource("9_n4iw5")]
 layout_mode = 2
+
+[node name="Hotbar_Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="Hotbar_Timer"]
+offset_left = 112.0
+offset_top = 128.0
+offset_right = 208.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("11_0rnm4")
+theme_override_font_sizes/font_size = 45
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Defender_List" type="Node2D" parent="."]
 position = Vector2(2152, 408)
@@ -425,16 +447,6 @@ position = Vector2(2152, 408)
 [node name="railgunner" parent="Defender_List" instance=ExtResource("14_nwiab")]
 
 [node name="sniper" parent="Defender_List" instance=ExtResource("15_or0pi")]
-
-[node name="Hotbar_Timer" type="Timer" parent="."]
-
-[node name="Label" type="Label" parent="Hotbar_Timer"]
-offset_left = 328.0
-offset_top = 600.0
-offset_right = 420.0
-offset_bottom = 647.0
-theme_override_fonts/font = SubResource("SystemFont_faswr")
-text = "Placeholder"
 
 [node name="Endline" parent="." instance=ExtResource("16_u1jtv")]
 position = Vector2(96, 120)
@@ -465,4 +477,3 @@ theme = SubResource("Theme_5t4f4")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Character_attack_timer" to="." method="_on_character_attack_timer_timeout"]
-[connection signal="timeout" from="Hotbar_Timer" to="." method="_on_hotbar_timer_timeout"]

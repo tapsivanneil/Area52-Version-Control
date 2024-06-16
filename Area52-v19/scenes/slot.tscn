@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/Slot.gd" id="1_gxkx0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a40y3"]
-bg_color = Color(0.6, 0.807843, 0.6, 1)
+bg_color = Color(0.696886, 0.696886, 0.696886, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -20,6 +20,7 @@ Button/styles/normal = SubResource("StyleBoxFlat_a40y3")
 custom_minimum_size = Vector2(40, 40)
 offset_right = 64.0
 offset_bottom = 64.0
+scale = Vector2(1.3787, 1.3787)
 focus_mode = 1
 theme = SubResource("Theme_552k8")
 icon_alignment = 1

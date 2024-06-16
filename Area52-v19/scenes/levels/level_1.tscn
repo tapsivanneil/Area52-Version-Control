@@ -1,7 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://uuuq2dmpt4dc"]
+[gd_scene load_steps=28 format=3 uid="uid://uuuq2dmpt4dc"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_1_scene.gd" id="1_cpdk8"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_r25te"]
+[ext_resource type="Texture2D" uid="uid://kvwhm8jm0swg" path="res://assets/level-1-bg.png" id="3_y11go"]
 [ext_resource type="PackedScene" uid="uid://0ylviwxcfcef" path="res://scenes/tile.tscn" id="4_jc3yh"]
 [ext_resource type="PackedScene" uid="uid://5203tlw2qe7m" path="res://scenes/player.tscn" id="5_3nqkg"]
 [ext_resource type="PackedScene" uid="uid://bkdghj7xakjws" path="res://scenes/barrier.tscn" id="7_7s383"]
@@ -54,6 +55,11 @@ offset_bottom = 1341.0
 scale = Vector2(0.518425, 0.551397)
 texture = ExtResource("2_r25te")
 expand_mode = 2
+
+[node name="Level-1-bg" type="Sprite2D" parent="."]
+position = Vector2(536, 328)
+scale = Vector2(0.655521, 0.655521)
+texture = ExtResource("3_y11go")
 
 [node name="Tiles" type="Node" parent="."]
 
@@ -376,22 +382,23 @@ position = Vector2(424, 616)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Hotbar" type="HBoxContainer" parent="UI"]
+[node name="Hotbar" type="VBoxContainer" parent="UI"]
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.988
 anchor_right = 0.5
 anchor_bottom = 0.988
-offset_left = -448.0
-offset_top = -639.224
-offset_right = -232.0
-offset_bottom = -589.224
+offset_left = -560.0
+offset_top = -518.224
+offset_right = -520.0
+offset_bottom = -268.224
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(1.98172, 1.69236)
+scale = Vector2(2.41511, 2.32864)
 size_flags_horizontal = 8
 size_flags_vertical = 10
 script = ExtResource("9_1d0or")
+metadata/_edit_use_anchors_ = true
 
 [node name="Slot" parent="UI/Hotbar" instance=ExtResource("10_srdqr")]
 layout_mode = 2
@@ -407,6 +414,21 @@ layout_mode = 2
 
 [node name="Slot5" parent="UI/Hotbar" instance=ExtResource("10_srdqr")]
 layout_mode = 2
+
+[node name="Hotbar_Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="Hotbar_Timer"]
+offset_left = 118.0
+offset_top = 128.0
+offset_right = 247.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("16_t2rj0")
+theme_override_font_sizes/font_size = 42
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Defender_List" type="Node2D" parent="."]
 position = Vector2(2152, 408)
@@ -424,19 +446,6 @@ position = Vector2(2152, 408)
 [node name="railgunner" parent="Defender_List" instance=ExtResource("15_xb1xb")]
 
 [node name="sniper" parent="Defender_List" instance=ExtResource("16_ed27w")]
-
-[node name="Hotbar_Timer" type="Timer" parent="."]
-
-[node name="Label" type="Label" parent="Hotbar_Timer"]
-offset_left = 293.0
-offset_top = 592.0
-offset_right = 431.0
-offset_bottom = 639.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("16_t2rj0")
-theme_override_font_sizes/font_size = 45
-text = "0"
-horizontal_alignment = 1
 
 [node name="Endline" parent="." instance=ExtResource("16_kxbka")]
 position = Vector2(96, 120)

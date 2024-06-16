@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends VBoxContainer
  
 @onready var slots = get_children()
 signal index(i: int)

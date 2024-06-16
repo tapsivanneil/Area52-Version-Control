@@ -38,7 +38,7 @@ Label/font_sizes/font_size = 24
 Label/fonts/font = ExtResource("3_b5v3v")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_klrvg"]
-size = Vector2(120, 120)
+size = Vector2(96.4845, 98.5)
 
 [node name="Almanac" type="Node2D"]
 script = ExtResource("1_kt7kx")
@@ -68,67 +68,68 @@ theme_override_font_sizes/font_size = 24
 [node name="Attacker" type="Node" parent="."]
 
 [node name="Alieny" type="Area2D" parent="Attacker"]
-position = Vector2(72, -8)
+position = Vector2(80, -24)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attacker/Alieny"]
-position = Vector2(196, 420)
+position = Vector2(191.758, 420)
 shape = SubResource("RectangleShape2D_klrvg")
 
 [node name="Panel2" type="Panel" parent="Attacker/Alieny"]
 offset_left = 136.0
 offset_top = 360.0
-offset_right = 266.0
-offset_bottom = 490.0
+offset_right = 251.0
+offset_bottom = 475.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="Alienya1" type="Sprite2D" parent="Attacker/Alieny"]
-position = Vector2(196, 424)
-scale = Vector2(0.409589, 0.409589)
+position = Vector2(194, 418)
+scale = Vector2(0.344545, 0.344545)
 texture = ExtResource("4_inij2")
 
 [node name="Mutatedalien" type="Area2D" parent="Attacker"]
-position = Vector2(88, 16)
+position = Vector2(-48, -144)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Attacker/Mutatedalien"]
-position = Vector2(464, 544)
+position = Vector2(463.031, 542)
 shape = SubResource("RectangleShape2D_klrvg")
 
 [node name="Panel2" type="Panel" parent="Attacker/Mutatedalien"]
 offset_left = 400.0
 offset_top = 480.0
-offset_right = 530.0
-offset_bottom = 610.0
+offset_right = 515.0
+offset_bottom = 595.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
+metadata/_edit_use_anchors_ = true
 
 [node name="Mutated1" type="Sprite2D" parent="Attacker/Mutatedalien"]
-position = Vector2(466, 546)
-scale = Vector2(0.392674, 0.392674)
+position = Vector2(458, 538)
+scale = Vector2(0.345158, 0.345158)
 texture = ExtResource("5_qon7j")
 
 [node name="Crawler" type="Area2D" parent="Attacker"]
-position = Vector2(72, 0)
+position = Vector2(216, -16)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Attacker/Crawler"]
-position = Vector2(336, 416)
+position = Vector2(331.516, 415)
 shape = SubResource("RectangleShape2D_klrvg")
 
 [node name="Panel2" type="Panel" parent="Attacker/Crawler"]
 offset_left = 272.0
 offset_top = 352.0
-offset_right = 402.0
-offset_bottom = 482.0
+offset_right = 387.0
+offset_bottom = 467.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="Crawler1" type="Sprite2D" parent="Attacker/Crawler"]
-position = Vector2(338, 418)
-scale = Vector2(0.391207, 0.391207)
+position = Vector2(330, 410)
+scale = Vector2(0.346363, 0.346363)
 texture = ExtResource("6_780ew")
 
 [node name="Dungbeetle" type="Area2D" parent="Attacker"]
-position = Vector2(88, 0)
+position = Vector2(224, -16)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Attacker/Dungbeetle"]
 position = Vector2(466, 416)
@@ -137,18 +138,18 @@ shape = SubResource("RectangleShape2D_klrvg")
 [node name="Panel2" type="Panel" parent="Attacker/Dungbeetle"]
 offset_left = 400.0
 offset_top = 352.0
-offset_right = 530.0
-offset_bottom = 482.0
+offset_right = 515.0
+offset_bottom = 467.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="Beetle1" type="Sprite2D" parent="Attacker/Dungbeetle"]
-position = Vector2(456, 416)
-scale = Vector2(0.404443, 0.404443)
+position = Vector2(458, 410)
+scale = Vector2(0.349194, 0.349201)
 texture = ExtResource("7_iq2kw")
 
 [node name="Grimer" type="Area2D" parent="Attacker"]
-position = Vector2(72, 16)
+position = Vector2(80, -16)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Attacker/Grimer"]
 position = Vector2(200, 544)
@@ -157,18 +158,18 @@ shape = SubResource("RectangleShape2D_klrvg")
 [node name="Panel2" type="Panel" parent="Attacker/Grimer"]
 offset_left = 136.0
 offset_top = 480.0
-offset_right = 266.0
-offset_bottom = 610.0
+offset_right = 251.0
+offset_bottom = 595.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="Grimer1" type="Sprite2D" parent="Attacker/Grimer"]
-position = Vector2(205, 545)
-scale = Vector2(0.395904, 0.395904)
+position = Vector2(194, 537)
+scale = Vector2(0.352826, 0.352826)
 texture = ExtResource("8_m4vwa")
 
 [node name="Swarm" type="Area2D" parent="Attacker"]
-position = Vector2(72, 16)
+position = Vector2(80, -16)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Attacker/Swarm"]
 position = Vector2(336, 544)
@@ -177,156 +178,156 @@ shape = SubResource("RectangleShape2D_klrvg")
 [node name="Panel2" type="Panel" parent="Attacker/Swarm"]
 offset_left = 272.0
 offset_top = 480.0
-offset_right = 402.0
-offset_bottom = 610.0
+offset_right = 387.0
+offset_bottom = 595.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="Swarm1" type="Sprite2D" parent="Attacker/Swarm"]
-position = Vector2(336, 544)
-scale = Vector2(0.408481, 0.408481)
+position = Vector2(330, 538)
+scale = Vector2(0.343852, 0.343852)
 texture = ExtResource("9_x0thp")
 
 [node name="Defender" type="Node" parent="."]
 
 [node name="Bomber" type="Area2D" parent="Defender"]
-position = Vector2(72, -288)
+position = Vector2(80, -280)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Defender/Bomber"]
-position = Vector2(200, 416)
+position = Vector2(196, 409.5)
 shape = SubResource("RectangleShape2D_klrvg")
 
 [node name="Panel2" type="Panel" parent="Defender/Bomber"]
 offset_left = 136.0
 offset_top = 352.0
-offset_right = 266.0
-offset_bottom = 482.0
+offset_right = 251.0
+offset_bottom = 467.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="Bomber" type="Sprite2D" parent="Defender/Bomber"]
-position = Vector2(200, 416)
-scale = Vector2(0.390437, 0.390437)
+position = Vector2(195, 411)
+scale = Vector2(0.341256, 0.341256)
 texture = ExtResource("10_41cx0")
 
 [node name="Defender" type="Area2D" parent="Defender"]
-position = Vector2(224, -416)
+position = Vector2(-48, -408)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Defender/Defender"]
-position = Vector2(464, 544)
+position = Vector2(460, 540)
 shape = SubResource("RectangleShape2D_klrvg")
 
 [node name="Panel2" type="Panel" parent="Defender/Defender"]
 offset_left = 400.0
 offset_top = 480.0
-offset_right = 530.0
-offset_bottom = 610.0
+offset_right = 515.0
+offset_bottom = 595.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="Defender2" type="Sprite2D" parent="Defender/Defender"]
-position = Vector2(464, 544)
-scale = Vector2(0.387322, 0.387322)
+position = Vector2(458, 538)
+scale = Vector2(0.346117, 0.346117)
 texture = ExtResource("11_bpqqf")
 
 [node name="Flamethrower" type="Area2D" parent="Defender"]
-position = Vector2(72, -288)
+position = Vector2(216, -280)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Defender/Flamethrower"]
-position = Vector2(336, 416)
+position = Vector2(332, 412)
 shape = SubResource("RectangleShape2D_klrvg")
 
 [node name="Panel2" type="Panel" parent="Defender/Flamethrower"]
 offset_left = 272.0
 offset_top = 352.0
-offset_right = 402.0
-offset_bottom = 482.0
+offset_right = 387.0
+offset_bottom = 467.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="Flamethrower" type="Sprite2D" parent="Defender/Flamethrower"]
-position = Vector2(336, 416)
-scale = Vector2(0.399483, 0.399483)
+position = Vector2(329, 410)
+scale = Vector2(0.349264, 0.349264)
 texture = ExtResource("12_rc52d")
 
 [node name="Machinegunner" type="Area2D" parent="Defender"]
-position = Vector2(72, -288)
+position = Vector2(208, -280)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Defender/Machinegunner"]
-position = Vector2(476.25, 416)
+position = Vector2(476.125, 412)
 shape = SubResource("RectangleShape2D_klrvg")
 
 [node name="Panel2" type="Panel" parent="Defender/Machinegunner"]
 offset_left = 416.0
 offset_top = 352.0
-offset_right = 546.0
-offset_bottom = 482.0
+offset_right = 531.0
+offset_bottom = 467.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="MachineGunner" type="Sprite2D" parent="Defender/Machinegunner"]
-position = Vector2(479, 416)
-scale = Vector2(0.410273, 0.410273)
+position = Vector2(474, 410)
+scale = Vector2(0.344464, 0.344464)
 texture = ExtResource("13_knhca")
 
 [node name="Pistoleer" type="Area2D" parent="Defender"]
-position = Vector2(72, -288)
+position = Vector2(80, -296)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Defender/Pistoleer"]
-position = Vector2(196, 564)
+position = Vector2(196, 558.75)
 shape = SubResource("RectangleShape2D_klrvg")
 
 [node name="Panel2" type="Panel" parent="Defender/Pistoleer"]
 offset_left = 136.0
 offset_top = 496.0
-offset_right = 266.0
-offset_bottom = 626.0
+offset_right = 251.0
+offset_bottom = 611.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="Pistoleer2" type="Sprite2D" parent="Defender/Pistoleer"]
-position = Vector2(201, 562)
-scale = Vector2(0.395557, 0.395557)
+position = Vector2(194, 553)
+scale = Vector2(0.348967, 0.348967)
 texture = ExtResource("14_row24")
 
 [node name="Railgunner" type="Area2D" parent="Defender"]
-position = Vector2(72, -272)
+position = Vector2(80, -280)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Defender/Railgunner"]
-position = Vector2(336, 544)
+position = Vector2(329.938, 544)
 shape = SubResource("RectangleShape2D_klrvg")
 
 [node name="Panel2" type="Panel" parent="Defender/Railgunner"]
 offset_left = 272.0
 offset_top = 480.0
-offset_right = 402.0
-offset_bottom = 610.0
+offset_right = 387.0
+offset_bottom = 595.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="RailGunner" type="Sprite2D" parent="Defender/Railgunner"]
-position = Vector2(336, 544)
-scale = Vector2(0.404696, 0.404696)
+position = Vector2(330, 538)
+scale = Vector2(0.345191, 0.345191)
 texture = ExtResource("15_bynsv")
 
 [node name="Sniper" type="Area2D" parent="Defender"]
-position = Vector2(216, -272)
+position = Vector2(216, -280)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Defender/Sniper"]
-position = Vector2(336, 544)
+position = Vector2(334, 544)
 shape = SubResource("RectangleShape2D_klrvg")
 
 [node name="Panel2" type="Panel" parent="Defender/Sniper"]
 offset_left = 272.0
 offset_top = 480.0
-offset_right = 402.0
-offset_bottom = 610.0
+offset_right = 387.0
+offset_bottom = 595.0
 mouse_filter = 2
 theme = SubResource("Theme_237wk")
 
 [node name="Sniper" type="Sprite2D" parent="Defender/Sniper"]
-position = Vector2(336, 544)
-scale = Vector2(0.403127, 0.403127)
+position = Vector2(329, 537)
+scale = Vector2(0.353318, 0.353318)
 texture = ExtResource("16_8u13l")
 
 [node name="MenuButton" parent="." instance=ExtResource("17_upysu")]

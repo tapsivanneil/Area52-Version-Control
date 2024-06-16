@@ -1,19 +1,19 @@
 [gd_scene load_steps=8 format=3 uid="uid://6mawp222ixfx"]
 
 [ext_resource type="Script" path="res://scripts/BackButton.gd" id="1_le7bc"]
-[ext_resource type="Texture2D" uid="uid://bqtm3riccy1h0" path="res://assets/icons/almanac-icon.png" id="2_8ai4v"]
+[ext_resource type="Texture2D" uid="uid://dr2hplnf2lplo" path="res://assets/icons/almanac-icon..png" id="3_imxds"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tqtjv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rv5xx"]
-texture = ExtResource("2_8ai4v")
+texture = ExtResource("3_imxds")
 modulate_color = Color(0.769432, 0.769432, 0.769432, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn4vl"]
-texture = ExtResource("2_8ai4v")
+texture = ExtResource("3_imxds")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eihgx"]
-texture = ExtResource("2_8ai4v")
+texture = ExtResource("3_imxds")
 modulate_color = Color(0.631035, 0.631035, 0.631035, 1)
 
 [sub_resource type="Theme" id="Theme_umrlg"]
