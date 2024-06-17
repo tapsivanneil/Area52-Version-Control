@@ -52,6 +52,7 @@ func die():
 	queue_free()
 
 func stop_attack():
+	$Sprite2D/AnimatedSprite2D.play("idle")
 	$Timer.stop()
 
 func attack():

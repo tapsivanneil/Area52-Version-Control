@@ -141,6 +141,7 @@ texture = ExtResource("4_krxg2")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Bomber" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-8, 2.38419e-07)
 scale = Vector2(0.111541, 0.111541)
 texture = ExtResource("4_jfqin")
@@ -153,7 +154,7 @@ vframes = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 position = Vector2(116.072, -26.7857)
-scale = Vector2(0.927309, 0.927309)
+scale = Vector2(0.852702, 0.852702)
 sprite_frames = SubResource("SpriteFrames_7w2yv")
 animation = &"attack"
 

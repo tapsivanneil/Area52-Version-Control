@@ -15,9 +15,8 @@ var reload_time = 7
 var path
 
 func _ready():
-	$Sprite2D/AnimatedSprite2D.play("idle")
 	#path = preload("res://path.tscn")
-	
+	$Sprite2D/AnimatedSprite2D.play("idle")
 	$Timer.wait_time = attack_speed
 	
 #func _process(delta):
@@ -52,10 +51,12 @@ func die():
 	queue_free()
 
 func stop_attack():
+	$Sprite2D/AnimatedSprite2D.play("idle")
 	$Timer.stop()
 
 func attack():
 	#$Timer.start()
+	$Sprite2D/AnimatedSprite2D.play("attack")
 	call_deferred("_do_attack")
 
 func _do_attack():
