@@ -11,4 +11,4 @@ func _ready():
 	#pass
 	
 func _on_alamanac_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/structure/level_selection.tscn")
+	get_tree().change_scene_to_file("res://scenes/structure/almanac.tscn")

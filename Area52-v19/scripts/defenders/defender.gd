@@ -7,7 +7,7 @@ var attacking
 var bullet_scene = PackedScene
 var attack_speed = 0
 var damage = 0
-var reload_time = 5
+var reload_time = 10
 
 @onready var main_scene = get_node('/root/Level_'+str(Global.player_level))
 

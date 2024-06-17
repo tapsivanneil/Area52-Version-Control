@@ -29,6 +29,7 @@ Button/styles/normal = SubResource("StyleBoxTexture_r3ijl")
 Button/styles/pressed = SubResource("StyleBoxTexture_xy0ei")
 
 [node name="PausePanel" type="Node2D"]
+z_index = 4
 script = ExtResource("1_ncird")
 
 [node name="ColorRect" type="ColorRect" parent="."]

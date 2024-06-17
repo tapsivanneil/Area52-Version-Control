@@ -14,7 +14,7 @@ var self_reference
 @onready var bullet = preload("res://scenes/bullet.tscn")
 @onready var victory_panel = get_node('/root/Level_'+str(Global.player_level)+'/Panels/VictoryPanel')
 @onready var animated_sprite = $AnimatedSprite
-
+@onready var hot_bar = get_node("/root/Level_"+str(Global.player_level)+"/UI/Hotbar")
 @onready var main_scene = get_node("/root/Level_"+str(Global.player_level))
 @onready var slime = $slime
 
@@ -77,7 +77,7 @@ func after_death_animation(enemy):
 	if main_scene.total_kills >= main_scene.default_num_of_spawns:
 		victory_panel.visible = true
 		Global.opened_level += 1
-		
+		hot_bar.visible = false
 	main_scene.enemy_on_stage.erase(enemy)
 	print(main_scene.enemy_on_stage)
 	queue_free()

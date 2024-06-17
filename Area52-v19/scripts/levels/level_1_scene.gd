@@ -124,7 +124,6 @@ func _on_hotbar_timer_timeout():
 	player.can_deploy = true
 	time.stop()
 
-
 func update_timer_label_text():
 	if time.time_left > 0:
 		timer_label.text = str(ceil(time.time_left))
@@ -133,3 +132,16 @@ func update_timer_label_text():
 	
 func _on_pause_button_pressed():
 	$Panels/PausePanel.visible = true
+
+	time.paused = true
+	$Character_attack_timer.stop()
+	$UI/Hotbar.visible = false
+	$PauseButton.visible = false
+	
+	for j in range(1, 45):
+		tile[j].stop_attack()
+
+	for enemy_check in enemy_on_stage:
+		var stop_enemy = get_node("Enemies/Enemy" + str(enemy_check))
+		stop_enemy.speed = 0
+
