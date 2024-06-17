@@ -1,16 +1,17 @@
-[gd_scene load_steps=15 format=3 uid="uid://bxdqvxcd77h1f"]
+[gd_scene load_steps=16 format=3 uid="uid://bxdqvxcd77h1f"]
 
 [ext_resource type="Script" path="res://scripts/attackers/dungbeetle.gd" id="1_rusju"]
 [ext_resource type="Texture2D" uid="uid://cegeicer568v2" path="res://assets/attacker/DUNG BEETLE/WALKING/BEETLE1.png" id="2_lj645"]
 [ext_resource type="Texture2D" uid="uid://bw30mtrww2k4u" path="res://assets/attacker/DUNG BEETLE/ATTACK/BEETLEA1.png" id="2_ofqiu"]
 [ext_resource type="Texture2D" uid="uid://ccxdmq5mdh5dm" path="res://assets/attacker/DUNG BEETLE/ATTACK/BEETLEA2.png" id="3_7g4yy"]
-[ext_resource type="Texture2D" uid="uid://c2fdgpmogdluc" path="res://assets/attacker/DUNG BEETLE/WALKING/BEETLE2.png" id="3_th5u2"]
+[ext_resource type="Texture2D" uid="uid://b6721gus0npbg" path="res://assets/attacker/DUNG BEETLE/WALKING/BEETLE2.png" id="3_th5u2"]
 [ext_resource type="Texture2D" uid="uid://domxdvjdjq6f" path="res://assets/attacker/DUNG BEETLE/ATTACK/BEETLEA3.png" id="4_dykl3"]
 [ext_resource type="Texture2D" uid="uid://yvu7llb8c7d" path="res://assets/attacker/DUNG BEETLE/ATTACK/BEETLEA4.png" id="5_q3qa0"]
 [ext_resource type="Texture2D" uid="uid://csmxb7u3jaix0" path="res://assets/attacker/DUNG BEETLE/DEAD/BEETLED1.png" id="6_pd3l4"]
 [ext_resource type="Texture2D" uid="uid://dr2ib22yiujio" path="res://assets/attacker/DUNG BEETLE/DEAD/BEETLED2.png" id="7_k2iky"]
 [ext_resource type="Texture2D" uid="uid://dxckju73ty0jw" path="res://assets/attacker/DUNG BEETLE/DEAD/BEETLED3.png" id="8_i0fpe"]
 [ext_resource type="Texture2D" uid="uid://dlqdrdhgpm63b" path="res://assets/attacker/DUNG BEETLE/DEAD/BEETLED4.png" id="9_geuvt"]
+[ext_resource type="Texture2D" uid="uid://c2fdgpmogdluc" path="res://assets/attacker/DUNG BEETLE/WALKING/BEETLE3.png" id="12_i0jpy"]
 [ext_resource type="AudioStream" uid="uid://i56k1gxb0g0e" path="res://assets/space-insect-99970.mp3" id="12_p6noi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
@@ -55,6 +56,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_th5u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_i0jpy")
 }],
 "loop": true,
 "name": &"Walk",
@@ -72,6 +76,7 @@ position = Vector2(16, -8)
 scale = Vector2(0.048, 0.048)
 sprite_frames = SubResource("SpriteFrames_8ngby")
 animation = &"Death"
+frame_progress = 0.862761
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8sk7w")

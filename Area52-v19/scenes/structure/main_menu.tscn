@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://eojwbq3qsse3"]
+[gd_scene load_steps=15 format=3 uid="uid://eojwbq3qsse3"]
 
 [ext_resource type="Script" path="res://scripts/MainMenuButtons.gd" id="1_7asiy"]
 [ext_resource type="Texture2D" uid="uid://c3vwqb1mh8ie8" path="res://assets/bg.png" id="1_exvin"]
@@ -6,6 +6,34 @@
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="4_gpi84"]
 [ext_resource type="Texture2D" uid="uid://xky23jdgdxyg" path="res://assets/icons/quit-icon.png" id="5_r2yqq"]
 [ext_resource type="Texture2D" uid="uid://cp8jvltrsksvi" path="res://assets/icons/option-icon.png" id="5_wehtm"]
+[ext_resource type="Texture2D" uid="uid://c0cfqp6yq2jt8" path="res://assets/main-menu-animation/M1.png" id="7_dup78"]
+[ext_resource type="Texture2D" uid="uid://cwwiw4hpnc5no" path="res://assets/main-menu-animation/M2.png" id="8_r5jvs"]
+[ext_resource type="Texture2D" uid="uid://bhki4uoyi7nfa" path="res://assets/main-menu-animation/M3.png" id="9_23c2a"]
+[ext_resource type="Texture2D" uid="uid://flk2275hrwyx" path="res://assets/main-menu-animation/M4.png" id="10_tka2r"]
+[ext_resource type="Texture2D" uid="uid://cxosmfl86emge" path="res://assets/main-menu-animation/M5.png" id="11_t00b3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_625mv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_dup78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r5jvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_23c2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tka2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_t00b3")
+}],
+"loop": true,
+"name": &"animation",
+"speed": 6.0
+}]
 
 [sub_resource type="FontVariation" id="FontVariation_lkqvs"]
 
@@ -35,6 +63,16 @@ offset_right = 3556.0
 offset_bottom = 1778.0
 scale = Vector2(0.324265, 0.364606)
 texture = ExtResource("1_exvin")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 321)
+scale = Vector2(0.324, 0.365)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_625mv")
+animation = &"animation"
+frame = 4
 
 [node name="MainMenuButtons" type="HBoxContainer" parent="."]
 visible = false

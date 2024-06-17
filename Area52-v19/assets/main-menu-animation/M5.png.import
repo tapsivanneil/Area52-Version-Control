@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6721gus0npbg"
-path="res://.godot/imported/BEETLE2.png-99b6b1983b066410c1acd94e381c61ce.ctex"
+uid="uid://cxosmfl86emge"
+path="res://.godot/imported/M5.png-124fdf16f59abc1438ff190ce36db86a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/attacker/DUNG BEETLE/WALKING/BEETLE2.png"
-dest_files=["res://.godot/imported/BEETLE2.png-99b6b1983b066410c1acd94e381c61ce.ctex"]
+source_file="res://assets/main-menu-animation/M5.png"
+dest_files=["res://.godot/imported/M5.png-124fdf16f59abc1438ff190ce36db86a.ctex"]
 
 [params]
 
