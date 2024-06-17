@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cyx73ty5be522"]
+[gd_scene load_steps=25 format=3 uid="uid://cyx73ty5be522"]
 
 [ext_resource type="Script" path="res://scripts/almanac.gd" id="1_kt7kx"]
 [ext_resource type="FontFile" uid="uid://cwc64a8usnhu3" path="res://assets/fonts/LeagueSpartan-Regular.ttf" id="2_4rbxp"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://brqrauuj24g13" path="res://assets/almanac-assets/railgunner.png" id="15_bynsv"]
 [ext_resource type="Texture2D" uid="uid://bti37vgrov4m0" path="res://assets/almanac-assets/sniper.png" id="16_8u13l"]
 [ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="17_upysu"]
+[ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="19_e330h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vgajj"]
 bg_color = Color(0.0313726, 0.364706, 0.211765, 1)
@@ -333,6 +334,18 @@ texture = ExtResource("16_8u13l")
 [node name="MenuButton" parent="." instance=ExtResource("17_upysu")]
 position = Vector2(64, 64)
 scale = Vector2(0.495171, 0.492952)
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 617.0
+offset_right = 448.0
+offset_bottom = 691.0
+rotation = -1.5708
+theme_override_fonts/font = ExtResource("19_e330h")
+theme_override_font_sizes/font_size = 72
+text = "ALMANAC"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="mouse_entered" from="Attacker/Alieny" to="." method="_on_alieny_mouse_entered"]
 [connection signal="mouse_entered" from="Attacker/Mutatedalien" to="." method="_on_mutatedalien_mouse_entered"]

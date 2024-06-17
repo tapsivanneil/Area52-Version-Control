@@ -415,21 +415,6 @@ layout_mode = 2
 [node name="Slot5" parent="UI/Hotbar" instance=ExtResource("10_srdqr")]
 layout_mode = 2
 
-[node name="Hotbar_Timer" type="Timer" parent="."]
-
-[node name="Label" type="Label" parent="Hotbar_Timer"]
-offset_left = 118.0
-offset_top = 128.0
-offset_right = 247.0
-offset_bottom = 616.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("16_t2rj0")
-theme_override_font_sizes/font_size = 42
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
 [node name="Defender_List" type="Node2D" parent="."]
 position = Vector2(2152, 408)
 
@@ -449,6 +434,21 @@ position = Vector2(2152, 408)
 
 [node name="Endline" parent="." instance=ExtResource("16_kxbka")]
 position = Vector2(96, 120)
+
+[node name="Hotbar_Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="Hotbar_Timer"]
+offset_left = 118.0
+offset_top = 128.0
+offset_right = 247.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("16_t2rj0")
+theme_override_font_sizes/font_size = 42
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Panels" type="Node" parent="."]
 
@@ -476,5 +476,4 @@ theme = SubResource("Theme_2vvg5")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Character_attack_timer" to="." method="_on_character_attack_timer_timeout"]
-[connection signal="timeout" from="Hotbar_Timer" to="." method="_on_hotbar_timer_timeout"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

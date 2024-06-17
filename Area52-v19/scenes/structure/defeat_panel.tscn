@@ -356,13 +356,12 @@ text = "DEFEAT"
 horizontal_alignment = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
+texture_filter = 5
 position = Vector2(568, 296)
 scale = Vector2(2.21122, 2.21122)
 sprite_frames = SubResource("SpriteFrames_pwivf")
 animation = &"defeat"
-frame = 11
-frame_progress = 0.855509
+frame_progress = 0.547851
 
 [connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="ReplayButton" to="." method="_on_replay_button_pressed"]
