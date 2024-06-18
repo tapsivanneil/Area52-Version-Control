@@ -23,7 +23,7 @@ func _ready() -> void:
 	get_tree().connect("node_added", Callable(self, "_on_node_added"))
 
 func play_button_sound() -> void:
-	print("play")
+	#print("play")
 	if sfx_player.is_playing():
 		sfx_player.stop()  # Stop the player if it's currently playing the sound
 	sfx_player.play()

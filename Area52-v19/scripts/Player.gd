@@ -47,13 +47,13 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("drop"):
 		#print(can_deploy)
 		if can_deploy == true:		
-			can_deploy = false
 			if current_tile_position != null:
 				current_tile_position.occupied = true
 				scene_instance = character_scene.instantiate()  # Create a new instance each time "drop" is pressed
 				current_tile_position.add_child(scene_instance)  # Add as child of the main scene
 				scene_instance.global_position = current_tile_position.global_position   # Replace x and y with desired coordinates
 				Hotbar_Timer.start()
+				can_deploy = false
 		else:
 			print('reloading')
 
