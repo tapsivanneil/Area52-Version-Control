@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cngnn8lg2e5fs"
-path="res://.godot/imported/bomber-spritesheet.png-33848954b9e7812098409d512f3dd02a.ctex"
+uid="uid://rj3w4qvwywjj"
+path="res://.godot/imported/bomber-idle.png-99fe0dd33c1682e18b2a5986b8cd086e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/defenders/player sprites/bomber-spritesheet.png"
-dest_files=["res://.godot/imported/bomber-spritesheet.png-33848954b9e7812098409d512f3dd02a.ctex"]
+source_file="res://assets/defenders/player sprites/bomber-idle.png"
+dest_files=["res://.godot/imported/bomber-idle.png-99fe0dd33c1682e18b2a5986b8cd086e.ctex"]
 
 [params]
 

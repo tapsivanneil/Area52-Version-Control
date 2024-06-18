@@ -16,7 +16,7 @@ var self_reference
 @onready var animated_sprite = $AnimatedSprite
 @onready var hot_bar = get_node("/root/Level_"+str(Global.player_level)+"/UI/Hotbar")
 @onready var main_scene = get_node("/root/Level_"+str(Global.player_level))
-@onready var crawl = $crawl
+@onready var crawl = $AnimatedSprite
 
 func _ready():
 	$animation_delay.wait_time = 0.8
@@ -29,7 +29,7 @@ func _process(delta):
 	
 func attack():
 	$Timer.start()
-	crawl.play()
+	crawl.play("Attack")
 
 
 func _on_timer_timeout():

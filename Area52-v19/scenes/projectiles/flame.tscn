@@ -15,8 +15,8 @@ shape = SubResource("CircleShape2D_vvf8y")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Flame" type="Sprite2D" parent="."]
-position = Vector2(-24, 0)
-scale = Vector2(0.062, 0.062)
+position = Vector2(-31, 2)
+scale = Vector2(0.063, 0.063)
 texture = ExtResource("2_rsa6f")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

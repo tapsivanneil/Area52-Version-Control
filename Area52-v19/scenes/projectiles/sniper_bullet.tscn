@@ -9,9 +9,9 @@
 script = ExtResource("1_sbkn0")
 
 [node name="Bullet" type="Sprite2D" parent="."]
-position = Vector2(-8, 0)
+position = Vector2(-16, -5.96047e-08)
 rotation = 0.0207836
-scale = Vector2(0.0235348, 0.0235348)
+scale = Vector2(0.03, 0.03)
 texture = ExtResource("2_ygrw0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

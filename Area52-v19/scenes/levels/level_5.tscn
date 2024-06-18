@@ -500,3 +500,4 @@ scale = Vector2(1.5, 1.5)
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Character_attack_timer" to="." method="_on_character_attack_timer_timeout"]
 [connection signal="timeout" from="Hotbar_Timer" to="." method="_on_hotbar_timer_timeout"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

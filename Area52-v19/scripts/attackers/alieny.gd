@@ -16,7 +16,7 @@ var self_reference
 @onready var animated_sprite = $AnimatedSprite
 
 @onready var main_scene = get_node("/root/Level_"+str(Global.player_level))
-@onready var alien = $alien
+@onready var alien = $AnimatedSprite
 
 
 @onready var hot_bar = get_node("/root/Level_"+str(Global.player_level)+"/UI/Hotbar")
@@ -32,7 +32,7 @@ func _process(delta):
 	
 func attack():
 	$Timer.start()
-	alien.play()
+	alien.play("Attack")
 
 
 func _on_timer_timeout():

@@ -16,7 +16,7 @@ var self_reference
 @onready var animated_sprite = $AnimatedSprite
 @onready var hot_bar = get_node("/root/Level_"+str(Global.player_level)+"/UI/Hotbar")
 @onready var main_scene = get_node("/root/Level_"+str(Global.player_level))
-@onready var beetle = $beetle
+@onready var beetle = $AnimatedSprite
 func _ready():
 	$animation_delay.wait_time = 0.8
 	$Timer.wait_time = attack_speed
@@ -30,7 +30,7 @@ func _process(delta):
 	
 func attack():
 	$Timer.start()
-	beetle.play()
+	beetle.play("Attack")
 	
 
 	

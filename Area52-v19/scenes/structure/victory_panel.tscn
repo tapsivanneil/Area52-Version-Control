@@ -1,8 +1,9 @@
-[gd_scene load_steps=66 format=3 uid="uid://bavj4xfxsd4u6"]
+[gd_scene load_steps=67 format=3 uid="uid://bavj4xfxsd4u6"]
 
 [ext_resource type="Script" path="res://scripts/panels/vicotry_panel.gd" id="1_8t02s"]
 [ext_resource type="Theme" uid="uid://ctgluvw3nd0i1" path="res://scenes/structure/victory_panel_preset.tres" id="2_xguwc"]
 [ext_resource type="Texture2D" uid="uid://bmnx3xtjaggcy" path="res://assets/icons/home-icon.png" id="3_vcemm"]
+[ext_resource type="Texture2D" uid="uid://cdrk0fqpluary" path="res://assets/icons/next-icon.png" id="4_7f5hy"]
 [ext_resource type="Texture2D" uid="uid://dnlakiqrg7iu3" path="res://assets/icons/replay-icon.png" id="4_r0bcr"]
 [ext_resource type="Texture2D" uid="uid://dc8lg4w0kegn2" path="res://assets/icons/level-select-icon.png" id="5_yijhm"]
 [ext_resource type="Texture2D" uid="uid://cmo4b2xr4t4w3" path="res://assets/victory-sprite.png" id="6_cvy5d"]
@@ -452,10 +453,10 @@ offset_bottom = 205.0
 scale = Vector2(0.782951, 0.782951)
 theme = ExtResource("2_xguwc")
 
-[node name="Home-icon" type="Sprite2D" parent="NextLevelButton"]
-position = Vector2(67, 65)
+[node name="Next-icon" type="Sprite2D" parent="NextLevelButton"]
+position = Vector2(71.5229, 67.6926)
 scale = Vector2(0.21, 0.21)
-texture = ExtResource("3_vcemm")
+texture = ExtResource("4_7f5hy")
 
 [node name="ReplayButton" type="Button" parent="."]
 offset_left = 980.0

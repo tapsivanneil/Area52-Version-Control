@@ -151,16 +151,17 @@ animations = [{
 }]
 
 [node name="Character" type="Area2D"]
-position = Vector2(152, 120)
+position = Vector2(8, 16)
 script = ExtResource("1_mrdkk")
 
 [node name="RailGunner" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-8, -24)
 scale = Vector2(0.118603, 0.118603)
 texture = ExtResource("2_frbod")
 
 [node name="Shooting_area" parent="." instance=ExtResource("2_qpbwq")]
-position = Vector2(40, 0)
+position = Vector2(32, 8)
 scale = Vector2(1.09427, 0.766947)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -181,11 +182,9 @@ scale = Vector2(0.118603, 0.118603)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 position = Vector2(-8.43149, 33.726)
-scale = Vector2(0.975479, 0.975479)
+scale = Vector2(0.999457, 0.999457)
 sprite_frames = SubResource("SpriteFrames_hnikt")
-animation = &"idle"
-frame = 1
-frame_progress = 0.296124
+animation = &"attack"
 
 [node name="laser" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_i40ng")

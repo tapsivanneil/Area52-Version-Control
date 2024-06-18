@@ -15,8 +15,8 @@ shape = SubResource("CircleShape2D_vvf8y")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Pistol-bullet" type="Sprite2D" parent="."]
-position = Vector2(-24, 2)
-scale = Vector2(0.065, 0.065)
+position = Vector2(-24, -7.10543e-15)
+scale = Vector2(0.063, 0.063)
 texture = ExtResource("2_r2rw2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

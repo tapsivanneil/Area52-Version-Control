@@ -122,11 +122,10 @@ animations = [{
 size = Vector2(55, 53)
 
 [node name="Character" type="Area2D"]
-position = Vector2(208, 200)
 script = ExtResource("1_bnnmg")
 
 [node name="Shooting_area" parent="." instance=ExtResource("2_ij0hb")]
-position = Vector2(42, -8)
+position = Vector2(48, -12)
 scale = Vector2(1.09427, 0.766947)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -134,10 +133,10 @@ scale = Vector2(0.112, 0.112)
 hframes = 4
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+scale = Vector2(1.21438, 1.21438)
 sprite_frames = SubResource("SpriteFrames_1br0f")
 animation = &"attack"
-frame = 7
-frame_progress = 0.052354
+frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -0.5)

@@ -75,8 +75,9 @@ script = ExtResource("1_rusju")
 position = Vector2(16, -8)
 scale = Vector2(0.048, 0.048)
 sprite_frames = SubResource("SpriteFrames_8ngby")
-animation = &"Death"
-frame_progress = 0.862761
+animation = &"Walk"
+frame = 1
+frame_progress = 0.412012
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8sk7w")

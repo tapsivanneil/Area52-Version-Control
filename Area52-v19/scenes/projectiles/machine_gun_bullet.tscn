@@ -15,23 +15,23 @@ shape = SubResource("CircleShape2D_vvf8y")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Machine-gun-bullet" type="Sprite2D" parent="."]
-position = Vector2(-17, 1)
-scale = Vector2(0.054, 0.054)
+position = Vector2(-24, 0)
+scale = Vector2(0.046, 0.046)
 texture = ExtResource("2_s3ia7")
 
 [node name="Machine-gun-bullet2" type="Sprite2D" parent="."]
-position = Vector2(-48, -7)
-scale = Vector2(0.054, 0.054)
+position = Vector2(-56, -13)
+scale = Vector2(0.046, 0.046)
 texture = ExtResource("2_s3ia7")
 
 [node name="Machine-gun-bullet3" type="Sprite2D" parent="."]
-position = Vector2(-49, 9)
-scale = Vector2(0.054, 0.054)
+position = Vector2(-56, 13)
+scale = Vector2(0.046, 0.046)
 texture = ExtResource("2_s3ia7")
 
 [node name="Machine-gun-bullet4" type="Sprite2D" parent="."]
-position = Vector2(-81, 1)
-scale = Vector2(0.054, 0.054)
+position = Vector2(-80, 0)
+scale = Vector2(0.046, 0.046)
 texture = ExtResource("2_s3ia7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
