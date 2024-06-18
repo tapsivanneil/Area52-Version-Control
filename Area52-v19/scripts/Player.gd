@@ -45,7 +45,7 @@ func _physics_process(delta):
 		$PlayerSprite/AnimationPlayer.play("idle")
 	
 	if Input.is_action_just_pressed("drop"):
-		print(can_deploy)
+		#print(can_deploy)
 		if can_deploy == true:		
 			can_deploy = false
 			if current_tile_position != null:
@@ -69,7 +69,7 @@ func _physics_process(delta):
 # to get the chosen character to be dropped
 func setDefender(defender):
 	character_scene = defender
-	print(defender)	
+	#print(defender)	
 	#var scene_instance = character_scene.instantiate()
 #
 	## Check if the instance has a method named "get_reload_time"

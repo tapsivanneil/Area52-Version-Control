@@ -444,6 +444,19 @@ position = Vector2(67, 65)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vcemm")
 
+[node name="NextLevelButton" type="Button" parent="."]
+offset_left = 972.0
+offset_top = 69.0
+offset_right = 1108.0
+offset_bottom = 205.0
+scale = Vector2(0.782951, 0.782951)
+theme = ExtResource("2_xguwc")
+
+[node name="Home-icon" type="Sprite2D" parent="NextLevelButton"]
+position = Vector2(67, 65)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("3_vcemm")
+
 [node name="ReplayButton" type="Button" parent="."]
 offset_left = 980.0
 offset_top = 472.0
@@ -488,5 +501,6 @@ animation = &"victory"
 frame = 56
 
 [connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="NextLevelButton" to="." method="_on_next_level_button_pressed"]
 [connection signal="pressed" from="ReplayButton" to="." method="_on_replay_button_pressed"]
 [connection signal="pressed" from="LevelSelectionButton" to="." method="_on_level_selection_button_pressed"]

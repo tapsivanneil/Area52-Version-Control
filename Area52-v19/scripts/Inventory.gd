@@ -11,7 +11,7 @@ func defender_list(ID = "0"):
 	var defender_texture = load("res://assets/defenders/" + DefenderData.get_texture(ID))
 	var defender_ATK = DefenderData.get_ATK(ID)
 	var defender_scn = load("res://scenes/" + DefenderData.get_scn(ID))
-	print(ID)
+	#print(ID)
  
 	defender_data = {"TEXTURE": defender_texture,
 					 "SCENE": defender_scn,

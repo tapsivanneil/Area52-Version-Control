@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://dohb0as1c26ma"]
+
+[ext_resource type="Script" path="res://scripts/BackButton.gd" id="1_kpow0"]
+[ext_resource type="Texture2D" uid="uid://dr2hplnf2lplo" path="res://assets/icons/almanac-icon..png" id="2_f5t5g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tqtjv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rv5xx"]
+texture = ExtResource("2_f5t5g")
+modulate_color = Color(0.769432, 0.769432, 0.769432, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn4vl"]
+texture = ExtResource("2_f5t5g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eihgx"]
+texture = ExtResource("2_f5t5g")
+modulate_color = Color(0.631035, 0.631035, 0.631035, 1)
+
+[sub_resource type="Theme" id="Theme_umrlg"]
+Button/styles/focus = SubResource("StyleBoxEmpty_tqtjv")
+Button/styles/hover = SubResource("StyleBoxTexture_rv5xx")
+Button/styles/normal = SubResource("StyleBoxTexture_tn4vl")
+Button/styles/pressed = SubResource("StyleBoxTexture_eihgx")
+
+[node name="Next_level" type="Node2D"]
+script = ExtResource("1_kpow0")
+
+[node name="NelxtLevelButton" type="Button" parent="."]
+offset_right = 142.0
+offset_bottom = 65.0
+scale = Vector2(0.449178, 0.986177)
+tooltip_text = "ALMANAC"
+theme = SubResource("Theme_umrlg")
+
+[connection signal="pressed" from="NelxtLevelButton" to="." method="_on_alamanac_button_pressed"]
