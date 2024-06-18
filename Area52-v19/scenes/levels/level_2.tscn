@@ -485,7 +485,7 @@ position = Vector2(153, 17)
 position = Vector2(1121, 13)
 
 [node name="Wall3" parent="Wall" instance=ExtResource("24_clp5c")]
-position = Vector2(1119, 112)
+position = Vector2(1119, 82)
 rotation = 1.5708
 scale = Vector2(1.5, 1.5)
 
