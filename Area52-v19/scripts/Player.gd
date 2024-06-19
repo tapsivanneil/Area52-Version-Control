@@ -46,7 +46,8 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("drop"):
 		#print(can_deploy)
-		if can_deploy == true:		
+		if can_deploy == true && current_tile_position.occupied == false:
+			#can_deploy = false		
 			if current_tile_position != null:
 				current_tile_position.occupied = true
 				scene_instance = character_scene.instantiate()  # Create a new instance each time "drop" is pressed
