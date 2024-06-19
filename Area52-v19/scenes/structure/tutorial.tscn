@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dme81lukts124"]
+
+[ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="1_gxaiv"]
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="MenuButton" parent="." instance=ExtResource("1_gxaiv")]
+position = Vector2(35, 24)
