@@ -7,9 +7,9 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite2D.play("victory")
-
+	
 	if Global.player_level == 5:
-		$NextLevelButton.visbile = false
+		$NextLevelButton.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -19,9 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://du5m84ymrpspn" path="res://scenes/defender/railgunner.tscn" id="14_nwiab"]
 [ext_resource type="PackedScene" uid="uid://d13l16psqi467" path="res://scenes/defender/sniper.tscn" id="15_or0pi"]
 [ext_resource type="PackedScene" uid="uid://c3bkqjer131nu" path="res://scenes/game elements/endline.tscn" id="16_u1jtv"]
-[ext_resource type="PackedScene" uid="uid://pk0dyp5doh51" path="res://scenes/structure/defeat_panel.tscn" id="17_butgh"]
-[ext_resource type="PackedScene" uid="uid://bvls14o2bg56v" path="res://scenes/structure/pause_panel.tscn" id="18_fhcr0"]
-[ext_resource type="PackedScene" uid="uid://bavj4xfxsd4u6" path="res://scenes/structure/victory_panel.tscn" id="19_h5p5o"]
+[ext_resource type="PackedScene" uid="uid://pk0dyp5doh51" path="res://scenes/panels/defeat_panel.tscn" id="17_butgh"]
+[ext_resource type="PackedScene" uid="uid://bvls14o2bg56v" path="res://scenes/panels/pause_panel.tscn" id="18_fhcr0"]
+[ext_resource type="PackedScene" uid="uid://bavj4xfxsd4u6" path="res://scenes/panels/victory_panel.tscn" id="19_h5p5o"]
 [ext_resource type="Texture2D" uid="uid://busia4y08tl6e" path="res://assets/icons/pause-icon.png" id="21_wwi7r"]
 [ext_resource type="PackedScene" uid="uid://1e0lehg71t5l" path="res://scenes/game elements/wall.tscn" id="24_clp5c"]
 

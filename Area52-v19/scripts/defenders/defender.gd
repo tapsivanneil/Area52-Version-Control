@@ -59,11 +59,7 @@ func attack():
 	pass
 
 func _do_attack():
-	bullet_scene = preload("res://scenes/bullet.tscn")
-	var bullet_instance = bullet_scene.instantiate()
-	get_tree().root.add_child(bullet_instance)
-	bullet_instance.transform = $Shooting_area.global_transform
-	#print("attacking")
+	pass
 
 
 func get_reload_time():

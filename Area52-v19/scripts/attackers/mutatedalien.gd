@@ -5,13 +5,12 @@ var moving_speed = 1
 var dps = 50
 var health = 1000
 var deployed_enemy_tag
-var attack_speed = 2
+var attack_speed = 0.3
 var attacking
 
 var self_reference
 
 @onready var player = get_node("/root/Level_"+str(Global.player_level)+"/Player")
-@onready var bullet = preload("res://scenes/bullet.tscn")
 @onready var victory_panel = get_node('/root/Level_'+str(Global.player_level)+'/Panels/VictoryPanel')
 @onready var animated_sprite = $AnimatedSprite
 @onready var hot_bar = get_node("/root/Level_"+str(Global.player_level)+"/UI/Hotbar")

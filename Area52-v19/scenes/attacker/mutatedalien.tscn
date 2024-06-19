@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bcor4g24aysp3" path="res://assets/attacker/MUTATEDALIEN/WALK/MUTATED1.png" id="11_xgh2p"]
 [ext_resource type="Texture2D" uid="uid://danwvl83e4tj0" path="res://assets/attacker/MUTATEDALIEN/WALK/MUTATED2.png" id="12_66iy8"]
 [ext_resource type="Texture2D" uid="uid://nhxuxajpdniu" path="res://assets/attacker/MUTATEDALIEN/WALK/MUTATED3.png" id="13_nt3jg"]
-[ext_resource type="AudioStream" uid="uid://b877xx2iqqmsr" path="res://assets/alien-cackle-99968_1ajutUFx.mp3" id="14_1p5vh"]
+[ext_resource type="AudioStream" uid="uid://b877xx2iqqmsr" path="res://assets/music/alien-cackle-99968_1ajutUFx.mp3" id="14_1p5vh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
 animations = [{

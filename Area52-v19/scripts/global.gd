@@ -1,7 +1,7 @@
 extends Node
 
-var player_level = 1
-var opened_level = 1
+var player_level = 5
+var opened_level = 5
 
 
 func _ready():

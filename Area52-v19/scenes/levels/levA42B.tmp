@@ -18,10 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://d13l16psqi467" path="res://scenes/defender/sniper.tscn" id="16_ed27w"]
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="16_t2rj0"]
 [ext_resource type="PackedScene" uid="uid://c3bkqjer131nu" path="res://scenes/game elements/endline.tscn" id="17_m01rw"]
-[ext_resource type="PackedScene" uid="uid://pk0dyp5doh51" path="res://scenes/panels/defeat_panel.tscn" id="19_5ldv5"]
-[ext_resource type="PackedScene" uid="uid://bvls14o2bg56v" path="res://scenes/panels/pause_panel.tscn" id="20_11thm"]
+[ext_resource type="PackedScene" uid="uid://pk0dyp5doh51" path="res://scenes/structure/defeat_panel.tscn" id="17_p8kgv"]
+[ext_resource type="PackedScene" uid="uid://bvls14o2bg56v" path="res://scenes/structure/pause_panel.tscn" id="18_fglr0"]
+[ext_resource type="PackedScene" uid="uid://bavj4xfxsd4u6" path="res://scenes/structure/victory_panel.tscn" id="19_yequg"]
 [ext_resource type="Texture2D" uid="uid://busia4y08tl6e" path="res://assets/icons/pause-icon.png" id="21_4dykb"]
-[ext_resource type="PackedScene" uid="uid://bavj4xfxsd4u6" path="res://scenes/panels/victory_panel.tscn" id="21_yemrw"]
 [ext_resource type="PackedScene" uid="uid://1e0lehg71t5l" path="res://scenes/game elements/wall.tscn" id="23_ctapa"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b77yr"]
@@ -453,16 +453,16 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Panels" type="Node" parent="."]
 
-[node name="DefeatPanel" parent="Panels" instance=ExtResource("19_5ldv5")]
+[node name="DefeatPanel" parent="Panels" instance=ExtResource("17_p8kgv")]
 visible = false
 top_level = true
 z_index = 2
 scale = Vector2(1.00071, 1.00071)
 
-[node name="PausePanel" parent="Panels" instance=ExtResource("20_11thm")]
+[node name="PausePanel" parent="Panels" instance=ExtResource("18_fglr0")]
 visible = false
 
-[node name="VictoryPanel" parent="Panels" instance=ExtResource("21_yemrw")]
+[node name="VictoryPanel" parent="Panels" instance=ExtResource("19_yequg")]
 visible = false
 z_index = 2
 scale = Vector2(0.999549, 0.999549)

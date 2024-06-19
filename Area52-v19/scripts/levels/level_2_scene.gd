@@ -15,7 +15,7 @@ var random_number
 var timer_label = Label
 var time = Timer
 
-var selection = preload("res://Character_selection.tscn")
+var selection = preload("res://scenes/structure/Character_selection.tscn")
 var selection_instance
 
 var total_kills = 0;

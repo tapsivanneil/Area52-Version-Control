@@ -11,7 +11,6 @@ var attacking
 var self_reference
 
 @onready var player = get_node("/root/Level_"+str(Global.player_level)+"/Player")
-@onready var bullet = preload("res://scenes/bullet.tscn")
 @onready var victory_panel = get_node('/root/Level_'+str(Global.player_level)+'/Panels/VictoryPanel')
 @onready var animated_sprite = $AnimatedSprite
 @onready var hot_bar = get_node("/root/Level_"+str(Global.player_level)+"/UI/Hotbar")
