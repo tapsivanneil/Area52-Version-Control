@@ -1,7 +1,7 @@
 [gd_scene load_steps=67 format=3 uid="uid://bavj4xfxsd4u6"]
 
 [ext_resource type="Script" path="res://scripts/panels/vicotry_panel.gd" id="1_8t02s"]
-[ext_resource type="Theme" uid="uid://ctgluvw3nd0i1" path="res://scenes/structure/victory_panel_preset.tres" id="2_xguwc"]
+[ext_resource type="Theme" uid="uid://ctgluvw3nd0i1" path="res://assets/victory_panel_preset.tres" id="2_xguwc"]
 [ext_resource type="Texture2D" uid="uid://bmnx3xtjaggcy" path="res://assets/icons/home-icon.png" id="3_vcemm"]
 [ext_resource type="Texture2D" uid="uid://cdrk0fqpluary" path="res://assets/icons/next-icon.png" id="4_7f5hy"]
 [ext_resource type="Texture2D" uid="uid://dnlakiqrg7iu3" path="res://assets/icons/replay-icon.png" id="4_r0bcr"]

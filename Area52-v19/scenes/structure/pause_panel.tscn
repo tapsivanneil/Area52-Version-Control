@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/panels/pause_panel.gd" id="1_ncird"]
 [ext_resource type="Texture2D" uid="uid://c2e6rpsk4o1au" path="res://assets/game-pause-bg.png" id="2_32o6v"]
-[ext_resource type="Theme" uid="uid://dr8v00v31ayoo" path="res://scenes/structure/pause_panel_preset.tres" id="3_efy85"]
+[ext_resource type="Theme" uid="uid://dr8v00v31ayoo" path="res://assets/pause_panel_preset.tres" id="3_efy85"]
 [ext_resource type="Texture2D" uid="uid://bmnx3xtjaggcy" path="res://assets/icons/home-icon.png" id="4_phwao"]
 [ext_resource type="Texture2D" uid="uid://ccwut5xyl5434" path="res://assets/game-pause-text.png" id="4_ufw66"]
 [ext_resource type="Texture2D" uid="uid://dnlakiqrg7iu3" path="res://assets/icons/replay-icon.png" id="5_h4y38"]

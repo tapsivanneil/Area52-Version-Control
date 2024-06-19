@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ukd0p6pxlooc"]
+
+[ext_resource type="PackedScene" uid="uid://c1awm8lao6gyu" path="res://scenes/game elements/placeholder.tscn" id="1_hnw0k"]
+[ext_resource type="Script" path="res://scripts/game elements/PassiveSlot.gd" id="2_srnyh"]
+
+[node name="PassiveSlot" instance=ExtResource("1_hnw0k")]
+script = ExtResource("2_srnyh")
+slot_index = 0
+
+[node name="click" parent="." index="2"]
+volume_db = 5.0

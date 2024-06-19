@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://cyx73ty5be522"]
 
-[ext_resource type="Script" path="res://scripts/almanac.gd" id="1_kt7kx"]
+[ext_resource type="Script" path="res://scripts/structure/almanac.gd" id="1_kt7kx"]
 [ext_resource type="FontFile" uid="uid://cwc64a8usnhu3" path="res://assets/fonts/LeagueSpartan-Regular.ttf" id="2_4rbxp"]
 [ext_resource type="Texture2D" uid="uid://dx0mmeptevcvq" path="res://assets/almanac-bg.png" id="2_pgcfw"]
 [ext_resource type="FontFile" uid="uid://cpuej7dj5e74f" path="res://assets/fonts/LeagueSpartan-SemiBold.ttf" id="3_b5v3v"]

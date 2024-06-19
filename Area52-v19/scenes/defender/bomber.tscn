@@ -1,11 +1,11 @@
 [gd_scene load_steps=24 format=3 uid="uid://boeiqbwn75xh3"]
 
 [ext_resource type="Script" path="res://scripts/defenders/bomber.gd" id="1_lmoyb"]
-[ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://scenes/shooting_area.tscn" id="2_7kq7b"]
+[ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://scenes/game elements/shooting_area.tscn" id="2_7kq7b"]
 [ext_resource type="Texture2D" uid="uid://wnohb4ig4lwf" path="res://assets/defenders/Bomber.png" id="4_jfqin"]
 [ext_resource type="Texture2D" uid="uid://be37bd6148pwg" path="res://assets/defenders/pistol.png" id="4_krxg2"]
 [ext_resource type="Texture2D" uid="uid://rj3w4qvwywjj" path="res://assets/defenders/player sprites/bomber-idle.png" id="5_jcyei"]
-[ext_resource type="AudioStream" uid="uid://bcnpp1ib0ed7k" path="res://assets/bomb_shot.mp3" id="5_rgj25"]
+[ext_resource type="AudioStream" uid="uid://bcnpp1ib0ed7k" path="res://assets/music/bomb_shot.mp3" id="5_rgj25"]
 [ext_resource type="Texture2D" uid="uid://d2145xkiexcu" path="res://assets/defenders/player sprites/bomber-attack.png" id="5_w7of1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ok3u"]

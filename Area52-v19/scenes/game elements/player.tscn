@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://5203tlw2qe7m"]
 
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_aonbc"]
+[ext_resource type="Script" path="res://scripts/game elements/Player.gd" id="1_aonbc"]
 [ext_resource type="Texture2D" uid="uid://dt11p4dkmh13g" path="res://assets/icon.svg" id="2_321kd"]
 [ext_resource type="Texture2D" uid="uid://chx6jm0ujb77d" path="res://assets/defenders/player sprites/player-spritesheet.png" id="3_t8gmq"]
 

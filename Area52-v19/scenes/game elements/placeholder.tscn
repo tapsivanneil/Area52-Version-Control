@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://c1awm8lao6gyu"]
 
-[ext_resource type="Script" path="res://scripts/placeholder.gd" id="1_qy7su"]
-[ext_resource type="Script" path="res://scripts/Stats.gd" id="2_hf6nq"]
-[ext_resource type="AudioStream" uid="uid://ba7lhnfly4l6r" path="res://assets/click-104721.mp3" id="3_6drxo"]
+[ext_resource type="Script" path="res://scripts/game elements/placeholder.gd" id="1_avw71"]
+[ext_resource type="Script" path="res://scripts/game elements/Stats.gd" id="2_xwqkm"]
+[ext_resource type="AudioStream" uid="uid://ba7lhnfly4l6r" path="res://assets/music/click-104721.mp3" id="3_gerxf"]
 
 [node name="Placeholder" type="PanelContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_qy7su")
+script = ExtResource("1_avw71")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 expand_mode = 1
-script = ExtResource("2_hf6nq")
+script = ExtResource("2_xwqkm")
 
 [node name="debug" type="Label" parent="."]
 unique_name_in_owner = true
@@ -23,5 +23,5 @@ theme_override_font_sizes/font_size = 8
 text = "0"
 
 [node name="click" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_6drxo")
+stream = ExtResource("3_gerxf")
 bus = &"System"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://dow7fuxoqadl7"]
 
-[ext_resource type="Script" path="res://scripts/level_selection.gd" id="1_valy6"]
+[ext_resource type="Script" path="res://scripts/structure/level_selection.gd" id="1_valy6"]
 [ext_resource type="FontFile" uid="uid://c2jev1gbnyma5" path="res://assets/AubetteArchiType Normal Regular.otf" id="2_g3xtt"]
 [ext_resource type="Texture2D" uid="uid://n3tqk8eggril" path="res://assets/level-select-background.png" id="2_hd1qq"]
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="3_x6s51"]

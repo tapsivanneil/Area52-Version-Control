@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://uxdhfu7vmarj"]
 
-[ext_resource type="Script" path="res://Volume.gd" id="1_6c5ou"]
+[ext_resource type="Script" path="res://scripts/game elements/Volume.gd" id="1_6c5ou"]
 [ext_resource type="Texture2D" uid="uid://coy7ibhy14x4g" path="res://assets/speaker-filled-audio-tool.png" id="2_03d7p"]
 
 [node name="Volume" type="HSlider"]
