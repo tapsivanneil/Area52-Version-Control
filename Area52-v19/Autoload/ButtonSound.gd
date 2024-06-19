@@ -1,6 +1,6 @@
 extends Node
 
-@export var sfx_path: String = "res://assets/menu-button-89141.mp3"
+@export var sfx_path: String = "res://assets/music/menu-button-89141.mp3"
 @export var bus_name: String = "System"
 
 var sfx_stream: AudioStream

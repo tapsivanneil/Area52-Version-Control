@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi4m56mcrf3ws"]
+
+[ext_resource type="Script" path="res://ending.gd" id="1_xlhve"]
+
+[node name="ending" type="VideoStreamPlayer"]
+script = ExtResource("1_xlhve")
