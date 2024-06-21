@@ -1,6 +1,6 @@
 extends Node
 
-var player_level = 5
+var player_level = 1
 var opened_level = 5
 
 
