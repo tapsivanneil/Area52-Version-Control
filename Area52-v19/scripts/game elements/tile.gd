@@ -21,19 +21,7 @@ func _ready():
 		var tile_name = "Tile" + str(i)
 		tiles[i] = get_node("/root/Level_"+str(Global.player_level)+"/Tiles/" + tile_name) 
 
-#func _process(delta):
-	#pass
-	#for child in get_children():
-		#if child.get_name() == "Character":
-			#if(child.health == 0):
-				#print('Character is dead')
-	
-func _on_body_entered(body):
-	if body == player:
-		player.inside_dropable = true
-		#for child in get_children():
-			#print(child)
-	
+func _process(delta):
 	for i in range(1, 45):
 		var tile_pos = tiles[i].global_position
 		if (player.global_position.x  <= tile_pos.x + tolerance &&
@@ -43,14 +31,20 @@ func _on_body_entered(body):
 			#print('Player is near Tile ' + str(i))
 			player.current_tile_position = tiles[i]
 	
+func _on_body_entered(body):
+	if body == player:
+		color_rect.modulate.a = 1.0
+		player.inside_dropable = true
+		#for child in get_children():
+			#print(child)
+
 	#for i in range(1, 50):
 		#if body == enemy[i]:
 			#print(enemy[i])
 
-				
 func _on_body_exited(body):
-	if body == player:
-		player.inside_dropable = false
+	color_rect.modulate.a = 0.1			
+	player.inside_dropable = false	
 
 func attack():
 	for child in get_children():
@@ -66,3 +60,6 @@ func stop_attack():
 
 func _on_timer_timeout():
 	attack()
+
+
+
