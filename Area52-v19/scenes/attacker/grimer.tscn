@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://r0xok0yi0dj7" path="res://assets/attacker/GRIMER/DEAD/GRIMERD4.png" id="8_ed4al"]
 [ext_resource type="Texture2D" uid="uid://br5xgtsip6o0s" path="res://assets/attacker/GRIMER/DEAD/GRIMERD5.png" id="9_toygl"]
 [ext_resource type="Texture2D" uid="uid://brewjnkgdjkm5" path="res://assets/attacker/GRIMER/DEAD/GRIMERD6.png" id="10_vvt2v"]
-[ext_resource type="AudioStream" uid="uid://lf8tdy3kaf2q" path="res://assets/slime-monster-noises-66776_xm5FIBZv.mp3" id="14_anh32"]
+[ext_resource type="AudioStream" uid="uid://lf8tdy3kaf2q" path="res://assets/music/slime-monster-noises-66776_xm5FIBZv.mp3" id="14_anh32"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
 animations = [{

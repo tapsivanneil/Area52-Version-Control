@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://fxop5aand8yd" path="res://assets/attacker/SWARM/DEAD/SWARMD1.png" id="5_ngqob"]
 [ext_resource type="Texture2D" uid="uid://58slmw8natg" path="res://assets/attacker/SWARM/DEAD/SWARMD2.png" id="6_nftno"]
 [ext_resource type="Texture2D" uid="uid://b1rw4eqh4844s" path="res://assets/attacker/SWARM/DEAD/SWARMD3.png" id="7_5h6r8"]
-[ext_resource type="AudioStream" uid="uid://bomwe42lfg00o" path="res://assets/wings-of-insects-45540.mp3" id="11_6fii6"]
+[ext_resource type="AudioStream" uid="uid://bomwe42lfg00o" path="res://assets/music/wings-of-insects-45540.mp3" id="11_6fii6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
 animations = [{

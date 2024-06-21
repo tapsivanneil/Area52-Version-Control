@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bi4m56mcrf3ws"]
+[gd_scene load_steps=3 format=3 uid="uid://bi4m56mcrf3ws"]
 
+[ext_resource type="VideoStream" path="res://assets/endingsc.ogv" id="1_rdtfk"]
 [ext_resource type="Script" path="res://scripts/structure/ending.gd" id="1_xlhve"]
 
 [node name="ending" type="VideoStreamPlayer"]
+offset_right = 1920.0
+offset_bottom = 1088.0
+scale = Vector2(0.597826, 0.596346)
+stream = ExtResource("1_rdtfk")
+autoplay = true
 script = ExtResource("1_xlhve")

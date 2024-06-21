@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cngw6mcgljyc7" path="res://assets/attacker/ALIEN Y/DEAD/ALIENYD1.png" id="5_ahrbl"]
 [ext_resource type="Texture2D" uid="uid://cfd8rqj7q0a2q" path="res://assets/attacker/ALIEN Y/DEAD/ALIENYD2.png" id="6_qscot"]
 [ext_resource type="Texture2D" uid="uid://ce4blk34m6vw1" path="res://assets/attacker/ALIEN Y/DEAD/ALIENYD3.png" id="7_xdwcs"]
-[ext_resource type="AudioStream" uid="uid://lf8tdy3kaf2q" path="res://assets/slime-monster-noises-66776_xm5FIBZv.mp3" id="11_nooi6"]
+[ext_resource type="AudioStream" uid="uid://lf8tdy3kaf2q" path="res://assets/music/slime-monster-noises-66776_xm5FIBZv.mp3" id="11_nooi6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
 animations = [{

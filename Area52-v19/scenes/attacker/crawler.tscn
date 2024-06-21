@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bmlhlviye1msj" path="res://assets/attacker/CRAWLER/DEAD/CRAWLERD1.png" id="5_dxjbg"]
 [ext_resource type="Texture2D" uid="uid://6sehgpou7p0x" path="res://assets/attacker/CRAWLER/DEAD/CRAWLERD2.png" id="6_iudac"]
 [ext_resource type="Texture2D" uid="uid://bghdhr1y4jhdr" path="res://assets/attacker/CRAWLER/DEAD/CRAWLERD3.png" id="7_a2y6s"]
-[ext_resource type="AudioStream" uid="uid://djmhx51bp3h1a" path="res://assets/creature1-85824.mp3" id="11_dl0jw"]
+[ext_resource type="AudioStream" uid="uid://djmhx51bp3h1a" path="res://assets/music/creature1-85824.mp3" id="11_dl0jw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
 animations = [{

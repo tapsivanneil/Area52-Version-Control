@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dxckju73ty0jw" path="res://assets/attacker/DUNG BEETLE/DEAD/BEETLED3.png" id="8_i0fpe"]
 [ext_resource type="Texture2D" uid="uid://dlqdrdhgpm63b" path="res://assets/attacker/DUNG BEETLE/DEAD/BEETLED4.png" id="9_geuvt"]
 [ext_resource type="Texture2D" uid="uid://c2fdgpmogdluc" path="res://assets/attacker/DUNG BEETLE/WALKING/BEETLE3.png" id="12_i0jpy"]
-[ext_resource type="AudioStream" uid="uid://i56k1gxb0g0e" path="res://assets/space-insect-99970.mp3" id="12_p6noi"]
+[ext_resource type="AudioStream" uid="uid://i56k1gxb0g0e" path="res://assets/music/space-insect-99970.mp3" id="12_p6noi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ngby"]
 animations = [{
