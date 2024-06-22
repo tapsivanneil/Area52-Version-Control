@@ -3,7 +3,7 @@ extends Node2D
 var speed = 0
 var moving_speed = 0.2
 var dps = 100
-var health = 1000
+var health = 120
 var deployed_enemy_tag
 var attack_speed = 1
 var attacking

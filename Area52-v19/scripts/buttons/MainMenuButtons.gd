@@ -4,6 +4,7 @@ var play_button_scene = preload("res://scenes/structure/level_selection.tscn")
 var option_scene = preload("res://scenes/structure/option.tscn")
 
 func _ready():
+	$"../Sprite2D/AnimatedSprite2D".play("animation")
 	pass # Replace with function body.
 
 #func _process(delta):
