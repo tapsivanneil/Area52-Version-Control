@@ -23,7 +23,9 @@ var total_kills = 0;
 @onready var player = get_node("/root/Level_"+str(Global.player_level)+"/Player")
 
 func _ready():
-
+	
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), true)
+	
 	timer_label = $Hotbar_Timer/Label
 	time = $Hotbar_Timer
 

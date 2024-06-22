@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cjoxowca2f0ah"]
+[gd_scene load_steps=32 format=3 uid="uid://cjoxowca2f0ah"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_2_scene.gd" id="1_bvjfg"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_58ntl"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://busia4y08tl6e" path="res://assets/icons/pause-icon.png" id="21_wwi7r"]
 [ext_resource type="PackedScene" uid="uid://1e0lehg71t5l" path="res://scenes/game elements/wall.tscn" id="24_clp5c"]
 [ext_resource type="PackedScene" uid="uid://cidd1kmt5io4n" path="res://scenes/game elements/progress_bar.tscn" id="25_whmk5"]
+[ext_resource type="AudioStream" uid="uid://cjt15wksgyr5a" path="res://assets/music/energy-hum-29083.mp3" id="26_uitle"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mh4fc"]
 
@@ -497,6 +498,11 @@ scale = Vector2(1.5, 1.5)
 
 [node name="ProgressBar" parent="." instance=ExtResource("25_whmk5")]
 position = Vector2(281, 656)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("26_uitle")
+pitch_scale = 1.32
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Character_attack_timer" to="." method="_on_character_attack_timer_timeout"]

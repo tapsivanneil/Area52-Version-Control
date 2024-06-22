@@ -1,0 +1,45 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dj8erpbgbrq2k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l5xuy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyvef"]
+bg_color = Color(0.235294, 0.482353, 0.12549, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wuxab"]
+bg_color = Color(0.333333, 0.686275, 0.180392, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wo8cf"]
+bg_color = Color(0.235294, 0.482353, 0.12549, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxEmpty_l5xuy")
+Button/styles/hover = SubResource("StyleBoxFlat_pyvef")
+Button/styles/normal = SubResource("StyleBoxFlat_wuxab")
+Button/styles/pressed = SubResource("StyleBoxFlat_wo8cf")
