@@ -69,139 +69,139 @@ texture = ExtResource("3_iup2j")
 [node name="Tiles" type="Node" parent="."]
 
 [node name="Tile1" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(288, 160)
+position = Vector2(280, 174)
 
 [node name="Tile2" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(288, 256)
+position = Vector2(281, 275)
 
 [node name="Tile3" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(288, 352)
+position = Vector2(280, 375)
 
 [node name="Tile4" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(288, 456)
+position = Vector2(280, 475)
 
 [node name="Tile5" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(288, 544)
+position = Vector2(280, 576)
 
 [node name="Tile6" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(384, 160)
+position = Vector2(376, 174)
 
 [node name="Tile7" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(384, 256)
+position = Vector2(376, 275)
 
 [node name="Tile8" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(384, 352)
+position = Vector2(376, 375)
 
 [node name="Tile9" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(384, 456)
+position = Vector2(376, 475)
 
 [node name="Tile10" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(384, 544)
+position = Vector2(376, 575)
 
 [node name="Tile11" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(480, 160)
+position = Vector2(473, 174)
 
 [node name="Tile12" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(480, 256)
+position = Vector2(473, 275)
 
 [node name="Tile13" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(480, 352)
+position = Vector2(473, 375)
 
 [node name="Tile14" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(480, 456)
+position = Vector2(473, 475)
 
 [node name="Tile15" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(480, 544)
+position = Vector2(473, 576)
 
 [node name="Tile16" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(576, 160)
+position = Vector2(572, 174)
 
 [node name="Tile17" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(576, 256)
+position = Vector2(572, 275)
 
 [node name="Tile18" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(576, 352)
+position = Vector2(572, 375)
 
 [node name="Tile19" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(576, 456)
+position = Vector2(572, 475)
 
 [node name="Tile20" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(576, 544)
+position = Vector2(572, 576)
 
 [node name="Tile21" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(672, 160)
+position = Vector2(670, 174)
 
 [node name="Tile22" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(672, 256)
+position = Vector2(670, 275)
 
 [node name="Tile23" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(672, 352)
+position = Vector2(670, 375)
 
 [node name="Tile24" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(672, 456)
+position = Vector2(670, 475)
 
 [node name="Tile25" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(672, 544)
+position = Vector2(670, 575)
 
 [node name="Tile26" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(768, 160)
+position = Vector2(767, 174)
 
 [node name="Tile27" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(768, 256)
+position = Vector2(767, 275)
 
 [node name="Tile28" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(768, 352)
+position = Vector2(767, 375)
 
 [node name="Tile29" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(768, 456)
+position = Vector2(767, 475)
 
 [node name="Tile30" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(768, 544)
+position = Vector2(767, 576)
 
 [node name="Tile31" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(864, 160)
+position = Vector2(865, 174)
 
 [node name="Tile32" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(864, 256)
+position = Vector2(866, 275)
 
 [node name="Tile33" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(864, 352)
+position = Vector2(865, 375)
 
 [node name="Tile34" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(864, 456)
+position = Vector2(866, 475)
 
 [node name="Tile35" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(864, 544)
+position = Vector2(865, 576)
 
 [node name="Tile36" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(960, 160)
+position = Vector2(961, 174)
 
 [node name="Tile37" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(960, 256)
+position = Vector2(962, 275)
 
 [node name="Tile38" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(960, 352)
+position = Vector2(961, 375)
 
 [node name="Tile39" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(960, 456)
+position = Vector2(962, 475)
 
 [node name="Tile40" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(960, 544)
+position = Vector2(961, 576)
 
 [node name="Tile41" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(1056, 160)
+position = Vector2(1057, 174)
 
 [node name="Tile42" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(1056, 256)
+position = Vector2(1058, 275)
 
 [node name="Tile43" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(1056, 352)
+position = Vector2(1057, 376)
 
 [node name="Tile44" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(1056, 456)
+position = Vector2(1058, 475)
 
 [node name="Tile45" parent="Tiles" instance=ExtResource("4_m4a8u")]
-position = Vector2(1056, 544)
+position = Vector2(1057, 576)
 
 [node name="Tile46" parent="Tiles" instance=ExtResource("4_m4a8u")]
 position = Vector2(1224, 160)
@@ -221,154 +221,154 @@ position = Vector2(1224, 544)
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Enemy1" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 167)
+position = Vector2(1232, 173)
 
 [node name="Enemy10" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 167)
+position = Vector2(1232, 173)
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1223, 167)
+position = Vector2(1224, 173)
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1231, 167)
+position = Vector2(1232, 173)
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 167)
+position = Vector2(1232, 173)
 
 [node name="Enemy5" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1223, 167)
+position = Vector2(1224, 173)
 
 [node name="Enemy6" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1231, 167)
+position = Vector2(1232, 173)
 
 [node name="Enemy7" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 167)
+position = Vector2(1232, 173)
 
 [node name="Enemy8" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1223, 167)
+position = Vector2(1224, 173)
 
 [node name="Enemy9" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1231, 167)
+position = Vector2(1232, 173)
 
 [node name="Enemy11" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 255)
+position = Vector2(1232, 274)
 
 [node name="Enemy12" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 255)
+position = Vector2(1232, 274)
 
 [node name="Enemy13" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1223, 255)
+position = Vector2(1224, 274)
 
 [node name="Enemy14" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1231, 255)
+position = Vector2(1232, 274)
 
 [node name="Enemy15" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 255)
+position = Vector2(1232, 274)
 
 [node name="Enemy16" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1223, 255)
+position = Vector2(1224, 274)
 
 [node name="Enemy17" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1231, 255)
+position = Vector2(1232, 274)
 
 [node name="Enemy18" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 255)
+position = Vector2(1232, 274)
 
 [node name="Enemy19" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1223, 255)
+position = Vector2(1224, 274)
 
 [node name="Enemy20" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1231, 255)
+position = Vector2(1232, 274)
 
 [node name="Enemy21" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 351)
+position = Vector2(1231, 376)
 
 [node name="Enemy22" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 351)
+position = Vector2(1231, 376)
 
 [node name="Enemy23" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1223, 351)
+position = Vector2(1223, 376)
 
 [node name="Enemy24" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1231, 351)
+position = Vector2(1231, 376)
 
 [node name="Enemy25" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 351)
+position = Vector2(1231, 376)
 
 [node name="Enemy26" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1223, 351)
+position = Vector2(1223, 376)
 
 [node name="Enemy27" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1231, 351)
+position = Vector2(1231, 376)
 
 [node name="Enemy28" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1231, 351)
+position = Vector2(1231, 376)
 
 [node name="Enemy29" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1223, 351)
+position = Vector2(1223, 376)
 
 [node name="Enemy30" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1231, 351)
+position = Vector2(1231, 376)
 
 [node name="Enemy31" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1239, 455)
+position = Vector2(1239, 475)
 
 [node name="Enemy32" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1239, 455)
+position = Vector2(1239, 475)
 
 [node name="Enemy33" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1231, 455)
+position = Vector2(1231, 475)
 
 [node name="Enemy34" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1239, 455)
+position = Vector2(1239, 475)
 
 [node name="Enemy35" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1239, 455)
+position = Vector2(1239, 475)
 
 [node name="Enemy36" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1231, 455)
+position = Vector2(1231, 475)
 
 [node name="Enemy37" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1239, 455)
+position = Vector2(1239, 475)
 
 [node name="Enemy38" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1239, 455)
+position = Vector2(1239, 475)
 
 [node name="Enemy39" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1231, 455)
+position = Vector2(1231, 475)
 
 [node name="Enemy40" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1239, 455)
+position = Vector2(1239, 475)
 
 [node name="Enemy41" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1239, 559)
+position = Vector2(1239, 576)
 
 [node name="Enemy42" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1239, 559)
+position = Vector2(1239, 576)
 
 [node name="Enemy43" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1231, 559)
+position = Vector2(1231, 576)
 
 [node name="Enemy44" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1239, 559)
+position = Vector2(1239, 576)
 
 [node name="Enemy45" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1239, 559)
+position = Vector2(1239, 576)
 
 [node name="Enemy46" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1231, 559)
+position = Vector2(1231, 576)
 
 [node name="Enemy47" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1239, 559)
+position = Vector2(1239, 576)
 
 [node name="Enemy48" parent="Enemies" instance=ExtResource("5_w36o8")]
-position = Vector2(1239, 559)
+position = Vector2(1239, 576)
 
 [node name="Enemy49" parent="Enemies" instance=ExtResource("5_c8k3s")]
-position = Vector2(1231, 559)
+position = Vector2(1231, 576)
 
 [node name="Enemy50" parent="Enemies" instance=ExtResource("6_lr8so")]
-position = Vector2(1239, 559)
+position = Vector2(1239, 576)
 
 [node name="Player" parent="." instance=ExtResource("3_20qxb")]
 z_index = 1

@@ -113,8 +113,7 @@ scale = Vector2(0.324, 0.365)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 sprite_frames = SubResource("SpriteFrames_625mv")
 animation = &"animation"
-frame = 3
-frame_progress = 0.0470242
+frame_progress = 0.150148
 
 [node name="MainMenuButtons" type="HBoxContainer" parent="."]
 visible = false

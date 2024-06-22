@@ -1,23 +1,30 @@
-[gd_scene load_steps=8 format=3 uid="uid://cidd1kmt5io4n"]
+[gd_scene load_steps=9 format=3 uid="uid://cidd1kmt5io4n"]
 
 [ext_resource type="Script" path="res://scripts/game elements/ProgressBar.gd" id="1_nn7cb"]
+[ext_resource type="FontFile" uid="uid://c2jev1gbnyma5" path="res://assets/AubetteArchiType Normal Regular.otf" id="2_dj8y0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hxo7"]
-bg_color = Color(0.988046, 0, 0.108052, 1)
+bg_color = Color(0.113725, 0.796078, 0.364706, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.70369, 2.10572e-06, 5.77569e-07, 1)
+border_color = Color(0.0623486, 0.456326, 0.200871, 1)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hy6u"]
-bg_color = Color(0.70369, 2.10572e-06, 5.77569e-07, 1)
+bg_color = Color(0.0627451, 0.454902, 0.2, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
 [sub_resource type="Theme" id="Theme_4dgfc"]
+ProgressBar/font_sizes/font_size = 24
+ProgressBar/fonts/font = ExtResource("2_dj8y0")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_0hxo7")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_0hy6u")
 
@@ -35,8 +42,14 @@ corner_radius_bottom_left = 100
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4y2wn"]
 bg_color = Color(0.443233, 0.00031001, 0.496444, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
 [sub_resource type="Theme" id="Theme_w0d1e"]
+ProgressBar/font_sizes/font_size = 24
+ProgressBar/fonts/font = ExtResource("2_dj8y0")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_tatck")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_4y2wn")
 
@@ -47,14 +60,14 @@ script = ExtResource("1_nn7cb")
 
 [node name="Kills_ProgressBar" type="ProgressBar" parent="CanvasLayer"]
 offset_left = 40.0
-offset_top = 24.0
+offset_top = 16.0
 offset_right = 301.0
-offset_bottom = 51.0
+offset_bottom = 58.0
 theme = SubResource("Theme_4dgfc")
 
 [node name="Spawns_ProgressBar" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 720.0
-offset_top = 24.0
-offset_right = 981.0
-offset_bottom = 51.0
+offset_left = 760.0
+offset_top = 16.0
+offset_right = 1021.0
+offset_bottom = 58.0
 theme = SubResource("Theme_w0d1e")

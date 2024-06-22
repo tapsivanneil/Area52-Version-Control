@@ -1,21 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://uxdhfu7vmarj"]
+[gd_scene load_steps=6 format=3 uid="uid://uxdhfu7vmarj"]
 
 [ext_resource type="Script" path="res://scripts/game elements/Volume.gd" id="1_6c5ou"]
-[ext_resource type="Texture2D" uid="uid://coy7ibhy14x4g" path="res://assets/speaker-filled-audio-tool.png" id="2_03d7p"]
+[ext_resource type="Texture2D" uid="uid://do12ak23417ks" path="res://assets/icons/speaker-icon.png" id="2_v2mvf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7scql"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gh0sb"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_n0q7t"]
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_7scql")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_gh0sb")
 
 [node name="Volume" type="HSlider"]
 offset_left = 144.0
 offset_top = 72.0
 offset_right = 376.0
 offset_bottom = 124.0
+theme = SubResource("Theme_n0q7t")
 max_value = 1.0
 step = 0.001
 script = ExtResource("1_6c5ou")
 
 [node name="Speaker-filled-audio-tool" type="Sprite2D" parent="."]
-position = Vector2(-32, 24)
-scale = Vector2(0.09375, 0.109375)
-texture = ExtResource("2_03d7p")
+position = Vector2(-40, 24)
+scale = Vector2(0.181731, 0.212019)
+texture = ExtResource("2_v2mvf")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

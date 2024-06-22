@@ -55,7 +55,7 @@ func attack():
 	call_deferred("_do_attack")
 
 func _do_attack():
-	bullet_scene = preload("res://scenes/projectiles/sniper_bullet.tscn")
+	bullet_scene = preload("res://scenes/projectiles/machine_gun_bullet.tscn")
 	var bullet_instance = bullet_scene.instantiate()
 	snipe.play()
 	get_tree().root.add_child(bullet_instance)

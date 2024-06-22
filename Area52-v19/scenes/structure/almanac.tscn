@@ -43,6 +43,7 @@ size = Vector2(96.4845, 98.5)
 
 [node name="Almanac" type="Node2D"]
 script = ExtResource("1_kt7kx")
+metadata/_edit_horizontal_guides_ = [72.0]
 
 [node name="Almanac-bg" type="Sprite2D" parent="."]
 position = Vector2(572.639, 323.57)
@@ -50,17 +51,17 @@ scale = Vector2(0.603501, 0.600796)
 texture = ExtResource("2_pgcfw")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 763.0
-offset_top = 69.0
-offset_right = 1088.0
-offset_bottom = 580.0
+offset_left = 496.0
+offset_top = 200.0
+offset_right = 816.0
+offset_bottom = 451.0
 theme = SubResource("Theme_237wk")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 776.0
-offset_top = 88.0
-offset_right = 1075.0
-offset_bottom = 574.0
+offset_left = 509.0
+offset_top = 219.0
+offset_right = 808.0
+offset_bottom = 705.0
 scale = Vector2(0.988545, 0.988545)
 theme = SubResource("Theme_5egoy")
 theme_override_fonts/font = ExtResource("2_4rbxp")
@@ -69,7 +70,7 @@ theme_override_font_sizes/font_size = 24
 [node name="Attacker" type="Node" parent="."]
 
 [node name="Alieny" type="Area2D" parent="Attacker"]
-position = Vector2(80, -24)
+position = Vector2(712, -32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attacker/Alieny"]
 position = Vector2(191.758, 420)
@@ -89,7 +90,7 @@ scale = Vector2(0.344545, 0.344545)
 texture = ExtResource("4_inij2")
 
 [node name="Mutatedalien" type="Area2D" parent="Attacker"]
-position = Vector2(-48, -144)
+position = Vector2(584, -152)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Attacker/Mutatedalien"]
 position = Vector2(463.031, 542)
@@ -110,7 +111,7 @@ scale = Vector2(0.345158, 0.345158)
 texture = ExtResource("5_qon7j")
 
 [node name="Crawler" type="Area2D" parent="Attacker"]
-position = Vector2(216, -16)
+position = Vector2(712, -280)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Attacker/Crawler"]
 position = Vector2(331.516, 415)
@@ -130,7 +131,7 @@ scale = Vector2(0.346363, 0.346363)
 texture = ExtResource("6_780ew")
 
 [node name="Dungbeetle" type="Area2D" parent="Attacker"]
-position = Vector2(224, -16)
+position = Vector2(448, -280)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Attacker/Dungbeetle"]
 position = Vector2(466, 416)
@@ -150,7 +151,7 @@ scale = Vector2(0.349194, 0.349201)
 texture = ExtResource("7_iq2kw")
 
 [node name="Grimer" type="Area2D" parent="Attacker"]
-position = Vector2(80, -16)
+position = Vector2(848, -280)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Attacker/Grimer"]
 position = Vector2(200, 544)
@@ -170,7 +171,7 @@ scale = Vector2(0.352826, 0.352826)
 texture = ExtResource("8_m4vwa")
 
 [node name="Swarm" type="Area2D" parent="Attacker"]
-position = Vector2(80, -16)
+position = Vector2(576, -280)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Attacker/Swarm"]
 position = Vector2(336, 544)
@@ -189,10 +190,34 @@ position = Vector2(330, 538)
 scale = Vector2(0.343852, 0.343852)
 texture = ExtResource("9_x0thp")
 
+[node name="Panel2" type="Panel" parent="Attacker"]
+offset_left = 984.0
+offset_top = 456.0
+offset_right = 1099.0
+offset_bottom = 571.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Panel3" type="Panel" parent="Attacker"]
+offset_left = 848.0
+offset_top = 456.0
+offset_right = 963.0
+offset_bottom = 571.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
+[node name="Panel4" type="Panel" parent="Attacker"]
+offset_left = 216.0
+offset_top = 72.0
+offset_right = 331.0
+offset_bottom = 187.0
+mouse_filter = 2
+theme = SubResource("Theme_237wk")
+
 [node name="Defender" type="Node" parent="."]
 
 [node name="Bomber" type="Area2D" parent="Defender"]
-position = Vector2(80, -280)
+position = Vector2(216, -280)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Defender/Bomber"]
 position = Vector2(196, 409.5)
@@ -212,7 +237,7 @@ scale = Vector2(0.341256, 0.341256)
 texture = ExtResource("10_41cx0")
 
 [node name="Defender" type="Area2D" parent="Defender"]
-position = Vector2(-48, -408)
+position = Vector2(-48, -24)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Defender/Defender"]
 position = Vector2(460, 540)
@@ -232,7 +257,7 @@ scale = Vector2(0.346117, 0.346117)
 texture = ExtResource("11_bpqqf")
 
 [node name="Flamethrower" type="Area2D" parent="Defender"]
-position = Vector2(216, -280)
+position = Vector2(80, -152)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Defender/Flamethrower"]
 position = Vector2(332, 412)
@@ -252,7 +277,7 @@ scale = Vector2(0.349264, 0.349264)
 texture = ExtResource("12_rc52d")
 
 [node name="Machinegunner" type="Area2D" parent="Defender"]
-position = Vector2(208, -280)
+position = Vector2(-200, -24)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Defender/Machinegunner"]
 position = Vector2(476.125, 412)
@@ -272,7 +297,7 @@ scale = Vector2(0.344464, 0.344464)
 texture = ExtResource("13_knhca")
 
 [node name="Pistoleer" type="Area2D" parent="Defender"]
-position = Vector2(80, -296)
+position = Vector2(216, -168)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Defender/Pistoleer"]
 position = Vector2(196, 558.75)
@@ -292,7 +317,7 @@ scale = Vector2(0.348967, 0.348967)
 texture = ExtResource("14_row24")
 
 [node name="Railgunner" type="Area2D" parent="Defender"]
-position = Vector2(80, -280)
+position = Vector2(-56, -24)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Defender/Railgunner"]
 position = Vector2(329.938, 544)
@@ -312,7 +337,7 @@ scale = Vector2(0.345191, 0.345191)
 texture = ExtResource("15_bynsv")
 
 [node name="Sniper" type="Area2D" parent="Defender"]
-position = Vector2(216, -280)
+position = Vector2(-56, -280)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Defender/Sniper"]
 position = Vector2(334, 544)
