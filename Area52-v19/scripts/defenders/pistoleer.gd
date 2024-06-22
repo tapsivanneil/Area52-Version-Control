@@ -10,18 +10,13 @@ var damage = 10
 var casting_time = 1
 var reload_time = 7
 @onready var main_scene = get_node('/root/Level_'+str(Global.player_level))
-@onready var shot = $gunShot
+@onready var gun_shot = $gun_shot
 
 var path
 
 func _ready():
-	#path = preload("res://path.tscn")
 	$Sprite2D/AnimatedSprite2D.play("idle")
-	$Timer.wait_time = attack_speed
-	
-#func _process(delta):
-	#pass
-	
+	$animation_delay.wait_time = 0.8
 
 func _on_body_entered(body):
 	
@@ -48,24 +43,27 @@ func _on_body_entered(body):
 		
 		
 func die():
-	queue_free()
+	$animation_delay.start()
+	$Sprite2D/AnimatedSprite2D.play("death")
 
 func stop_attack():
 	$Sprite2D/AnimatedSprite2D.play("idle")
 	$Timer.stop()
 
 func attack():
-	#$Timer.start()
 	$Sprite2D/AnimatedSprite2D.play("attack")
 	call_deferred("_do_attack")
 
 func _do_attack():
 	bullet_scene = preload("res://scenes/projectiles/pistol_bullet.tscn")
 	var bullet_instance = bullet_scene.instantiate()
+	gun_shot.play()
 	get_tree().root.add_child(bullet_instance)
-	shot.play()
 	bullet_instance.transform = $Shooting_area.global_transform
-	#print("attacking")
+
 func get_reload_time():
 	return reload_time
 
+func _on_animation_delay_timeout():
+	queue_free()
+	$animation_delay.stop()

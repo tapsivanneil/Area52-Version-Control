@@ -36,40 +36,24 @@ func _on_timer_timeout():
 	speed = 0
 	if attacking != null: 
 		attacking.health -= dps
-		print(attacking.health)
 		if attacking.health <= 0:
-			$Timer.stop()
-			
 			var child = attacking
 			if child.get_name() == "Character":
-				#call_deferred("remove_character", attacking)
-				print('dead')
-				child.queue_free()
-				
 				attacking = null
+				child.die()
 				speed = moving_speed
 				
-		else:
-			#print("CharacterH:", attacking.health)
-			pass
 	elif(attacking == null):
-		print("none attacking")	
+		animated_sprite.play('Walk')
 		$Timer.stop()
 		speed = moving_speed
 
 func take_dmg(dmg, enemy):
 	health -= dmg
-	#print(health)
 	self_reference = enemy
 	if health <= 0:
 		animated_sprite.play('Death')
 		$animation_delay.start()
-		
-
-
-#func _on_area_2d_body_entered(body):
-	#if body.get_name() == 'Bullet' or body == bullet:
-		#self.queue_free() \
 		
 func after_death_animation(enemy):
 	main_scene.total_kills += 1
@@ -82,16 +66,13 @@ func after_death_animation(enemy):
 			victory_panel.visible = true
 			hot_bar.visible = false
 			Global.opened_level += 1
-		
 	main_scene.enemy_on_stage.erase(enemy)
 	progress_bar.update_kills_progress_bar()
 	queue_free()
 
-
 func _on_animation_delay_timeout():
 	after_death_animation(self_reference)
 	$animation_delay.stop()
-
 
 func _on_area_2d_body_entered(body):
 	if body == player:

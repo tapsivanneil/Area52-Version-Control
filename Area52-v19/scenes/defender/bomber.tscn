@@ -213,10 +213,14 @@ position = Vector2(142.857, 2.8026e-45)
 scale = Vector2(1.04888, 1.04888)
 sprite_frames = SubResource("SpriteFrames_7w2yv")
 animation = &"death"
+frame_progress = 0.580764
 
 [node name="bomb_shot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_rgj25")
 bus = &"sfx"
 
+[node name="animation_delay" type="Timer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="animation_delay" to="." method="_on_animation_delay_timeout"]

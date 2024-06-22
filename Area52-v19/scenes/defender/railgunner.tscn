@@ -254,5 +254,8 @@ frame_progress = 0.813997
 stream = ExtResource("5_i40ng")
 bus = &"sfx"
 
+[node name="animation_delay" type="Timer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="animation_delay" to="." method="_on_animation_delay_timeout"]

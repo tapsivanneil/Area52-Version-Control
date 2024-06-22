@@ -16,14 +16,7 @@ var path
 
 func _ready():
 	$Sprite2D/AnimatedSprite2D.play("idle")
-	#path = preload("res://path.tscn")
-	
-	$Timer.wait_time = attack_speed
-	
-
-#func _process(delta):
-	#pass
-	
+	$animation_delay.wait_time = 0.8
 
 func _on_body_entered(body):
 	
@@ -50,14 +43,14 @@ func _on_body_entered(body):
 		
 		
 func die():
-	queue_free()
+	$animation_delay.start()
+	$Sprite2D/AnimatedSprite2D.play("death")
 
 func stop_attack():
 	$Sprite2D/AnimatedSprite2D.play("idle")
 	$Timer.stop()
 
 func attack():
-	#$Timer.start()
 	$Sprite2D/AnimatedSprite2D.play("attack")
 	call_deferred("_do_attack")
 
@@ -67,7 +60,10 @@ func _do_attack():
 	snipe.play()
 	get_tree().root.add_child(bullet_instance)
 	bullet_instance.transform = $Shooting_area.global_transform
-	#print("attacking")
 
 func get_reload_time():
 	return reload_time
+
+func _on_animation_delay_timeout():
+	queue_free()
+	$animation_delay.stop()

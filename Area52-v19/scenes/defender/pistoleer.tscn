@@ -213,11 +213,14 @@ texture = ExtResource("4_lwbjj")
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="gunShot" type="AudioStreamPlayer" parent="."]
+[node name="gun_shot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_5vxuq")
 volume_db = -0.5
 pitch_scale = 2.0
 bus = &"sfx"
 
+[node name="animation_delay" type="Timer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="animation_delay" to="." method="_on_animation_delay_timeout"]

@@ -232,5 +232,8 @@ stream = ExtResource("5_j7ie3")
 pitch_scale = 0.65
 bus = &"sfx"
 
+[node name="animation_delay" type="Timer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="animation_delay" to="." method="_on_animation_delay_timeout"]

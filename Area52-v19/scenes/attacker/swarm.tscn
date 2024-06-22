@@ -60,7 +60,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8sk7w"]
 size = Vector2(50, 50)
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy2" type="CharacterBody2D"]
 script = ExtResource("1_xydeo")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
