@@ -6,7 +6,7 @@ extends Node2D
 @export var level4 = preload("res://scenes/levels/level_4.tscn")
 @export var level5 = preload("res://scenes/levels/level_5.tscn")
 
-func _ready():
+func _ready():	
 	for i in range(Global.opened_level):
 		var button_name = "Control/Level" + str(i+1) + "_btn"  
 		var button = get_node(button_name)
@@ -36,3 +36,7 @@ func _on_level_5_btn_pressed():
 	Global.player_level = 5	
 	#print(Global.player_level)
 	get_tree().change_scene_to_file("res://scenes/levels/level_5.tscn")
+
+
+func _on_back_story_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/structure/backstory.tscn")

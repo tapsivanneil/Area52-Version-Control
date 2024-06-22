@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dinja1og0mxib"]
+[gd_scene load_steps=3 format=3 uid="uid://d3cxtjhhmo5bv"]
 
 [ext_resource type="VideoStream" path="res://assets/backstory.ogv" id="1_o4ylp"]
+[ext_resource type="Script" path="res://scripts/structure/backstory.gd" id="2_s0bbe"]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer"]
 offset_right = 1920.0
@@ -8,3 +9,15 @@ offset_bottom = 1088.0
 scale = Vector2(0.600775, 0.600775)
 stream = ExtResource("1_o4ylp")
 autoplay = true
+script = ExtResource("2_s0bbe")
+
+[node name="SkipButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1711.0
+offset_top = 975.0
+offset_right = 1858.0
+offset_bottom = 1032.0
+text = "Skip
+"
+
+[connection signal="pressed" from="SkipButton" to="." method="_on_skip_button_pressed"]

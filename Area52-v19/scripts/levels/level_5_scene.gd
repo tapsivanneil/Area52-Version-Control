@@ -1,8 +1,8 @@
 extends Node2D
 
 var attacker_instance
-var num_of_spawns = 25
-var default_num_of_spawns = 25
+var num_of_spawns = 1
+var default_num_of_spawns = 1
 var spawn_timer
 
 var enemy = {}

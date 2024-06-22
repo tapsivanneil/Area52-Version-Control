@@ -376,12 +376,20 @@ scale = Vector2(0.650785, 0.650785)
 theme_override_fonts/font = ExtResource("3_x6s51")
 text = "ALMANAC"
 
-[node name="MenuButton2" parent="." instance=ExtResource("7_mqfek")]
-position = Vector2(1064, 32)
+[node name="TutorialButton" parent="." instance=ExtResource("7_mqfek")]
+position = Vector2(1056, 30)
 scale = Vector2(0.48804, 0.48804)
+
+[node name="BackStoryButton" type="Button" parent="."]
+offset_left = 939.0
+offset_top = 38.0
+offset_right = 1008.0
+offset_bottom = 69.0
+text = "Story"
 
 [connection signal="pressed" from="Control/Level1_btn" to="." method="_on_level_1_btn_pressed"]
 [connection signal="pressed" from="Control/Level2_btn" to="." method="_on_level_2_btn_pressed"]
 [connection signal="pressed" from="Control/Level3_btn" to="." method="_on_level_3_btn_pressed"]
 [connection signal="pressed" from="Control/Level4_btn" to="." method="_on_level_4_btn_pressed"]
 [connection signal="pressed" from="Control/Level5_btn" to="." method="_on_level_5_btn_pressed"]
+[connection signal="pressed" from="BackStoryButton" to="." method="_on_back_story_button_pressed"]
