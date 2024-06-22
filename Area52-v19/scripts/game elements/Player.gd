@@ -7,7 +7,7 @@ var current_tile_position
 var can_deploy: bool = true
 
 #@onready var current_level = get_node("/root/Level_"+str(Global.player_level))
-var character_scene = preload("res://scenes/defender/pistoleer.tscn")
+var character_scene = null
 var scene_instance  # Variable to store the reference to the scene instance
 var is_looking_left = false
 var moving 
@@ -46,7 +46,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("drop"):
 		#print(can_deploy)
-		if current_tile_position != null:
+		if current_tile_position != null && character_scene != null:
 			if can_deploy == true && current_tile_position.occupied == false:
 				#can_deploy = false		
 				if current_tile_position != null:
