@@ -76,8 +76,7 @@ size = Vector2(50, 50)
 script = ExtResource("1_be2e0")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(16, -8)
-scale = Vector2(0.048, 0.048)
+scale = Vector2(0.0996544, 0.0996544)
 sprite_frames = SubResource("SpriteFrames_8ngby")
 animation = &"Death"
 

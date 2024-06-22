@@ -16,7 +16,7 @@ shape = SubResource("CircleShape2D_vvf8y")
 
 [node name="Bomb" type="Sprite2D" parent="."]
 position = Vector2(-32, 0)
-scale = Vector2(0.063, 0.063)
+scale = Vector2(0.07, 0.07)
 texture = ExtResource("2_m06ob")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
