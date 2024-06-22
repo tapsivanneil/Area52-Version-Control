@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/structure/almanac.gd" id="1_kt7kx"]
 [ext_resource type="FontFile" uid="uid://cwc64a8usnhu3" path="res://assets/fonts/LeagueSpartan-Regular.ttf" id="2_4rbxp"]
-[ext_resource type="Texture2D" uid="uid://dx0mmeptevcvq" path="res://assets/almanac-bg.png" id="2_pgcfw"]
+[ext_resource type="Texture2D" uid="uid://dx0mmeptevcvq" path="res://assets/backgrounds/almanac-bg.png" id="2_pgcfw"]
 [ext_resource type="FontFile" uid="uid://cpuej7dj5e74f" path="res://assets/fonts/LeagueSpartan-SemiBold.ttf" id="3_b5v3v"]
 [ext_resource type="Texture2D" uid="uid://0sgmwucl78oy" path="res://assets/almanac-assets/alien-y.png" id="4_inij2"]
 [ext_resource type="Texture2D" uid="uid://cdoosobjq1pxn" path="res://assets/almanac-assets/mutated.png" id="5_qon7j"]

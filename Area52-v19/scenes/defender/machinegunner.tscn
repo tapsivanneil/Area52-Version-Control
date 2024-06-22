@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://d0wdsr22md8yk"]
+[gd_scene load_steps=27 format=3 uid="uid://d0wdsr22md8yk"]
 
 [ext_resource type="Script" path="res://scripts/defenders/machinegunner.gd" id="1_p7v37"]
 [ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://scenes/game elements/shooting_area.tscn" id="2_nqg3e"]
-[ext_resource type="Texture2D" uid="uid://d1jtffr48biqi" path="res://assets/defenders/player sprites/machinegunner-spritesheet.png" id="4_g2mq8"]
+[ext_resource type="Texture2D" uid="uid://d1jtffr48biqi" path="res://assets/defenders/player sprites/attack-animation/machinegunner-spritesheet.png" id="4_g2mq8"]
 [ext_resource type="Texture2D" uid="uid://be37bd6148pwg" path="res://assets/defenders/pistol.png" id="4_ormlm"]
+[ext_resource type="Texture2D" uid="uid://dpuiks3ajfdod" path="res://assets/defenders/player sprites/death-animation/machinegun-death.png" id="5_0kk5a"]
 [ext_resource type="AudioStream" uid="uid://dj1d3kk2qq6q8" path="res://assets/music/ak-47-firing-8760_3J70hBNd.mp3" id="5_ao5cl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ok3u"]
@@ -36,6 +37,38 @@ region = Rect2(4820, 0, 964, 976)
 [sub_resource type="AtlasTexture" id="AtlasTexture_h0gxr"]
 atlas = ExtResource("4_g2mq8")
 region = Rect2(5784, 0, 964, 976)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msxyk"]
+atlas = ExtResource("5_0kk5a")
+region = Rect2(0, 0, 938, 992)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2wvb"]
+atlas = ExtResource("5_0kk5a")
+region = Rect2(938, 0, 938, 992)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5ee6"]
+atlas = ExtResource("5_0kk5a")
+region = Rect2(1876, 0, 938, 992)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hu3nm"]
+atlas = ExtResource("5_0kk5a")
+region = Rect2(2814, 0, 938, 992)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2axn"]
+atlas = ExtResource("5_0kk5a")
+region = Rect2(3752, 0, 938, 992)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70hbs"]
+atlas = ExtResource("5_0kk5a")
+region = Rect2(4690, 0, 938, 992)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0vwk"]
+atlas = ExtResource("5_0kk5a")
+region = Rect2(5628, 0, 938, 992)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3t24"]
+atlas = ExtResource("5_0kk5a")
+region = Rect2(6566, 0, 938, 992)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1eui2"]
 atlas = ExtResource("4_g2mq8")
@@ -75,6 +108,35 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msxyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2wvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5ee6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hu3nm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2axn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70hbs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0vwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3t24")
+}],
+"loop": true,
+"name": &"death",
 "speed": 12.0
 }, {
 "frames": [{
@@ -120,9 +182,9 @@ vframes = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 scale = Vector2(1.24328, 1.24328)
 sprite_frames = SubResource("SpriteFrames_sbe21")
-animation = &"attack"
-frame = 4
-frame_progress = 0.984392
+animation = &"idle"
+frame = 2
+frame_progress = 0.000703641
 
 [node name="snipe" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ao5cl")

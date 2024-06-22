@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/levels/level_2_scene.gd" id="1_bvjfg"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_58ntl"]
 [ext_resource type="PackedScene" uid="uid://5203tlw2qe7m" path="res://scenes/game elements/player.tscn" id="3_ood4h"]
-[ext_resource type="Texture2D" uid="uid://cags3h0ymnrwd" path="res://assets/level-2-bg.png" id="3_xqd2i"]
+[ext_resource type="Texture2D" uid="uid://cags3h0ymnrwd" path="res://assets/backgrounds/level-2-bg.png" id="3_xqd2i"]
 [ext_resource type="PackedScene" uid="uid://0ylviwxcfcef" path="res://scenes/game elements/tile.tscn" id="4_gnyli"]
 [ext_resource type="PackedScene" uid="uid://by5kh4t7we0tt" path="res://scenes/attacker/swarm.tscn" id="5_e6xx7"]
 [ext_resource type="PackedScene" uid="uid://bxdqvxcd77h1f" path="res://scenes/attacker/dungbeetle.tscn" id="5_evxi6"]

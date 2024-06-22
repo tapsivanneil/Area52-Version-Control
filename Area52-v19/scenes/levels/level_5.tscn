@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/levels/level_5_scene.gd" id="1_2wxhp"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_maiv6"]
-[ext_resource type="Texture2D" uid="uid://b7iyyodb1k52x" path="res://assets/level-5-bg.png" id="3_a2cvd"]
+[ext_resource type="Texture2D" uid="uid://b7iyyodb1k52x" path="res://assets/backgrounds/level-5-bg.png" id="3_a2cvd"]
 [ext_resource type="PackedScene" uid="uid://5203tlw2qe7m" path="res://scenes/game elements/player.tscn" id="3_hkcl4"]
 [ext_resource type="PackedScene" uid="uid://0ylviwxcfcef" path="res://scenes/game elements/tile.tscn" id="4_0vu27"]
 [ext_resource type="PackedScene" uid="uid://by5kh4t7we0tt" path="res://scenes/attacker/swarm.tscn" id="4_xw3fy"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://db0amwqvokcrj"]
 
 [ext_resource type="PackedScene" uid="uid://uxdhfu7vmarj" path="res://scenes/game elements/volume.tscn" id="1_b4gm1"]
-[ext_resource type="Texture2D" uid="uid://dx0mmeptevcvq" path="res://assets/almanac-bg.png" id="1_y7n0m"]
+[ext_resource type="Texture2D" uid="uid://dx0mmeptevcvq" path="res://assets/backgrounds/almanac-bg.png" id="1_y7n0m"]
 [ext_resource type="Script" path="res://scripts/buttons/Back.gd" id="2_f8g7c"]
 [ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="2_nnvpk"]
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="3_o8fv6"]

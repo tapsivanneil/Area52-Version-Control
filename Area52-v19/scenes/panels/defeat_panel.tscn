@@ -1,7 +1,7 @@
 [gd_scene load_steps=49 format=3 uid="uid://pk0dyp5doh51"]
 
 [ext_resource type="Script" path="res://scripts/panels/defeat_panel.gd" id="1_0ikc0"]
-[ext_resource type="Theme" uid="uid://c0fhs6qrjwnjq" path="res://assets/defeat_panel_preset.tres" id="2_xmkse"]
+[ext_resource type="Theme" uid="uid://c0fhs6qrjwnjq" path="res://assets/button-presets/defeat_panel_preset.tres" id="2_xmkse"]
 [ext_resource type="Texture2D" uid="uid://bmnx3xtjaggcy" path="res://assets/icons/home-icon.png" id="3_5f6cm"]
 [ext_resource type="Texture2D" uid="uid://dnlakiqrg7iu3" path="res://assets/icons/replay-icon.png" id="4_fck0j"]
 [ext_resource type="Texture2D" uid="uid://dc8lg4w0kegn2" path="res://assets/icons/level-select-icon.png" id="5_laeoy"]

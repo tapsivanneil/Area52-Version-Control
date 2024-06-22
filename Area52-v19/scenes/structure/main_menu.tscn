@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://eojwbq3qsse3"]
 
 [ext_resource type="Script" path="res://scripts/buttons/MainMenuButtons.gd" id="1_7asiy"]
-[ext_resource type="Texture2D" uid="uid://c3vwqb1mh8ie8" path="res://assets/bg.png" id="1_exvin"]
+[ext_resource type="Texture2D" uid="uid://c3vwqb1mh8ie8" path="res://assets/backgrounds/bg.png" id="1_exvin"]
 [ext_resource type="Theme" uid="uid://b0u64elq2ning" path="res://assets/button-presets/main_menu_button_preset.tres" id="3_bxq80"]
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="4_gpi84"]
 [ext_resource type="Texture2D" uid="uid://xky23jdgdxyg" path="res://assets/icons/quit-icon.png" id="5_r2yqq"]

@@ -49,6 +49,7 @@ func _on_body_entered(body):
 		
 		
 func die():
+	$Sprite2D/AnimatedSprite2D.play("death")
 	queue_free()
 
 func stop_attack():

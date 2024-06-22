@@ -1,12 +1,13 @@
-[gd_scene load_steps=24 format=3 uid="uid://boeiqbwn75xh3"]
+[gd_scene load_steps=32 format=3 uid="uid://boeiqbwn75xh3"]
 
 [ext_resource type="Script" path="res://scripts/defenders/bomber.gd" id="1_lmoyb"]
 [ext_resource type="PackedScene" uid="uid://cm8u50gnnvkyh" path="res://scenes/game elements/shooting_area.tscn" id="2_7kq7b"]
 [ext_resource type="Texture2D" uid="uid://wnohb4ig4lwf" path="res://assets/defenders/Bomber.png" id="4_jfqin"]
 [ext_resource type="Texture2D" uid="uid://be37bd6148pwg" path="res://assets/defenders/pistol.png" id="4_krxg2"]
-[ext_resource type="Texture2D" uid="uid://rj3w4qvwywjj" path="res://assets/defenders/player sprites/bomber-idle.png" id="5_jcyei"]
+[ext_resource type="Texture2D" uid="uid://rj3w4qvwywjj" path="res://assets/defenders/player sprites/idle-animation/bomber-idle.png" id="5_jcyei"]
 [ext_resource type="AudioStream" uid="uid://bcnpp1ib0ed7k" path="res://assets/music/bomb_shot.mp3" id="5_rgj25"]
-[ext_resource type="Texture2D" uid="uid://d2145xkiexcu" path="res://assets/defenders/player sprites/bomber-attack.png" id="5_w7of1"]
+[ext_resource type="Texture2D" uid="uid://d2145xkiexcu" path="res://assets/defenders/player sprites/attack-animation/bomber-attack.png" id="5_w7of1"]
+[ext_resource type="Texture2D" uid="uid://jowpg4w2hwbq" path="res://assets/defenders/player sprites/bomber-death.png" id="6_qe2fp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ok3u"]
 size = Vector2(55, 53)
@@ -54,6 +55,34 @@ region = Rect2(11475, 0, 1275, 949)
 [sub_resource type="AtlasTexture" id="AtlasTexture_101bm"]
 atlas = ExtResource("5_w7of1")
 region = Rect2(12750, 0, 1275, 949)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uecgy"]
+atlas = ExtResource("6_qe2fp")
+region = Rect2(0, 0, 811, 987)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4g2l0"]
+atlas = ExtResource("6_qe2fp")
+region = Rect2(811, 0, 811, 987)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dect"]
+atlas = ExtResource("6_qe2fp")
+region = Rect2(1622, 0, 811, 987)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee7dv"]
+atlas = ExtResource("6_qe2fp")
+region = Rect2(2433, 0, 811, 987)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buqrr"]
+atlas = ExtResource("6_qe2fp")
+region = Rect2(3244, 0, 811, 987)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycrrc"]
+atlas = ExtResource("6_qe2fp")
+region = Rect2(4055, 0, 811, 987)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hc7q"]
+atlas = ExtResource("6_qe2fp")
+region = Rect2(4866, 0, 811, 987)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6nlqd"]
 atlas = ExtResource("5_jcyei")
@@ -109,6 +138,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_uecgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4g2l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dect")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee7dv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buqrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycrrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hc7q")
+}],
+"loop": true,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_6nlqd")
 }, {
 "duration": 1.0,
@@ -157,7 +212,7 @@ vframes = 2
 position = Vector2(142.857, 2.8026e-45)
 scale = Vector2(1.04888, 1.04888)
 sprite_frames = SubResource("SpriteFrames_7w2yv")
-animation = &"idle"
+animation = &"death"
 
 [node name="bomb_shot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_rgj25")
