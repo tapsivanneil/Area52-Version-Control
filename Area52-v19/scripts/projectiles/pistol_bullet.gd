@@ -10,20 +10,10 @@ var enemy ={}
 
 var speed 
 
-
 func _ready():
 	#pass
 	speed = character.attack_speed
 	
-	#print(character.attack_speed)
-	
-	#pass
-	#for i in range(1, 50):
-		#if i not in main_scene.deployed_enemy:
-			#if get_node("/root/MainScene/Enemy" + str(i)) != null:
-				#enemy[i] = get_node("/root/MainScene/Enemy" + str(i))
-
-
 func _process(delta):
 	position += transform.x * speed * delta 
 

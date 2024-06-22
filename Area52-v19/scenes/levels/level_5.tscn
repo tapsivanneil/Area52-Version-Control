@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b41tkgkmb4p3k"]
+[gd_scene load_steps=34 format=3 uid="uid://b41tkgkmb4p3k"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_5_scene.gd" id="1_2wxhp"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_maiv6"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://bavj4xfxsd4u6" path="res://scenes/panels/victory_panel.tscn" id="19_wdsya"]
 [ext_resource type="Texture2D" uid="uid://busia4y08tl6e" path="res://assets/icons/pause-icon.png" id="24_0v5fe"]
 [ext_resource type="PackedScene" uid="uid://1e0lehg71t5l" path="res://scenes/game elements/wall.tscn" id="27_q1yfw"]
+[ext_resource type="PackedScene" uid="uid://cidd1kmt5io4n" path="res://scenes/game elements/progress_bar.tscn" id="28_lijfo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6f2ow"]
 
@@ -496,6 +497,9 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(1118, 654)
 rotation = 1.5708
 scale = Vector2(1.5, 1.5)
+
+[node name="ProgressBar" parent="." instance=ExtResource("28_lijfo")]
+position = Vector2(202, 535)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Character_attack_timer" to="." method="_on_character_attack_timer_timeout"]

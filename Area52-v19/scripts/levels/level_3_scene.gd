@@ -77,6 +77,7 @@ func _on_timer_timeout():
 		deploy_attackers(move_enemy)
 		
 		move_enemy.deployed_enemy_tag = random_number
+		$ProgressBar.update_spawns_progress_bar()
 		num_of_spawns -= 1
 		#print(enemy_on_stage)
 		

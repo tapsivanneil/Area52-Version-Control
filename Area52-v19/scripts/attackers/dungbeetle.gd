@@ -16,6 +16,10 @@ var self_reference
 @onready var hot_bar = get_node("/root/Level_"+str(Global.player_level)+"/UI/Hotbar")
 @onready var main_scene = get_node("/root/Level_"+str(Global.player_level))
 @onready var beetle = $AnimatedSprite
+@onready var progress_bar = get_node("/root/Level_"+str(Global.player_level)+"/ProgressBar")
+
+
+
 func _ready():
 	$animation_delay.wait_time = 0.8
 	$Timer.wait_time = attack_speed
@@ -31,9 +35,6 @@ func attack():
 	$Timer.start()
 	beetle.play("Attack")
 	
-
-	
-
 
 func _on_timer_timeout():
 	speed = 0
@@ -86,7 +87,7 @@ func after_death_animation(enemy):
 			hot_bar.visible = false
 			Global.opened_level += 1
 	main_scene.enemy_on_stage.erase(enemy)
-	print(main_scene.enemy_on_stage)
+	progress_bar.update_kills_progress_bar()
 	queue_free()
 
 

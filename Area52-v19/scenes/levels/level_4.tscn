@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cufhdp3sqro70"]
+[gd_scene load_steps=33 format=3 uid="uid://cufhdp3sqro70"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_4_scene.gd" id="1_xgjlg"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_wgqic"]
@@ -26,6 +26,7 @@
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="21_c6ry2"]
 [ext_resource type="Texture2D" uid="uid://busia4y08tl6e" path="res://assets/icons/pause-icon.png" id="23_n5yn2"]
 [ext_resource type="PackedScene" uid="uid://1e0lehg71t5l" path="res://scenes/game elements/wall.tscn" id="26_qsoeg"]
+[ext_resource type="PackedScene" uid="uid://cidd1kmt5io4n" path="res://scenes/game elements/progress_bar.tscn" id="27_4bbwu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slsfc"]
 
@@ -495,6 +496,9 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(1118, 654)
 rotation = 1.5708
 scale = Vector2(1.5, 1.5)
+
+[node name="ProgressBar" parent="." instance=ExtResource("27_4bbwu")]
+position = Vector2(154, 219)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Character_attack_timer" to="." method="_on_character_attack_timer_timeout"]

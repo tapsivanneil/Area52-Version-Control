@@ -36,8 +36,7 @@ func _ready():
 	# Connect the signal from the selection scene
 	selection_instance.connect("selection_done", Callable(self, "_on_selection_done"))
 	
-
-
+	
 	for i in range(1, 50):
 		enemy[i] = get_node("/root/Level_"+str(current_level)+"/Enemies/Enemy" + str(i))
 	
@@ -78,10 +77,11 @@ func _on_timer_timeout():
 		deploy_attackers(move_enemy)
 		
 		move_enemy.deployed_enemy_tag = random_number
+		$ProgressBar.update_spawns_progress_bar()
+		
 		num_of_spawns -= 1
 		#print(enemy_on_stage)
 		
-
 func deploy_attackers(move_enemy):
 	move_enemy.speed = move_enemy.moving_speed
 	

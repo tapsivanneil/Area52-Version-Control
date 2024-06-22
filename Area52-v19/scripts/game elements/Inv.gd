@@ -17,7 +17,7 @@ func _ready():
 
 func complete_selection():
 	if DefenderList.count_null_values() == 0 && DefenderList.passive_slot_data.size() >= 5:
-		print("true")
+		#print("true")
 		completed = true
 		$StartButton.disabled = false
 		#visible = !visible
