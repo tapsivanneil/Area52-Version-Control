@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://eojwbq3qsse3"]
+[gd_scene load_steps=16 format=3 uid="uid://eojwbq3qsse3"]
 
 [ext_resource type="Script" path="res://scripts/buttons/MainMenuButtons.gd" id="1_7asiy"]
 [ext_resource type="Texture2D" uid="uid://c3vwqb1mh8ie8" path="res://assets/backgrounds/bg.png" id="1_exvin"]
+[ext_resource type="Script" path="res://scripts/structure/main_menu.gd" id="1_qelmu"]
 [ext_resource type="Theme" uid="uid://b0u64elq2ning" path="res://assets/button-presets/main_menu_button_preset.tres" id="3_bxq80"]
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="4_gpi84"]
 [ext_resource type="Texture2D" uid="uid://xky23jdgdxyg" path="res://assets/icons/quit-icon.png" id="5_r2yqq"]
@@ -29,52 +30,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("11_t00b3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_t00b3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_t00b3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_t00b3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_t00b3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_t00b3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_t00b3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_t00b3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_t00b3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_t00b3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_t00b3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_dup78")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_r5jvs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_23c2a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_tka2r")
 }],
-"loop": true,
+"loop": false,
 "name": &"animation",
-"speed": 8.0
+"speed": 10.0
 }]
 
 [sub_resource type="FontVariation" id="FontVariation_lkqvs"]
@@ -89,6 +48,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qelmu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -113,8 +73,7 @@ scale = Vector2(0.324, 0.365)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 sprite_frames = SubResource("SpriteFrames_625mv")
 animation = &"animation"
-frame = 3
-frame_progress = 0.0470242
+frame_progress = 0.693582
 
 [node name="MainMenuButtons" type="HBoxContainer" parent="."]
 visible = false
@@ -200,6 +159,9 @@ theme_override_font_sizes/normal_font_size = 60
 theme_override_font_sizes/bold_font_size = 22
 text = "AREA 52"
 
+[node name="animation_timer" type="Timer" parent="."]
+
 [connection signal="pressed" from="PlayButton" to="MainMenuButtons" method="_on_play_button_pressed"]
 [connection signal="pressed" from="OptionsButton" to="MainMenuButtons" method="_on_options_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="MainMenuButtons" method="_on_quit_button_pressed"]
+[connection signal="timeout" from="animation_timer" to="." method="_on_animation_timer_timeout"]
