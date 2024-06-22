@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dinja1og0mxib"]
+
+[ext_resource type="VideoStream" path="res://assets/backstory.ogv" id="1_o4ylp"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer"]
+offset_right = 1920.0
+offset_bottom = 1088.0
+scale = Vector2(0.600775, 0.600775)
+stream = ExtResource("1_o4ylp")
+autoplay = true

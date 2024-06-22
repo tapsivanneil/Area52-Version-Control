@@ -212,7 +212,7 @@ vframes = 2
 position = Vector2(142.857, 2.8026e-45)
 scale = Vector2(1.04888, 1.04888)
 sprite_frames = SubResource("SpriteFrames_7w2yv")
-animation = &"death"
+animation = &"attack"
 
 [node name="bomb_shot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_rgj25")
