@@ -181,7 +181,7 @@ animations = [{
 script = ExtResource("1_lmoyb")
 
 [node name="Shooting_area" parent="." instance=ExtResource("2_7kq7b")]
-position = Vector2(32, -8)
+position = Vector2(72, -16)
 scale = Vector2(1.09427, 0.766947)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -209,8 +209,8 @@ hframes = 14
 vframes = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
-position = Vector2(142.857, 2.8026e-45)
-scale = Vector2(1.04888, 1.04888)
+position = Vector2(142.857, -142.857)
+scale = Vector2(0.966414, 0.966414)
 sprite_frames = SubResource("SpriteFrames_7w2yv")
 animation = &"attack"
 

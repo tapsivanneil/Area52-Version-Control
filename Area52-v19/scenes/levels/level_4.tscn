@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cufhdp3sqro70"]
+[gd_scene load_steps=36 format=3 uid="uid://cufhdp3sqro70"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_4_scene.gd" id="1_xgjlg"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_wgqic"]
@@ -28,6 +28,16 @@
 [ext_resource type="PackedScene" uid="uid://1e0lehg71t5l" path="res://scenes/game elements/wall.tscn" id="26_qsoeg"]
 [ext_resource type="PackedScene" uid="uid://cidd1kmt5io4n" path="res://scenes/game elements/progress_bar.tscn" id="27_4bbwu"]
 [ext_resource type="AudioStream" uid="uid://prch7fjbp4iq" path="res://assets/music/vision-wires-crossed-128154.mp3" id="28_36bpy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ng1u"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="Theme" id="Theme_nfjpg"]
+Panel/styles/panel = SubResource("StyleBoxFlat_0ng1u")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slsfc"]
 
@@ -443,18 +453,25 @@ position = Vector2(96, 120)
 
 [node name="Hotbar_Timer" type="Timer" parent="."]
 
+[node name="Panel" type="Panel" parent="Hotbar_Timer"]
+offset_left = 472.0
+offset_top = 3.0
+offset_right = 521.0
+offset_bottom = 34.0
+scale = Vector2(3.16505, 3.16505)
+theme = SubResource("Theme_nfjpg")
+
 [node name="Label" type="Label" parent="Hotbar_Timer"]
-offset_left = 118.0
-offset_top = 128.0
-offset_right = 247.0
-offset_bottom = 616.0
+offset_left = 486.0
+offset_top = -187.0
+offset_right = 615.0
+offset_bottom = 301.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("21_c6ry2")
 theme_override_font_sizes/font_size = 42
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Panels" type="Node" parent="."]
 
@@ -473,10 +490,10 @@ z_index = 2
 scale = Vector2(0.999549, 0.999549)
 
 [node name="PauseButton" type="Button" parent="."]
-offset_left = 1024.0
-offset_top = 10.0
-offset_right = 1152.0
-offset_bottom = 82.0
+offset_left = 1072.0
+offset_top = 24.0
+offset_right = 1200.0
+offset_bottom = 96.0
 scale = Vector2(0.429844, 0.75577)
 theme = SubResource("Theme_73j6a")
 

@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3cxtjhhmo5bv"]
+[gd_scene load_steps=6 format=3 uid="uid://d3cxtjhhmo5bv"]
 
 [ext_resource type="VideoStream" path="res://assets/backstory.ogv" id="1_o4ylp"]
 [ext_resource type="Script" path="res://scripts/structure/backstory.gd" id="2_s0bbe"]
+[ext_resource type="Texture2D" uid="uid://n3tqk8eggril" path="res://assets/backgrounds/level-select-background.png" id="3_pa64n"]
+[ext_resource type="Texture2D" uid="uid://dx0mmeptevcvq" path="res://assets/backgrounds/almanac-bg.png" id="4_2jpv0"]
+[ext_resource type="FontFile" uid="uid://c2jev1gbnyma5" path="res://assets/AubetteArchiType Normal Regular.otf" id="4_32s25"]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer"]
 offset_right = 1920.0
@@ -11,13 +14,27 @@ stream = ExtResource("1_o4ylp")
 autoplay = true
 script = ExtResource("2_s0bbe")
 
+[node name="Level-select-bg" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(958.762, 532.645)
+scale = Vector2(0.997106, 1.00827)
+texture = ExtResource("3_pa64n")
+
+[node name="Almanac-bg" type="Sprite2D" parent="."]
+position = Vector2(958.762, 545.961)
+scale = Vector2(1.00061, 1.01261)
+texture = ExtResource("4_2jpv0")
+
 [node name="SkipButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1711.0
-offset_top = 975.0
-offset_right = 1858.0
-offset_bottom = 1032.0
-text = "Skip
+offset_left = 1611.25
+offset_top = 892.181
+offset_right = 1758.25
+offset_bottom = 949.181
+scale = Vector2(1.38289, 1.38289)
+theme_override_fonts/font = ExtResource("4_32s25")
+theme_override_font_sizes/font_size = 25
+text = "SKIP
 "
 
 [connection signal="finished" from="." to="." method="_on_finished"]

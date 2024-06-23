@@ -1,22 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://cidd1kmt5io4n"]
+[gd_scene load_steps=11 format=3 uid="uid://cidd1kmt5io4n"]
 
 [ext_resource type="Script" path="res://scripts/game elements/ProgressBar.gd" id="1_nn7cb"]
 [ext_resource type="FontFile" uid="uid://c2jev1gbnyma5" path="res://assets/AubetteArchiType Normal Regular.otf" id="2_dj8y0"]
+[ext_resource type="Texture2D" uid="uid://wbpgx5uttcx7" path="res://assets/defenders/player-head.png" id="3_4udl3"]
+[ext_resource type="Texture2D" uid="uid://c857esvmysnai" path="res://assets/attacker/grimer-head.png" id="4_17u1w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hxo7"]
-bg_color = Color(0.113725, 0.796078, 0.364706, 1)
+bg_color = Color(0.0862745, 0.415686, 0.901961, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.0623486, 0.456326, 0.200871, 1)
+border_color = Color(0.0352941, 0.192157, 0.396078, 1)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hy6u"]
-bg_color = Color(0.0627451, 0.454902, 0.2, 1)
+bg_color = Color(0.0352941, 0.192157, 0.396078, 1)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
@@ -59,15 +61,27 @@ script = ExtResource("1_nn7cb")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Kills_ProgressBar" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 40.0
-offset_top = 16.0
-offset_right = 301.0
-offset_bottom = 58.0
+offset_left = 88.0
+offset_top = 32.0
+offset_right = 349.0
+offset_bottom = 74.0
+scale = Vector2(1.00571, 1.00423)
 theme = SubResource("Theme_4dgfc")
 
+[node name="Player-head" type="Sprite2D" parent="CanvasLayer/Kills_ProgressBar"]
+position = Vector2(-16, 16)
+scale = Vector2(0.0851117, 0.0851117)
+texture = ExtResource("3_4udl3")
+
 [node name="Spawns_ProgressBar" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 760.0
-offset_top = 16.0
-offset_right = 1021.0
-offset_bottom = 58.0
+offset_left = 772.0
+offset_top = 32.0
+offset_right = 1033.0
+offset_bottom = 74.0
 theme = SubResource("Theme_w0d1e")
+
+[node name="Grimer-head" type="Sprite2D" parent="CanvasLayer/Spawns_ProgressBar"]
+position = Vector2(-16, 16)
+scale = Vector2(0.280908, 0.280908)
+texture = ExtResource("4_17u1w")
+flip_h = true

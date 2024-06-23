@@ -50,7 +50,7 @@ func stop_attack():
 	$Timer.stop()
 
 func attack():
-	$Sprite2D/AnimatedSprite2D.play("attack")
+	#$Sprite2D/AnimatedSprite2D.play("attack")
 	call_deferred("_do_attack")
 
 func _do_attack():

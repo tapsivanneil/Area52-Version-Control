@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://uuuq2dmpt4dc"]
+[gd_scene load_steps=33 format=3 uid="uid://uuuq2dmpt4dc"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_1_scene.gd" id="1_cpdk8"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_r25te"]
@@ -18,12 +18,23 @@
 [ext_resource type="PackedScene" uid="uid://d13l16psqi467" path="res://scenes/defender/sniper.tscn" id="16_ed27w"]
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="16_t2rj0"]
 [ext_resource type="PackedScene" uid="uid://c3bkqjer131nu" path="res://scenes/game elements/endline.tscn" id="17_m01rw"]
+[ext_resource type="Texture2D" uid="uid://x55gd5frfdwr" path="res://assets/screen.png" id="18_r51kj"]
 [ext_resource type="PackedScene" uid="uid://pk0dyp5doh51" path="res://scenes/panels/defeat_panel.tscn" id="19_5ldv5"]
 [ext_resource type="PackedScene" uid="uid://bvls14o2bg56v" path="res://scenes/panels/pause_panel.tscn" id="20_11thm"]
 [ext_resource type="Texture2D" uid="uid://busia4y08tl6e" path="res://assets/icons/pause-icon.png" id="21_4dykb"]
 [ext_resource type="PackedScene" uid="uid://bavj4xfxsd4u6" path="res://scenes/panels/victory_panel.tscn" id="21_yemrw"]
 [ext_resource type="PackedScene" uid="uid://1e0lehg71t5l" path="res://scenes/game elements/wall.tscn" id="23_ctapa"]
 [ext_resource type="PackedScene" uid="uid://cidd1kmt5io4n" path="res://scenes/game elements/progress_bar.tscn" id="24_xn7um"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ige3y"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="Theme" id="Theme_ug2d2"]
+Panel/styles/panel = SubResource("StyleBoxFlat_ige3y")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b77yr"]
 
@@ -43,15 +54,6 @@ Button/styles/focus = SubResource("StyleBoxEmpty_b77yr")
 Button/styles/hover = SubResource("StyleBoxTexture_rfi10")
 Button/styles/normal = SubResource("StyleBoxTexture_rm6kb")
 Button/styles/pressed = SubResource("StyleBoxTexture_66iau")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osiai"]
-corner_radius_top_left = 1000
-corner_radius_top_right = 1000
-corner_radius_bottom_right = 1000
-corner_radius_bottom_left = 1000
-
-[sub_resource type="Theme" id="Theme_ug2d2"]
-Panel/styles/panel = SubResource("StyleBoxFlat_osiai")
 
 [node name="Level_1" type="Node2D"]
 script = ExtResource("1_cpdk8")
@@ -449,11 +451,25 @@ position = Vector2(96, 120)
 
 [node name="Hotbar_Timer" type="Timer" parent="."]
 
+[node name="Panel" type="Panel" parent="Hotbar_Timer"]
+offset_left = 461.0
+offset_top = 3.0
+offset_right = 510.0
+offset_bottom = 34.0
+scale = Vector2(3.16505, 3.16505)
+theme = SubResource("Theme_ug2d2")
+
+[node name="Screen" type="Sprite2D" parent="Hotbar_Timer"]
+visible = false
+position = Vector2(532.506, 53)
+scale = Vector2(0.523376, 0.523376)
+texture = ExtResource("18_r51kj")
+
 [node name="Label" type="Label" parent="Hotbar_Timer"]
-offset_left = 479.0
-offset_top = -200.0
-offset_right = 608.0
-offset_bottom = 288.0
+offset_left = 474.506
+offset_top = -190.0
+offset_right = 603.506
+offset_bottom = 298.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("16_t2rj0")
 theme_override_font_sizes/font_size = 42
@@ -479,10 +495,10 @@ z_index = 2
 scale = Vector2(0.999549, 0.999549)
 
 [node name="PauseButton" type="Button" parent="."]
-offset_left = 1079.0
-offset_top = 13.0
-offset_right = 1207.0
-offset_bottom = 85.0
+offset_left = 1080.0
+offset_top = 24.0
+offset_right = 1208.0
+offset_bottom = 96.0
 scale = Vector2(0.429844, 0.75577)
 theme = SubResource("Theme_2vvg5")
 
@@ -506,14 +522,6 @@ scale = Vector2(1.5, 1.5)
 
 [node name="ProgressBar" parent="." instance=ExtResource("24_xn7um")]
 position = Vector2(43, 87)
-
-[node name="Panel" type="Panel" parent="ProgressBar"]
-offset_left = 437.0
-offset_top = -111.0
-offset_right = 477.0
-offset_bottom = -71.0
-scale = Vector2(3.16505, 3.16505)
-theme = SubResource("Theme_ug2d2")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Character_attack_timer" to="." method="_on_character_attack_timer_timeout"]

@@ -223,7 +223,7 @@ scale = Vector2(0.118603, 0.118603)
 texture = ExtResource("2_frbod")
 
 [node name="Shooting_area" parent="." instance=ExtResource("2_qpbwq")]
-position = Vector2(32, 8)
+position = Vector2(80, 16)
 scale = Vector2(1.09427, 0.766947)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -243,12 +243,10 @@ position = Vector2(-7, -28)
 scale = Vector2(0.118603, 0.118603)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
-position = Vector2(-8.43149, 33.726)
-scale = Vector2(0.999457, 0.999457)
+position = Vector2(193.924, 101.178)
+scale = Vector2(0.927335, 0.927335)
 sprite_frames = SubResource("SpriteFrames_hnikt")
-animation = &"death"
-frame = 5
-frame_progress = 0.813997
+animation = &"attack"
 
 [node name="laser" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_i40ng")

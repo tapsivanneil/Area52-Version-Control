@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cjoxowca2f0ah"]
+[gd_scene load_steps=34 format=3 uid="uid://cjoxowca2f0ah"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_2_scene.gd" id="1_bvjfg"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_58ntl"]
@@ -26,6 +26,16 @@
 [ext_resource type="PackedScene" uid="uid://1e0lehg71t5l" path="res://scenes/game elements/wall.tscn" id="24_clp5c"]
 [ext_resource type="PackedScene" uid="uid://cidd1kmt5io4n" path="res://scenes/game elements/progress_bar.tscn" id="25_whmk5"]
 [ext_resource type="AudioStream" uid="uid://cjt15wksgyr5a" path="res://assets/music/energy-hum-29083.mp3" id="26_uitle"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osiai"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="Theme" id="Theme_hlxqb"]
+Panel/styles/panel = SubResource("StyleBoxFlat_osiai")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mh4fc"]
 
@@ -421,11 +431,19 @@ layout_mode = 2
 
 [node name="Hotbar_Timer" type="Timer" parent="."]
 
+[node name="Panel" type="Panel" parent="Hotbar_Timer"]
+offset_left = 470.0
+offset_top = 3.0
+offset_right = 519.0
+offset_bottom = 34.0
+scale = Vector2(3.16505, 3.16505)
+theme = SubResource("Theme_hlxqb")
+
 [node name="Label" type="Label" parent="Hotbar_Timer"]
-offset_left = 112.0
-offset_top = 128.0
-offset_right = 208.0
-offset_bottom = 616.0
+offset_left = 501.0
+offset_top = -186.0
+offset_right = 597.0
+offset_bottom = 302.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("11_0rnm4")
 theme_override_font_sizes/font_size = 45
@@ -471,10 +489,10 @@ z_index = 2
 scale = Vector2(0.999549, 0.999549)
 
 [node name="PauseButton" type="Button" parent="."]
-offset_left = 1024.0
-offset_top = 10.0
-offset_right = 1152.0
-offset_bottom = 82.0
+offset_left = 1072.0
+offset_top = 24.0
+offset_right = 1200.0
+offset_bottom = 96.0
 scale = Vector2(0.429844, 0.75577)
 theme = SubResource("Theme_5t4f4")
 

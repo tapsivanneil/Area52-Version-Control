@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c8ru306eulhvn"]
+[gd_scene load_steps=35 format=3 uid="uid://c8ru306eulhvn"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_3_scene.gd" id="1_gpofm"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_8ru52"]
@@ -27,6 +27,16 @@
 [ext_resource type="PackedScene" uid="uid://1e0lehg71t5l" path="res://scenes/game elements/wall.tscn" id="25_emayc"]
 [ext_resource type="PackedScene" uid="uid://cidd1kmt5io4n" path="res://scenes/game elements/progress_bar.tscn" id="26_6cn6f"]
 [ext_resource type="AudioStream" uid="uid://dr8wtdnaum3ur" path="res://assets/music/caves-of-dawn-10376.mp3" id="27_yifpp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tec7v"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="Theme" id="Theme_2lahd"]
+Panel/styles/panel = SubResource("StyleBoxFlat_tec7v")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f7vn3"]
 
@@ -442,18 +452,24 @@ position = Vector2(96, 128)
 
 [node name="Hotbar_Timer" type="Timer" parent="."]
 
+[node name="Panel" type="Panel" parent="Hotbar_Timer"]
+offset_left = 472.0
+offset_top = 3.0
+offset_right = 521.0
+offset_bottom = 34.0
+scale = Vector2(3.16505, 3.16505)
+theme = SubResource("Theme_2lahd")
+
 [node name="Label" type="Label" parent="Hotbar_Timer"]
-offset_left = 118.0
-offset_top = 128.0
-offset_right = 247.0
-offset_bottom = 616.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 487.0
+offset_top = -186.0
+offset_right = 616.0
+offset_bottom = 302.0
 theme_override_fonts/font = ExtResource("20_cgqvn")
 theme_override_font_sizes/font_size = 42
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Panels" type="Node" parent="."]
 
@@ -472,10 +488,10 @@ z_index = 2
 scale = Vector2(0.999549, 0.999549)
 
 [node name="PauseButton" type="Button" parent="."]
-offset_left = 1024.0
-offset_top = 10.0
-offset_right = 1152.0
-offset_bottom = 82.0
+offset_left = 1077.0
+offset_top = 23.0
+offset_right = 1205.0
+offset_bottom = 95.0
 scale = Vector2(0.429844, 0.75577)
 theme = SubResource("Theme_i3v3p")
 

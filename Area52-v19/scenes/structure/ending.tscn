@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi4m56mcrf3ws"]
+[gd_scene load_steps=5 format=3 uid="uid://bi4m56mcrf3ws"]
 
 [ext_resource type="VideoStream" path="res://assets/endingsc.ogv" id="1_rdtfk"]
 [ext_resource type="Script" path="res://scripts/structure/ending.gd" id="1_xlhve"]
 [ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="3_0pcm5"]
+[ext_resource type="Texture2D" uid="uid://n3tqk8eggril" path="res://assets/backgrounds/level-select-background.png" id="3_xndid"]
 
 [node name="ending" type="VideoStreamPlayer"]
 offset_right = 1920.0
@@ -12,8 +13,13 @@ stream = ExtResource("1_rdtfk")
 autoplay = true
 script = ExtResource("1_xlhve")
 
+[node name="Level-select-bg" type="Sprite2D" parent="."]
+position = Vector2(580, 323)
+scale = Vector2(0.604167, 0.598148)
+texture = ExtResource("3_xndid")
+
 [node name="MenuButton" parent="." instance=ExtResource("3_0pcm5")]
-position = Vector2(53.5273, 46.9526)
-scale = Vector2(0.424871, 0.424871)
+position = Vector2(56, 56)
+scale = Vector2(0.580969, 0.580969)
 
 [connection signal="finished" from="." to="." method="_on_finished"]

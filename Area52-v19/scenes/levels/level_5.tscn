@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b41tkgkmb4p3k"]
+[gd_scene load_steps=37 format=3 uid="uid://b41tkgkmb4p3k"]
 
 [ext_resource type="Script" path="res://scripts/levels/level_5_scene.gd" id="1_2wxhp"]
 [ext_resource type="Texture2D" uid="uid://b5wxr5ogwrfp7" path="res://assets/areaout.png" id="2_maiv6"]
@@ -29,6 +29,16 @@
 [ext_resource type="PackedScene" uid="uid://1e0lehg71t5l" path="res://scenes/game elements/wall.tscn" id="27_q1yfw"]
 [ext_resource type="PackedScene" uid="uid://cidd1kmt5io4n" path="res://scenes/game elements/progress_bar.tscn" id="28_lijfo"]
 [ext_resource type="AudioStream" uid="uid://daq6t4btwy18y" path="res://assets/music/cloned-organisms-188710.mp3" id="29_r7ppm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7y2re"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="Theme" id="Theme_d6qsx"]
+Panel/styles/panel = SubResource("StyleBoxFlat_7y2re")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6f2ow"]
 
@@ -67,292 +77,6 @@ expand_mode = 2
 position = Vector2(536, 328)
 scale = Vector2(0.655521, 0.655521)
 texture = ExtResource("3_a2cvd")
-
-[node name="Enemies" type="Node" parent="."]
-
-[node name="Enemy1" parent="Enemies" instance=ExtResource("4_xw3fy")]
-position = Vector2(1212, 168)
-
-[node name="Enemy2" parent="Enemies" instance=ExtResource("5_j6ohh")]
-position = Vector2(1228, 168)
-
-[node name="Enemy3" parent="Enemies" instance=ExtResource("6_vqbxl")]
-position = Vector2(1220, 168)
-
-[node name="Enemy4" parent="Enemies" instance=ExtResource("7_u4512")]
-position = Vector2(1212, 160)
-
-[node name="Enemy5" parent="Enemies" instance=ExtResource("8_2i2vi")]
-position = Vector2(1220, 160)
-
-[node name="Enemy6" parent="Enemies" instance=ExtResource("4_xw3fy")]
-position = Vector2(1212, 168)
-
-[node name="Enemy7" parent="Enemies" instance=ExtResource("5_j6ohh")]
-position = Vector2(1228, 168)
-
-[node name="Enemy8" parent="Enemies" instance=ExtResource("6_vqbxl")]
-position = Vector2(1220, 168)
-
-[node name="Enemy9" parent="Enemies" instance=ExtResource("7_u4512")]
-position = Vector2(1212, 160)
-
-[node name="Enemy10" parent="Enemies" instance=ExtResource("8_2i2vi")]
-position = Vector2(1220, 160)
-
-[node name="Enemy11" parent="Enemies" instance=ExtResource("4_xw3fy")]
-position = Vector2(1212, 264)
-
-[node name="Enemy12" parent="Enemies" instance=ExtResource("5_j6ohh")]
-position = Vector2(1228, 264)
-
-[node name="Enemy13" parent="Enemies" instance=ExtResource("6_vqbxl")]
-position = Vector2(1220, 264)
-
-[node name="Enemy14" parent="Enemies" instance=ExtResource("7_u4512")]
-position = Vector2(1212, 256)
-
-[node name="Enemy15" parent="Enemies" instance=ExtResource("8_2i2vi")]
-position = Vector2(1220, 256)
-
-[node name="Enemy16" parent="Enemies" instance=ExtResource("4_xw3fy")]
-position = Vector2(1212, 264)
-
-[node name="Enemy17" parent="Enemies" instance=ExtResource("5_j6ohh")]
-position = Vector2(1228, 264)
-
-[node name="Enemy18" parent="Enemies" instance=ExtResource("6_vqbxl")]
-position = Vector2(1220, 264)
-
-[node name="Enemy19" parent="Enemies" instance=ExtResource("7_u4512")]
-position = Vector2(1212, 256)
-
-[node name="Enemy20" parent="Enemies" instance=ExtResource("8_2i2vi")]
-position = Vector2(1220, 256)
-
-[node name="Enemy21" parent="Enemies" instance=ExtResource("4_xw3fy")]
-position = Vector2(1212, 360)
-
-[node name="Enemy22" parent="Enemies" instance=ExtResource("5_j6ohh")]
-position = Vector2(1228, 360)
-
-[node name="Enemy23" parent="Enemies" instance=ExtResource("6_vqbxl")]
-position = Vector2(1220, 360)
-
-[node name="Enemy24" parent="Enemies" instance=ExtResource("7_u4512")]
-position = Vector2(1212, 352)
-
-[node name="Enemy25" parent="Enemies" instance=ExtResource("8_2i2vi")]
-position = Vector2(1220, 352)
-
-[node name="Enemy26" parent="Enemies" instance=ExtResource("4_xw3fy")]
-position = Vector2(1212, 360)
-
-[node name="Enemy27" parent="Enemies" instance=ExtResource("5_j6ohh")]
-position = Vector2(1228, 360)
-
-[node name="Enemy28" parent="Enemies" instance=ExtResource("6_vqbxl")]
-position = Vector2(1220, 360)
-
-[node name="Enemy29" parent="Enemies" instance=ExtResource("7_u4512")]
-position = Vector2(1212, 352)
-
-[node name="Enemy30" parent="Enemies" instance=ExtResource("8_2i2vi")]
-position = Vector2(1220, 352)
-
-[node name="Enemy31" parent="Enemies" instance=ExtResource("4_xw3fy")]
-position = Vector2(1220, 464)
-
-[node name="Enemy32" parent="Enemies" instance=ExtResource("5_j6ohh")]
-position = Vector2(1236, 464)
-
-[node name="Enemy33" parent="Enemies" instance=ExtResource("6_vqbxl")]
-position = Vector2(1228, 464)
-
-[node name="Enemy34" parent="Enemies" instance=ExtResource("7_u4512")]
-position = Vector2(1220, 456)
-
-[node name="Enemy35" parent="Enemies" instance=ExtResource("8_2i2vi")]
-position = Vector2(1228, 456)
-
-[node name="Enemy36" parent="Enemies" instance=ExtResource("4_xw3fy")]
-position = Vector2(1220, 464)
-
-[node name="Enemy37" parent="Enemies" instance=ExtResource("5_j6ohh")]
-position = Vector2(1236, 464)
-
-[node name="Enemy38" parent="Enemies" instance=ExtResource("6_vqbxl")]
-position = Vector2(1228, 464)
-
-[node name="Enemy39" parent="Enemies" instance=ExtResource("7_u4512")]
-position = Vector2(1220, 456)
-
-[node name="Enemy40" parent="Enemies" instance=ExtResource("8_2i2vi")]
-position = Vector2(1228, 456)
-
-[node name="Enemy41" parent="Enemies" instance=ExtResource("4_xw3fy")]
-position = Vector2(1220, 563)
-
-[node name="Enemy42" parent="Enemies" instance=ExtResource("5_j6ohh")]
-position = Vector2(1236, 563)
-
-[node name="Enemy43" parent="Enemies" instance=ExtResource("6_vqbxl")]
-position = Vector2(1228, 563)
-
-[node name="Enemy44" parent="Enemies" instance=ExtResource("7_u4512")]
-position = Vector2(1220, 555)
-
-[node name="Enemy45" parent="Enemies" instance=ExtResource("8_2i2vi")]
-position = Vector2(1228, 555)
-
-[node name="Enemy46" parent="Enemies" instance=ExtResource("4_xw3fy")]
-position = Vector2(1220, 563)
-
-[node name="Enemy47" parent="Enemies" instance=ExtResource("5_j6ohh")]
-position = Vector2(1236, 563)
-
-[node name="Enemy48" parent="Enemies" instance=ExtResource("6_vqbxl")]
-position = Vector2(1228, 563)
-
-[node name="Enemy49" parent="Enemies" instance=ExtResource("7_u4512")]
-position = Vector2(1220, 555)
-
-[node name="Enemy50" parent="Enemies" instance=ExtResource("8_2i2vi")]
-position = Vector2(1228, 555)
-
-[node name="Player" parent="." instance=ExtResource("3_hkcl4")]
-z_index = 2
-position = Vector2(215, 187)
-
-[node name="Timer" type="Timer" parent="."]
-
-[node name="Character_attack_timer" type="Timer" parent="."]
-
-[node name="Barrier" parent="." instance=ExtResource("6_cvkvl")]
-position = Vector2(1152, 64)
-
-[node name="Character" parent="." instance=ExtResource("7_64kmf")]
-visible = false
-position = Vector2(424, 616)
-
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Hotbar" type="VBoxContainer" parent="UI"]
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.988
-anchor_right = 0.5
-anchor_bottom = 0.988
-offset_left = -560.0
-offset_top = -518.224
-offset_right = -520.0
-offset_bottom = -268.224
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(2.41511, 2.32864)
-size_flags_horizontal = 8
-size_flags_vertical = 10
-script = ExtResource("8_1480g")
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot" parent="UI/Hotbar" instance=ExtResource("9_aurg8")]
-layout_mode = 2
-
-[node name="Slot2" parent="UI/Hotbar" instance=ExtResource("9_aurg8")]
-layout_mode = 2
-
-[node name="Slot3" parent="UI/Hotbar" instance=ExtResource("9_aurg8")]
-layout_mode = 2
-
-[node name="Slot4" parent="UI/Hotbar" instance=ExtResource("9_aurg8")]
-layout_mode = 2
-
-[node name="Slot5" parent="UI/Hotbar" instance=ExtResource("9_aurg8")]
-layout_mode = 2
-
-[node name="Hotbar_Timer" type="Timer" parent="."]
-
-[node name="Label" type="Label" parent="Hotbar_Timer"]
-offset_left = 118.0
-offset_top = 128.0
-offset_right = 247.0
-offset_bottom = 616.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("15_a3f6t")
-theme_override_font_sizes/font_size = 42
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Defender_List" type="Node2D" parent="."]
-position = Vector2(2152, 408)
-
-[node name="bomber" parent="Defender_List" instance=ExtResource("10_g1gvm")]
-
-[node name="defender" parent="Defender_List" instance=ExtResource("11_t4yfa")]
-
-[node name="flamethrower" parent="Defender_List" instance=ExtResource("12_rbpp3")]
-
-[node name="machinegunner" parent="Defender_List" instance=ExtResource("13_5a8hi")]
-
-[node name="pistoleer" parent="Defender_List" instance=ExtResource("7_64kmf")]
-
-[node name="railgunner" parent="Defender_List" instance=ExtResource("14_dl5fk")]
-
-[node name="sniper" parent="Defender_List" instance=ExtResource("15_ehfbd")]
-
-[node name="Endline" parent="." instance=ExtResource("16_30iq8")]
-position = Vector2(96, 128)
-
-[node name="Panels" type="Node" parent="."]
-
-[node name="DefeatPanel" parent="Panels" instance=ExtResource("17_rvpg0")]
-visible = false
-top_level = true
-z_index = 2
-scale = Vector2(1.00071, 1.00071)
-
-[node name="PausePanel" parent="Panels" instance=ExtResource("18_3jp7y")]
-visible = false
-
-[node name="VictoryPanel" parent="Panels" instance=ExtResource("19_wdsya")]
-visible = false
-z_index = 2
-scale = Vector2(0.999549, 0.999549)
-
-[node name="PauseButton" type="Button" parent="."]
-offset_left = 1024.0
-offset_top = 10.0
-offset_right = 1152.0
-offset_bottom = 82.0
-scale = Vector2(0.429844, 0.75577)
-theme = SubResource("Theme_e3hlw")
-
-[node name="Wall" type="Node" parent="."]
-
-[node name="Wall" parent="Wall" instance=ExtResource("27_q1yfw")]
-position = Vector2(153, 17)
-
-[node name="Wall2" parent="Wall" instance=ExtResource("27_q1yfw")]
-position = Vector2(1121, 13)
-
-[node name="Wall3" parent="Wall" instance=ExtResource("27_q1yfw")]
-position = Vector2(1114, 83)
-rotation = 1.5708
-scale = Vector2(1.5, 1.5)
-
-[node name="Wall4" parent="Wall" instance=ExtResource("27_q1yfw")]
-position = Vector2(1118, 654)
-rotation = 1.5708
-scale = Vector2(1.5, 1.5)
-
-[node name="ProgressBar" parent="." instance=ExtResource("28_lijfo")]
-position = Vector2(202, 535)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("29_r7ppm")
-autoplay = true
 
 [node name="Tiles" type="Node" parent="."]
 
@@ -505,6 +229,298 @@ position = Vector2(1224, 456)
 
 [node name="Tile50" parent="Tiles" instance=ExtResource("4_0vu27")]
 position = Vector2(1224, 544)
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy1" parent="Enemies" instance=ExtResource("4_xw3fy")]
+position = Vector2(1224, 168)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("5_j6ohh")]
+position = Vector2(1240, 168)
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("6_vqbxl")]
+position = Vector2(1232, 168)
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("7_u4512")]
+position = Vector2(1224, 160)
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource("8_2i2vi")]
+position = Vector2(1232, 160)
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource("4_xw3fy")]
+position = Vector2(1224, 168)
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource("5_j6ohh")]
+position = Vector2(1240, 168)
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource("6_vqbxl")]
+position = Vector2(1232, 168)
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource("7_u4512")]
+position = Vector2(1224, 160)
+
+[node name="Enemy10" parent="Enemies" instance=ExtResource("8_2i2vi")]
+position = Vector2(1232, 160)
+
+[node name="Enemy11" parent="Enemies" instance=ExtResource("4_xw3fy")]
+position = Vector2(1224, 264)
+
+[node name="Enemy12" parent="Enemies" instance=ExtResource("5_j6ohh")]
+position = Vector2(1240, 264)
+
+[node name="Enemy13" parent="Enemies" instance=ExtResource("6_vqbxl")]
+position = Vector2(1232, 264)
+
+[node name="Enemy14" parent="Enemies" instance=ExtResource("7_u4512")]
+position = Vector2(1224, 256)
+
+[node name="Enemy15" parent="Enemies" instance=ExtResource("8_2i2vi")]
+position = Vector2(1232, 256)
+
+[node name="Enemy16" parent="Enemies" instance=ExtResource("4_xw3fy")]
+position = Vector2(1224, 264)
+
+[node name="Enemy17" parent="Enemies" instance=ExtResource("5_j6ohh")]
+position = Vector2(1240, 264)
+
+[node name="Enemy18" parent="Enemies" instance=ExtResource("6_vqbxl")]
+position = Vector2(1232, 264)
+
+[node name="Enemy19" parent="Enemies" instance=ExtResource("7_u4512")]
+position = Vector2(1224, 256)
+
+[node name="Enemy20" parent="Enemies" instance=ExtResource("8_2i2vi")]
+position = Vector2(1232, 256)
+
+[node name="Enemy21" parent="Enemies" instance=ExtResource("4_xw3fy")]
+position = Vector2(1224, 360)
+
+[node name="Enemy22" parent="Enemies" instance=ExtResource("5_j6ohh")]
+position = Vector2(1240, 360)
+
+[node name="Enemy23" parent="Enemies" instance=ExtResource("6_vqbxl")]
+position = Vector2(1232, 360)
+
+[node name="Enemy24" parent="Enemies" instance=ExtResource("7_u4512")]
+position = Vector2(1224, 352)
+
+[node name="Enemy25" parent="Enemies" instance=ExtResource("8_2i2vi")]
+position = Vector2(1232, 352)
+
+[node name="Enemy26" parent="Enemies" instance=ExtResource("4_xw3fy")]
+position = Vector2(1224, 360)
+
+[node name="Enemy27" parent="Enemies" instance=ExtResource("5_j6ohh")]
+position = Vector2(1240, 360)
+
+[node name="Enemy28" parent="Enemies" instance=ExtResource("6_vqbxl")]
+position = Vector2(1232, 360)
+
+[node name="Enemy29" parent="Enemies" instance=ExtResource("7_u4512")]
+position = Vector2(1224, 352)
+
+[node name="Enemy30" parent="Enemies" instance=ExtResource("8_2i2vi")]
+position = Vector2(1232, 352)
+
+[node name="Enemy31" parent="Enemies" instance=ExtResource("4_xw3fy")]
+position = Vector2(1232, 464)
+
+[node name="Enemy32" parent="Enemies" instance=ExtResource("5_j6ohh")]
+position = Vector2(1248, 464)
+
+[node name="Enemy33" parent="Enemies" instance=ExtResource("6_vqbxl")]
+position = Vector2(1240, 464)
+
+[node name="Enemy34" parent="Enemies" instance=ExtResource("7_u4512")]
+position = Vector2(1232, 456)
+
+[node name="Enemy35" parent="Enemies" instance=ExtResource("8_2i2vi")]
+position = Vector2(1240, 456)
+
+[node name="Enemy36" parent="Enemies" instance=ExtResource("4_xw3fy")]
+position = Vector2(1232, 464)
+
+[node name="Enemy37" parent="Enemies" instance=ExtResource("5_j6ohh")]
+position = Vector2(1248, 464)
+
+[node name="Enemy38" parent="Enemies" instance=ExtResource("6_vqbxl")]
+position = Vector2(1240, 464)
+
+[node name="Enemy39" parent="Enemies" instance=ExtResource("7_u4512")]
+position = Vector2(1232, 456)
+
+[node name="Enemy40" parent="Enemies" instance=ExtResource("8_2i2vi")]
+position = Vector2(1240, 456)
+
+[node name="Enemy41" parent="Enemies" instance=ExtResource("4_xw3fy")]
+position = Vector2(1232, 563)
+
+[node name="Enemy42" parent="Enemies" instance=ExtResource("5_j6ohh")]
+position = Vector2(1248, 563)
+
+[node name="Enemy43" parent="Enemies" instance=ExtResource("6_vqbxl")]
+position = Vector2(1240, 563)
+
+[node name="Enemy44" parent="Enemies" instance=ExtResource("7_u4512")]
+position = Vector2(1232, 555)
+
+[node name="Enemy45" parent="Enemies" instance=ExtResource("8_2i2vi")]
+position = Vector2(1240, 555)
+
+[node name="Enemy46" parent="Enemies" instance=ExtResource("4_xw3fy")]
+position = Vector2(1232, 563)
+
+[node name="Enemy47" parent="Enemies" instance=ExtResource("5_j6ohh")]
+position = Vector2(1248, 563)
+
+[node name="Enemy48" parent="Enemies" instance=ExtResource("6_vqbxl")]
+position = Vector2(1240, 563)
+
+[node name="Enemy49" parent="Enemies" instance=ExtResource("7_u4512")]
+position = Vector2(1232, 555)
+
+[node name="Enemy50" parent="Enemies" instance=ExtResource("8_2i2vi")]
+position = Vector2(1240, 555)
+
+[node name="Player" parent="." instance=ExtResource("3_hkcl4")]
+z_index = 2
+position = Vector2(215, 187)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Character_attack_timer" type="Timer" parent="."]
+
+[node name="Barrier" parent="." instance=ExtResource("6_cvkvl")]
+position = Vector2(1152, 64)
+
+[node name="Character" parent="." instance=ExtResource("7_64kmf")]
+visible = false
+position = Vector2(424, 616)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hotbar" type="VBoxContainer" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.988
+anchor_right = 0.5
+anchor_bottom = 0.988
+offset_left = -560.0
+offset_top = -518.224
+offset_right = -520.0
+offset_bottom = -268.224
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2.41511, 2.32864)
+size_flags_horizontal = 8
+size_flags_vertical = 10
+script = ExtResource("8_1480g")
+metadata/_edit_use_anchors_ = true
+
+[node name="Slot" parent="UI/Hotbar" instance=ExtResource("9_aurg8")]
+layout_mode = 2
+
+[node name="Slot2" parent="UI/Hotbar" instance=ExtResource("9_aurg8")]
+layout_mode = 2
+
+[node name="Slot3" parent="UI/Hotbar" instance=ExtResource("9_aurg8")]
+layout_mode = 2
+
+[node name="Slot4" parent="UI/Hotbar" instance=ExtResource("9_aurg8")]
+layout_mode = 2
+
+[node name="Slot5" parent="UI/Hotbar" instance=ExtResource("9_aurg8")]
+layout_mode = 2
+
+[node name="Hotbar_Timer" type="Timer" parent="."]
+
+[node name="Panel" type="Panel" parent="Hotbar_Timer"]
+offset_left = 471.0
+offset_right = 520.0
+offset_bottom = 31.0
+scale = Vector2(3.16505, 3.16505)
+theme = SubResource("Theme_d6qsx")
+
+[node name="Label" type="Label" parent="Hotbar_Timer"]
+offset_left = 485.0
+offset_top = -188.0
+offset_right = 614.0
+offset_bottom = 300.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("15_a3f6t")
+theme_override_font_sizes/font_size = 42
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Defender_List" type="Node2D" parent="."]
+position = Vector2(2152, 408)
+
+[node name="bomber" parent="Defender_List" instance=ExtResource("10_g1gvm")]
+
+[node name="defender" parent="Defender_List" instance=ExtResource("11_t4yfa")]
+
+[node name="flamethrower" parent="Defender_List" instance=ExtResource("12_rbpp3")]
+
+[node name="machinegunner" parent="Defender_List" instance=ExtResource("13_5a8hi")]
+
+[node name="pistoleer" parent="Defender_List" instance=ExtResource("7_64kmf")]
+
+[node name="railgunner" parent="Defender_List" instance=ExtResource("14_dl5fk")]
+
+[node name="sniper" parent="Defender_List" instance=ExtResource("15_ehfbd")]
+
+[node name="Endline" parent="." instance=ExtResource("16_30iq8")]
+position = Vector2(96, 128)
+
+[node name="Panels" type="Node" parent="."]
+
+[node name="DefeatPanel" parent="Panels" instance=ExtResource("17_rvpg0")]
+visible = false
+top_level = true
+z_index = 2
+scale = Vector2(1.00071, 1.00071)
+
+[node name="PausePanel" parent="Panels" instance=ExtResource("18_3jp7y")]
+visible = false
+
+[node name="VictoryPanel" parent="Panels" instance=ExtResource("19_wdsya")]
+visible = false
+z_index = 2
+scale = Vector2(0.999549, 0.999549)
+
+[node name="PauseButton" type="Button" parent="."]
+offset_left = 1072.0
+offset_top = 24.0
+offset_right = 1200.0
+offset_bottom = 96.0
+scale = Vector2(0.429844, 0.75577)
+theme = SubResource("Theme_e3hlw")
+
+[node name="Wall" type="Node" parent="."]
+
+[node name="Wall" parent="Wall" instance=ExtResource("27_q1yfw")]
+position = Vector2(153, 17)
+
+[node name="Wall2" parent="Wall" instance=ExtResource("27_q1yfw")]
+position = Vector2(1121, 13)
+
+[node name="Wall3" parent="Wall" instance=ExtResource("27_q1yfw")]
+position = Vector2(1114, 83)
+rotation = 1.5708
+scale = Vector2(1.5, 1.5)
+
+[node name="Wall4" parent="Wall" instance=ExtResource("27_q1yfw")]
+position = Vector2(1118, 654)
+rotation = 1.5708
+scale = Vector2(1.5, 1.5)
+
+[node name="ProgressBar" parent="." instance=ExtResource("28_lijfo")]
+position = Vector2(202, 535)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("29_r7ppm")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Character_attack_timer" to="." method="_on_character_attack_timer_timeout"]

@@ -158,7 +158,7 @@ animations = [{
 script = ExtResource("1_p7v37")
 
 [node name="Shooting_area" parent="." instance=ExtResource("2_nqg3e")]
-position = Vector2(32, 16)
+position = Vector2(80, 8)
 scale = Vector2(1.09427, 0.766947)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -180,11 +180,10 @@ hframes = 6
 vframes = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
-scale = Vector2(1.24328, 1.24328)
+position = Vector2(281.4, -93.8)
+scale = Vector2(1.28265, 1.28265)
 sprite_frames = SubResource("SpriteFrames_sbe21")
-animation = &"idle"
-frame = 2
-frame_progress = 0.000703641
+animation = &"attack"
 
 [node name="snipe" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ao5cl")
