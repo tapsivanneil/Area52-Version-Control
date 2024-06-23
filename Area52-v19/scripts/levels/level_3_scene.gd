@@ -136,7 +136,7 @@ func update_timer_label_text():
 func _on_pause_button_pressed():
 	$Panels/PausePanel.visible = true
 	progress_bar.visible = false
-		$Timer.set_paused(true)
+	$Timer.set_paused(true)
 	$Character_attack_timer.stop()
 	$UI/Hotbar.visible = false
 	$PauseButton.visible = false

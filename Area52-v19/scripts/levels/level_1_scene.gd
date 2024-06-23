@@ -54,7 +54,7 @@ func _ready():
 
 func _process(delta):
 	update_timer_label_text()
-	
+
 func _on_selection_done():
 	# Remove the selection scene
 	selection_instance.queue_free() 

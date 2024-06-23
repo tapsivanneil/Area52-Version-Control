@@ -17,6 +17,8 @@ var self_reference
 @onready var main_scene = get_node("/root/Level_"+str(Global.player_level))
 @onready var slime = $AnimatedSprite
 @onready var progress_bar = get_node("/root/Level_"+str(Global.player_level)+"/ProgressBar")
+@onready var progress_bar_vis = get_node("/root/Level_"+str(Global.player_level)+"/ProgressBar/CanvasLayer")
+
 
 func _ready():
 	$animation_delay.wait_time = 0.8
@@ -63,6 +65,7 @@ func after_death_animation(enemy):
 		if Global.player_level == 5:
 			get_tree().change_scene_to_file("res://scenes/structure/ending.tscn")
 		else:
+			progress_bar_vis.visible = false
 			victory_panel.visible = true
 			hot_bar.visible = false
 			Global.opened_level += 1

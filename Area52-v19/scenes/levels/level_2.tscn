@@ -497,7 +497,8 @@ rotation = 1.5708
 scale = Vector2(1.5, 1.5)
 
 [node name="ProgressBar" parent="." instance=ExtResource("25_whmk5")]
-position = Vector2(281, 656)
+visible = false
+position = Vector2(493, 42)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("26_uitle")
