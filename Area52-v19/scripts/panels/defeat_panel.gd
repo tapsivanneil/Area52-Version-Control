@@ -1,17 +1,17 @@
 extends Node2D
 
 @onready var panel = get_node('/root/Level_'+str(Global.player_level)+'/Panels/DefeatPanel')
-
+@onready var progress_bar = get_node('/root/Level_'+str(Global.player_level)+'/ProgressBar/CanvasLayer')
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite2D.play("defeat")
-	pass # Replace with function body.
+	progress_bar.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+#func _process(delta):
+	#pass
 
 
 func _on_home_button_pressed():

@@ -6,10 +6,13 @@ var completed: bool = false
 signal selection_done
 
 @onready var main_scene_timer = get_node('/root/Level_'+str(Global.player_level)+'/Timer')
+@onready var progress_bar = get_node('/root/Level_'+str(Global.player_level)+'/ProgressBar/CanvasLayer')
 
 func _ready():
 
 	main_scene_timer.stop()
+	progress_bar.visible = false
+	print(progress_bar.visible)
 	
 	# Connect the button signals to a function
 	$StartButton.disabled = true
@@ -28,6 +31,7 @@ func complete_selection():
 	
 
 func _on_start_button_pressed():
+	progress_bar.visible = true
 	main_scene_timer.start()
 	emit_signal("selection_done")
 

@@ -2,10 +2,10 @@ extends Node2D
 
 @onready var panel = get_node('/root/Level_'+str(Global.player_level)+'/Panels/PausePanel')
 @onready var current_scene = get_node('/root/Level_'+str(Global.player_level))
-
+@onready var progress_bar = get_node('/root/Level_'+str(Global.player_level)+'/ProgressBar/CanvasLayer')
 @onready var reload_timer = get_node('/root/Level_'+str(Global.player_level)+'/Hotbar_Timer')
 @onready var character_attack_timer = get_node('/root/Level_'+str(Global.player_level)+'/Character_attack_timer')
-
+@onready var enemy_deployment_timer = get_node('/root/Level_'+str(Global.player_level)+'/Timer')
 @onready var hot_bar = get_node('/root/Level_'+str(Global.player_level)+'/UI/Hotbar')
 @onready var pause_button = get_node('/root/Level_'+str(Global.player_level)+'/PauseButton')
 
@@ -14,7 +14,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,9 +37,10 @@ func _on_level_selection_button_pressed():
 
 func _on_close_button_pressed():
 	panel.visible = false
+	progress_bar.visible = true	
 	reload_timer.paused = false
 	character_attack_timer.start()
-	
+	enemy_deployment_timer.set_paused(false)
 	pause_button.visible = true
 	hot_bar.visible = true
 	

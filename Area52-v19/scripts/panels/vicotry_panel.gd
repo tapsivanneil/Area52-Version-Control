@@ -1,13 +1,13 @@
 extends Node2D
 
 @onready var panel = get_node('/root/Level_'+str(Global.player_level)+'/Panels/VictoryPanel')
-
+@onready var progress_bar = get_node('/root/Level_'+str(Global.player_level)+'/ProgressBar/CanvasLayer')
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite2D.play("victory")
-	
+	progress_bar.visible = false
 	if Global.player_level == 5:
 		$NextLevelButton.visible = false
 
@@ -30,7 +30,7 @@ func _on_level_selection_button_pressed():
 
 func _on_close_button_pressed():
 	panel.visible = false
-
+	progress_bar.visible = true
 
 func _on_next_level_button_pressed():
 		Global.player_level += 1

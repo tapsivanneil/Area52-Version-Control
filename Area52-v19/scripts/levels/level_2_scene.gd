@@ -21,6 +21,7 @@ var selection_instance
 var total_kills = 0;
 
 @onready var player = get_node("/root/Level_"+str(Global.player_level)+"/Player")
+@onready var progress_bar = get_node('/root/Level_'+str(Global.player_level)+'/ProgressBar/CanvasLayer')
 
 func _ready():
 	
@@ -135,8 +136,8 @@ func update_timer_label_text():
 	
 func _on_pause_button_pressed():
 	$Panels/PausePanel.visible = true
-
-	time.paused = true
+	progress_bar.visible = false
+	$Timer.set_paused(true)
 	$Character_attack_timer.stop()
 	$UI/Hotbar.visible = false
 	$PauseButton.visible = false
