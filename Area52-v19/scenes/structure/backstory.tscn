@@ -21,6 +21,7 @@ scale = Vector2(0.997106, 1.00827)
 texture = ExtResource("3_pa64n")
 
 [node name="Almanac-bg" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(958.762, 545.961)
 scale = Vector2(1.00061, 1.01261)
 texture = ExtResource("4_2jpv0")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmo4b2xr4t4w3"
-path="res://.godot/imported/victory-sprite.png-8ea8a59f52a559a40eb255e4f62b7be3.ctex"
+uid="uid://c7pl4vsnaa76l"
+path="res://.godot/imported/Victory-sprite.png-59f2735bbfa3f1aa623eb315751cc06c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/victory-sprite.png"
-dest_files=["res://.godot/imported/victory-sprite.png-8ea8a59f52a559a40eb255e4f62b7be3.ctex"]
+source_file="res://assets/Victory-sprite.png"
+dest_files=["res://.godot/imported/Victory-sprite.png-59f2735bbfa3f1aa623eb315751cc06c.ctex"]
 
 [params]
 

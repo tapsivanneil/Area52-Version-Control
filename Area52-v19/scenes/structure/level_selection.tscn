@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dow7fuxoqadl7"]
+[gd_scene load_steps=41 format=3 uid="uid://dow7fuxoqadl7"]
 
 [ext_resource type="Script" path="res://scripts/structure/level_selection.gd" id="1_valy6"]
 [ext_resource type="Texture2D" uid="uid://n3tqk8eggril" path="res://assets/backgrounds/level-select-background.png" id="2_dgsqf"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://6mawp222ixfx" path="res://scenes/buttons/almanac.tscn" id="6_w0esu"]
 [ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="7_85u42"]
 [ext_resource type="PackedScene" uid="uid://b628l4f1wo8x7" path="res://scenes/buttons/tutorial_button.tscn" id="7_mqfek"]
+[ext_resource type="Texture2D" uid="uid://cqlbij0cw087s" path="res://assets/icons/book-icon.png" id="9_p55t6"]
 
 [sub_resource type="GDScript" id="GDScript_ve0ai"]
 script/source = "extends StaticBody2D
@@ -191,6 +192,25 @@ border_width_bottom = 5
 Button/styles/hover = SubResource("StyleBoxFlat_3ljw5")
 Button/styles/normal = SubResource("StyleBoxFlat_gtlmt")
 Button/styles/pressed = SubResource("StyleBoxFlat_tuuk8")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tqtjv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rv5xx"]
+texture = ExtResource("9_p55t6")
+modulate_color = Color(0.769432, 0.769432, 0.769432, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_apnor"]
+texture = ExtResource("9_p55t6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eihgx"]
+texture = ExtResource("9_p55t6")
+modulate_color = Color(0.631035, 0.631035, 0.631035, 1)
+
+[sub_resource type="Theme" id="Theme_5wpcb"]
+Button/styles/focus = SubResource("StyleBoxEmpty_tqtjv")
+Button/styles/hover = SubResource("StyleBoxTexture_rv5xx")
+Button/styles/normal = SubResource("StyleBoxTexture_apnor")
+Button/styles/pressed = SubResource("StyleBoxTexture_eihgx")
 
 [node name="LevelSelect" type="Node2D"]
 script = ExtResource("1_valy6")
@@ -377,15 +397,16 @@ theme_override_fonts/font = ExtResource("3_x6s51")
 text = "ALMANAC"
 
 [node name="TutorialButton" parent="." instance=ExtResource("7_mqfek")]
-position = Vector2(1056, 30)
+position = Vector2(64, 520)
 scale = Vector2(0.48804, 0.48804)
 
 [node name="BackStoryButton" type="Button" parent="."]
-offset_left = 939.0
-offset_top = 38.0
-offset_right = 1008.0
-offset_bottom = 69.0
-text = "Story"
+offset_left = 144.0
+offset_top = 520.0
+offset_right = 285.0
+offset_bottom = 651.0
+scale = Vector2(0.488, 0.488)
+theme = SubResource("Theme_5wpcb")
 
 [connection signal="pressed" from="Control/Level1_btn" to="." method="_on_level_1_btn_pressed"]
 [connection signal="pressed" from="Control/Level2_btn" to="." method="_on_level_2_btn_pressed"]

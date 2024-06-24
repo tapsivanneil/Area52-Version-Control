@@ -391,7 +391,7 @@ position = Vector2(215, 187)
 [node name="Character_attack_timer" type="Timer" parent="."]
 
 [node name="Barrier" parent="." instance=ExtResource("6_cvkvl")]
-position = Vector2(1152, 64)
+position = Vector2(1144, 65)
 
 [node name="Character" parent="." instance=ExtResource("7_64kmf")]
 visible = false
