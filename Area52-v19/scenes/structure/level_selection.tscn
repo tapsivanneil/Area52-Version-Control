@@ -197,6 +197,7 @@ Button/styles/pressed = SubResource("StyleBoxFlat_tuuk8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_avhqp"]
 texture = ExtResource("9_p55t6")
+modulate_color = Color(0.768627, 0.768627, 0.768627, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_apnor"]
 texture = ExtResource("9_p55t6")
