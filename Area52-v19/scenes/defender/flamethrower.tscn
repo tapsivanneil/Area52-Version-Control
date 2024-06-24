@@ -195,11 +195,11 @@ animations = [{
 script = ExtResource("1_8c31c")
 
 [node name="Shooting_area" parent="." instance=ExtResource("2_psrwj")]
-position = Vector2(40, 14)
+position = Vector2(72, -10)
 scale = Vector2(1.09427, 0.766947)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 13.5)
+position = Vector2(-0.5, -2.5)
 shape = SubResource("RectangleShape2D_1ok3u")
 
 [node name="Icon" type="Sprite2D" parent="."]
@@ -221,11 +221,10 @@ position = Vector2(-8, -16)
 scale = Vector2(0.124, 0.124)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
-position = Vector2(64.5161, 129.032)
+position = Vector2(64.5161, -0.000244141)
 scale = Vector2(0.792828, 0.792828)
 sprite_frames = SubResource("SpriteFrames_xnoiy")
-animation = &"death"
-frame_progress = 0.459993
+animation = &"attack"
 
 [node name="fire" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_j7ie3")

@@ -28,7 +28,7 @@ script = ExtResource("1_le7bc")
 [node name="AlamanacButton" type="Button" parent="."]
 offset_right = 142.0
 offset_bottom = 65.0
-scale = Vector2(0.449178, 0.986177)
+scale = Vector2(0.44836, 0.98438)
 tooltip_text = "ALMANAC"
 theme = SubResource("Theme_umrlg")
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b628l4f1wo8x7"]
+[gd_scene load_steps=9 format=3 uid="uid://b628l4f1wo8x7"]
 
 [ext_resource type="Script" path="res://scripts/buttons/tutorial_button.gd" id="1_0alli"]
+[ext_resource type="Texture2D" uid="uid://cqlbij0cw087s" path="res://assets/icons/book-icon.png" id="2_blp6c"]
 [ext_resource type="Texture2D" uid="uid://3x7c6coekvf5" path="res://assets/icons/tutorial-icon.png" id="3_yk1w7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tqtjv"]
@@ -13,7 +14,7 @@ modulate_color = Color(0.769432, 0.769432, 0.769432, 1)
 texture = ExtResource("3_yk1w7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eihgx"]
-texture = ExtResource("3_yk1w7")
+texture = ExtResource("2_blp6c")
 modulate_color = Color(0.631035, 0.631035, 0.631035, 1)
 
 [sub_resource type="Theme" id="Theme_hv8fj"]
@@ -28,7 +29,8 @@ script = ExtResource("1_0alli")
 [node name="Button" type="Button" parent="."]
 offset_right = 150.0
 offset_bottom = 150.0
-scale = Vector2(0.863564, 0.856098)
+scale = Vector2(1.12359, 1.11388)
+tooltip_text = "Tutorial"
 theme = SubResource("Theme_hv8fj")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=41 format=3 uid="uid://dow7fuxoqadl7"]
 
 [ext_resource type="Script" path="res://scripts/structure/level_selection.gd" id="1_valy6"]
-[ext_resource type="Texture2D" uid="uid://n3tqk8eggril" path="res://assets/backgrounds/level-select-background.png" id="2_dgsqf"]
 [ext_resource type="FontFile" uid="uid://c2jev1gbnyma5" path="res://assets/AubetteArchiType Normal Regular.otf" id="2_g3xtt"]
+[ext_resource type="Texture2D" uid="uid://2yotnlvi8hua" path="res://assets/backgrounds/level-select-bg2.png" id="2_qk8rq"]
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="3_x6s51"]
 [ext_resource type="PackedScene" uid="uid://6mawp222ixfx" path="res://scenes/buttons/almanac.tscn" id="6_w0esu"]
 [ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="7_85u42"]
@@ -195,9 +195,8 @@ Button/styles/pressed = SubResource("StyleBoxFlat_tuuk8")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tqtjv"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rv5xx"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_avhqp"]
 texture = ExtResource("9_p55t6")
-modulate_color = Color(0.769432, 0.769432, 0.769432, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_apnor"]
 texture = ExtResource("9_p55t6")
@@ -208,7 +207,7 @@ modulate_color = Color(0.631035, 0.631035, 0.631035, 1)
 
 [sub_resource type="Theme" id="Theme_5wpcb"]
 Button/styles/focus = SubResource("StyleBoxEmpty_tqtjv")
-Button/styles/hover = SubResource("StyleBoxTexture_rv5xx")
+Button/styles/hover = SubResource("StyleBoxTexture_avhqp")
 Button/styles/normal = SubResource("StyleBoxTexture_apnor")
 Button/styles/pressed = SubResource("StyleBoxTexture_eihgx")
 
@@ -219,7 +218,7 @@ level1 = SubResource("PackedScene_ca7bk")
 [node name="Level-select-bg" type="Sprite2D" parent="."]
 position = Vector2(580, 323)
 scale = Vector2(0.604167, 0.598148)
-texture = ExtResource("2_dgsqf")
+texture = ExtResource("2_qk8rq")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 400.0
@@ -383,7 +382,7 @@ position = Vector2(56, 56)
 scale = Vector2(0.580969, 0.580969)
 
 [node name="AlmanacButton" parent="." instance=ExtResource("6_w0esu")]
-position = Vector2(992, 504)
+position = Vector2(872, 504)
 scale = Vector2(1.9973, 1.9973)
 
 [node name="Label" type="Label" parent="AlmanacButton"]
@@ -397,15 +396,16 @@ theme_override_fonts/font = ExtResource("3_x6s51")
 text = "ALMANAC"
 
 [node name="TutorialButton" parent="." instance=ExtResource("7_mqfek")]
-position = Vector2(64, 520)
+position = Vector2(752, 544)
 scale = Vector2(0.48804, 0.48804)
 
 [node name="BackStoryButton" type="Button" parent="."]
-offset_left = 144.0
-offset_top = 520.0
-offset_right = 285.0
-offset_bottom = 651.0
-scale = Vector2(0.488, 0.488)
+offset_left = 1032.0
+offset_top = 544.0
+offset_right = 1173.0
+offset_bottom = 675.0
+scale = Vector2(0.654686, 0.654686)
+tooltip_text = "Backstory"
 theme = SubResource("Theme_5wpcb")
 
 [connection signal="pressed" from="Control/Level1_btn" to="." method="_on_level_1_btn_pressed"]

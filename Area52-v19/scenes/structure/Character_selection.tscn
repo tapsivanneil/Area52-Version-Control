@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cokx7e71ebjms"]
+[gd_scene load_steps=15 format=3 uid="uid://cokx7e71ebjms"]
 
 [ext_resource type="Script" path="res://scripts/game elements/Inv.gd" id="1_cxq88"]
 [ext_resource type="PackedScene" uid="uid://c1awm8lao6gyu" path="res://scenes/game elements/placeholder.tscn" id="1_mh4gc"]
@@ -10,7 +10,6 @@
 [ext_resource type="Theme" uid="uid://ckegq7jbflc30" path="res://assets/button-presets/passive-slot-preset.tres" id="8_rb47p"]
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="9_8gvum"]
 [ext_resource type="Texture2D" uid="uid://cbpmihj44ilrl" path="res://assets/backgrounds/level-selection-text.png" id="10_bxv64"]
-[ext_resource type="FontFile" uid="uid://c2jev1gbnyma5" path="res://assets/AubetteArchiType Normal Regular.otf" id="11_8ui01"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mq54w"]
 
@@ -214,11 +213,11 @@ texture = ExtResource("10_bxv64")
 texture_filter = 2
 layout_mode = 0
 offset_left = 268.0
-offset_top = 68.0
+offset_top = 108.0
 offset_right = 945.0
-offset_bottom = 176.0
+offset_bottom = 216.0
 theme_override_colors/font_color = Color(0.0313726, 0.380392, 0.219608, 1)
-theme_override_fonts/font = ExtResource("11_8ui01")
+theme_override_fonts/font = ExtResource("9_8gvum")
 theme_override_font_sizes/font_size = 74
 text = "SELECT DEFENDERS"
 
@@ -229,7 +228,7 @@ offset_left = -3.0
 offset_top = -3.0
 offset_right = 674.0
 offset_bottom = 105.0
-theme_override_fonts/font = ExtResource("11_8ui01")
+theme_override_fonts/font = ExtResource("9_8gvum")
 theme_override_font_sizes/font_size = 74
 text = "SELECT DEFENDERS"
 

@@ -181,7 +181,7 @@ animations = [{
 script = ExtResource("1_lmoyb")
 
 [node name="Shooting_area" parent="." instance=ExtResource("2_7kq7b")]
-position = Vector2(72, -16)
+position = Vector2(72, -24)
 scale = Vector2(1.09427, 0.766947)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

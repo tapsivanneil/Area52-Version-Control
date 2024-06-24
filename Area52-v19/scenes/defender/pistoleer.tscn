@@ -187,7 +187,7 @@ size = Vector2(55, 53)
 script = ExtResource("1_bnnmg")
 
 [node name="Shooting_area" parent="." instance=ExtResource("2_ij0hb")]
-position = Vector2(80, -24)
+position = Vector2(104, -32)
 scale = Vector2(1.09427, 0.766947)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
