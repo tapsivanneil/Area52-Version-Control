@@ -347,7 +347,7 @@ offset_right = 1160.0
 offset_bottom = 670.0
 scale = Vector2(1, 0.967)
 theme = SubResource("Theme_tnlv8")
-color = Color(0.886275, 0.741176, 0, 1)
+color = Color(0.886275, 0.741176, 0, 0.741176)
 
 [node name="HomeButton" type="Button" parent="."]
 offset_left = 240.0

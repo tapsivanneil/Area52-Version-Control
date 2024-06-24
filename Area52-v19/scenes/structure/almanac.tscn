@@ -58,10 +58,10 @@ offset_bottom = 451.0
 theme = SubResource("Theme_237wk")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 509.0
-offset_top = 219.0
-offset_right = 808.0
-offset_bottom = 705.0
+offset_left = 520.0
+offset_top = 232.0
+offset_right = 795.0
+offset_bottom = 423.0
 scale = Vector2(0.988545, 0.988545)
 theme = SubResource("Theme_5egoy")
 theme_override_fonts/font = ExtResource("2_4rbxp")
@@ -111,7 +111,7 @@ scale = Vector2(0.345158, 0.345158)
 texture = ExtResource("5_qon7j")
 
 [node name="Crawler" type="Area2D" parent="Attacker"]
-position = Vector2(712, -280)
+position = Vector2(576, 104)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Attacker/Crawler"]
 position = Vector2(331.516, 415)
@@ -190,30 +190,6 @@ position = Vector2(330, 538)
 scale = Vector2(0.343852, 0.343852)
 texture = ExtResource("9_x0thp")
 
-[node name="Panel2" type="Panel" parent="Attacker"]
-offset_left = 984.0
-offset_top = 456.0
-offset_right = 1099.0
-offset_bottom = 571.0
-mouse_filter = 2
-theme = SubResource("Theme_237wk")
-
-[node name="Panel3" type="Panel" parent="Attacker"]
-offset_left = 848.0
-offset_top = 456.0
-offset_right = 963.0
-offset_bottom = 571.0
-mouse_filter = 2
-theme = SubResource("Theme_237wk")
-
-[node name="Panel4" type="Panel" parent="Attacker"]
-offset_left = 216.0
-offset_top = 72.0
-offset_right = 331.0
-offset_bottom = 187.0
-mouse_filter = 2
-theme = SubResource("Theme_237wk")
-
 [node name="Defender" type="Node" parent="."]
 
 [node name="Bomber" type="Area2D" parent="Defender"]
@@ -277,7 +253,7 @@ scale = Vector2(0.349264, 0.349264)
 texture = ExtResource("12_rc52d")
 
 [node name="Machinegunner" type="Area2D" parent="Defender"]
-position = Vector2(-200, -24)
+position = Vector2(-200, -88)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Defender/Machinegunner"]
 position = Vector2(476.125, 412)
@@ -297,7 +273,7 @@ scale = Vector2(0.344464, 0.344464)
 texture = ExtResource("13_knhca")
 
 [node name="Pistoleer" type="Area2D" parent="Defender"]
-position = Vector2(216, -168)
+position = Vector2(80, -104)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Defender/Pistoleer"]
 position = Vector2(196, 558.75)
@@ -317,7 +293,7 @@ scale = Vector2(0.348967, 0.348967)
 texture = ExtResource("14_row24")
 
 [node name="Railgunner" type="Area2D" parent="Defender"]
-position = Vector2(-56, -24)
+position = Vector2(80, -152)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Defender/Railgunner"]
 position = Vector2(329.938, 544)
@@ -337,7 +313,7 @@ scale = Vector2(0.345191, 0.345191)
 texture = ExtResource("15_bynsv")
 
 [node name="Sniper" type="Area2D" parent="Defender"]
-position = Vector2(-56, -280)
+position = Vector2(-56, -344)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Defender/Sniper"]
 position = Vector2(334, 544)

@@ -28,10 +28,10 @@ texture = ExtResource("4_2jpv0")
 
 [node name="SkipButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1611.25
-offset_top = 892.181
-offset_right = 1758.25
-offset_bottom = 949.181
+offset_left = 1637.88
+offset_top = 945.446
+offset_right = 1784.88
+offset_bottom = 1002.45
 scale = Vector2(1.38289, 1.38289)
 theme_override_fonts/font = ExtResource("4_32s25")
 theme_override_font_sizes/font_size = 25
