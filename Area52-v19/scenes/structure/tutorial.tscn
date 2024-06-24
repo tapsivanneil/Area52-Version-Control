@@ -1,8 +1,134 @@
-[gd_scene load_steps=2 format=3 uid="uid://dme81lukts124"]
+[gd_scene load_steps=20 format=3 uid="uid://dme81lukts124"]
 
 [ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="1_gxaiv"]
+[ext_resource type="Script" path="res://scripts/structure/tutorial.gd" id="1_mlan2"]
+[ext_resource type="Texture2D" uid="uid://bjq5gxg3byv03" path="res://assets/tutorial/1.png" id="2_ypgps"]
+[ext_resource type="Texture2D" uid="uid://brmsacxe4osn1" path="res://assets/tutorial/2.png" id="3_1nmxu"]
+[ext_resource type="Texture2D" uid="uid://ciw68oumtcu21" path="res://assets/tutorial/3.png" id="4_v52mm"]
+[ext_resource type="Texture2D" uid="uid://cyqg3bpnssk3a" path="res://assets/tutorial/4.png" id="5_lbadj"]
+[ext_resource type="Texture2D" uid="uid://do60d6nflbf2h" path="res://assets/tutorial/5.png" id="6_ir6mu"]
+[ext_resource type="Texture2D" uid="uid://5tfrlguq6qhp" path="res://assets/tutorial/6.png" id="7_wqnwi"]
+[ext_resource type="Texture2D" uid="uid://b8mastn0f3amy" path="res://assets/tutorial/7.png" id="8_q4qvb"]
+[ext_resource type="Texture2D" uid="uid://bdhcctwehttnr" path="res://assets/tutorial/8.png" id="9_lvwu5"]
+[ext_resource type="Texture2D" uid="uid://fhuixhopi81r" path="res://assets/tutorial/9.png" id="10_ceofy"]
+[ext_resource type="Texture2D" uid="uid://dcfw4p8dikph8" path="res://assets/tutorial/10.png" id="11_jjnfd"]
+[ext_resource type="Texture2D" uid="uid://ct4j74g3m6y8y" path="res://assets/tutorial/11.png" id="12_t6d0n"]
+[ext_resource type="Texture2D" uid="uid://d1gubc675fayj" path="res://assets/tutorial/12.png" id="13_pe2s2"]
+[ext_resource type="Texture2D" uid="uid://cbxwubaebh7md" path="res://assets/tutorial/13.png" id="14_kqdyg"]
+[ext_resource type="Texture2D" uid="uid://b33cl5m5ojj8s" path="res://assets/tutorial/14.png" id="15_nby5h"]
+[ext_resource type="Texture2D" uid="uid://bk2vynk0cug24" path="res://assets/tutorial/15.png" id="16_8ftfe"]
+[ext_resource type="Texture2D" uid="uid://bb0kh4ea3h2er" path="res://assets/tutorial/16.png" id="17_onm3q"]
+[ext_resource type="Texture2D" uid="uid://ns7htnvvjnq0" path="res://assets/tutorial/17.png" id="18_8wxp4"]
 
 [node name="Tutorial" type="Node2D"]
+script = ExtResource("1_mlan2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.601608, 0.608199)
+
+[node name="1" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(960, 529)
+texture = ExtResource("2_ypgps")
+
+[node name="2" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("3_1nmxu")
+
+[node name="3" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("4_v52mm")
+
+[node name="4" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("5_lbadj")
+
+[node name="5" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("6_ir6mu")
+
+[node name="6" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("7_wqnwi")
+
+[node name="7" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("8_q4qvb")
+
+[node name="8" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("9_lvwu5")
+
+[node name="9" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("10_ceofy")
+
+[node name="10" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("11_jjnfd")
+
+[node name="11" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("12_t6d0n")
+
+[node name="12" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("13_pe2s2")
+
+[node name="13" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("14_kqdyg")
+
+[node name="14" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("15_nby5h")
+
+[node name="15" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("16_8ftfe")
+
+[node name="16" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("17_onm3q")
+
+[node name="17" type="Sprite2D" parent="Sprite2D"]
+visible = false
+position = Vector2(960, 529)
+texture = ExtResource("18_8wxp4")
 
 [node name="MenuButton" parent="." instance=ExtResource("1_gxaiv")]
 position = Vector2(35, 24)
+scale = Vector2(0.318122, 0.315505)
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 997.0
+offset_top = 577.0
+offset_right = 1104.0
+offset_bottom = 625.0
+scale = Vector2(0.991896, 0.907763)
+text = "Next"
+
+[node name="PreviousButton" type="Button" parent="."]
+offset_left = 47.9999
+offset_top = 583.0
+offset_right = 155.0
+offset_bottom = 631.0
+scale = Vector2(0.991896, 0.907763)
+text = "Previous"
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="PreviousButton" to="." method="_on_previous_button_pressed"]

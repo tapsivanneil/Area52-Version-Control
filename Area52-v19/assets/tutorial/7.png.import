@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0jvpv4feuxax"
-path="res://.godot/imported/defeat-sprite.png-69a9d1c03475f801a1e103eb10c18537.ctex"
+uid="uid://b8mastn0f3amy"
+path="res://.godot/imported/7.png-66d3a43d16a35c8803e805e0ec829d6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/defeat-sprite.png"
-dest_files=["res://.godot/imported/defeat-sprite.png-69a9d1c03475f801a1e103eb10c18537.ctex"]
+source_file="res://assets/tutorial/7.png"
+dest_files=["res://.godot/imported/7.png-66d3a43d16a35c8803e805e0ec829d6a.ctex"]
 
 [params]
 
