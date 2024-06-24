@@ -57,8 +57,8 @@ func take_dmg(dmg, enemy):
 		
 func after_death_animation(enemy):
 	main_scene.total_kills += 1
-	print(main_scene.total_kills)
-	print(main_scene.default_num_of_spawns)		
+	#print(main_scene.total_kills)
+	#print(main_scene.default_num_of_spawns)		
 	if main_scene.total_kills >= main_scene.default_num_of_spawns:
 		if Global.player_level == 5:
 			get_tree().change_scene_to_file("res://scenes/structure/ending.tscn")

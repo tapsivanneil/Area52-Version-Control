@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7pl4vsnaa76l"
-path="res://.godot/imported/Victory-sprite.png-59f2735bbfa3f1aa623eb315751cc06c.ctex"
+path="res://.godot/imported/victory-sprite.png-8ea8a59f52a559a40eb255e4f62b7be3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Victory-sprite.png"
-dest_files=["res://.godot/imported/Victory-sprite.png-59f2735bbfa3f1aa623eb315751cc06c.ctex"]
+source_file="res://assets/victory-sprite.png"
+dest_files=["res://.godot/imported/victory-sprite.png-8ea8a59f52a559a40eb255e4f62b7be3.ctex"]
 
 [params]
 

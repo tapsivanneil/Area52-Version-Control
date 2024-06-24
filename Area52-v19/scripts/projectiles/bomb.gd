@@ -34,14 +34,15 @@ func _on_body_entered(body):
 	elif body == barrier:
 		queue_free()
 	
-	if main_scene.enemy_on_stage != null:
-		for i in main_scene.enemy_on_stage:
-			#if get_node("/root/MainScene/Enemy" + str(i)) != null:
-				var enemy_target = get_node("/root/Level_"+str(Global.player_level)+"/Enemies/Enemy" + str(i))
-				if body == enemy_target:
-					if(enemy_target.health > 0):
-						enemy_target.take_dmg(character.damage, i)
-						queue_free()
+	if main_scene != null:
+			if main_scene.enemy_on_stage != null:
+				for i in main_scene.enemy_on_stage:
+					#if get_node("/root/MainScene/Enemy" + str(i)) != null:
+						var enemy_target = get_node("/root/Level_"+str(Global.player_level)+"/Enemies/Enemy" + str(i))
+						if body == enemy_target:
+							if(enemy_target.health > 0):
+								enemy_target.take_dmg(character.damage, i)
+								queue_free()
 					#print(enemy_target)
 					#print(enemy_target.health)
 					#enemy_target.heatlh -= dmg
