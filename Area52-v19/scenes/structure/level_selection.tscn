@@ -1,12 +1,17 @@
-[gd_scene load_steps=41 format=3 uid="uid://dow7fuxoqadl7"]
+[gd_scene load_steps=51 format=3 uid="uid://dow7fuxoqadl7"]
 
 [ext_resource type="Script" path="res://scripts/structure/level_selection.gd" id="1_valy6"]
 [ext_resource type="FontFile" uid="uid://c2jev1gbnyma5" path="res://assets/AubetteArchiType Normal Regular.otf" id="2_g3xtt"]
 [ext_resource type="Texture2D" uid="uid://2yotnlvi8hua" path="res://assets/backgrounds/level-select-bg2.png" id="2_qk8rq"]
 [ext_resource type="FontFile" uid="uid://dacw3y1r8f4dy" path="res://assets/fonts/LeagueSpartan-ExtraBold.ttf" id="3_x6s51"]
+[ext_resource type="Texture2D" uid="uid://bnr6tnevl2kj7" path="res://assets/backgrounds/level-select-bg-1.png" id="4_1d5wv"]
+[ext_resource type="Texture2D" uid="uid://dtvcs5pmu7ajl" path="res://assets/backgrounds/level-select-bg-2.png" id="6_jx826"]
 [ext_resource type="PackedScene" uid="uid://6mawp222ixfx" path="res://scenes/buttons/almanac.tscn" id="6_w0esu"]
 [ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="7_85u42"]
 [ext_resource type="PackedScene" uid="uid://b628l4f1wo8x7" path="res://scenes/buttons/tutorial_button.tscn" id="7_mqfek"]
+[ext_resource type="Texture2D" uid="uid://ourpnsgvhugu" path="res://assets/backgrounds/level-select-bg-3.png" id="7_wjsxw"]
+[ext_resource type="Texture2D" uid="uid://d2epx1tekknwa" path="res://assets/backgrounds/level-select-bg-4.png" id="8_34hvn"]
+[ext_resource type="Texture2D" uid="uid://chkb4b0ocxsvg" path="res://assets/backgrounds/level-select-bg-5.png" id="9_0pl52"]
 [ext_resource type="Texture2D" uid="uid://cqlbij0cw087s" path="res://assets/icons/book-icon.png" id="9_p55t6"]
 
 [sub_resource type="GDScript" id="GDScript_ve0ai"]
@@ -63,135 +68,100 @@ _bundled = {
 
 [sub_resource type="Theme" id="Theme_q57qp"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3a2oe"]
-bg_color = Color(2.71939e-06, 0.404761, 0.187682, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fhar"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0o35"]
-bg_color = Color(0, 0.65098, 0.317647, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nll2n"]
+texture = ExtResource("4_1d5wv")
+modulate_color = Color(0.493545, 0.493546, 0.493546, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m8pno"]
-bg_color = Color(0, 0.65098, 0.317647, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_31cm3"]
+texture = ExtResource("4_1d5wv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1lo5t"]
+texture = ExtResource("4_1d5wv")
+modulate_color = Color(0.321728, 0.321728, 0.321728, 1)
 
 [sub_resource type="Theme" id="Theme_dpotj"]
-Button/styles/hover = SubResource("StyleBoxFlat_3a2oe")
-Button/styles/normal = SubResource("StyleBoxFlat_i0o35")
-Button/styles/pressed = SubResource("StyleBoxFlat_m8pno")
+Button/styles/focus = SubResource("StyleBoxEmpty_8fhar")
+Button/styles/hover = SubResource("StyleBoxTexture_nll2n")
+Button/styles/normal = SubResource("StyleBoxTexture_31cm3")
+Button/styles/pressed = SubResource("StyleBoxTexture_1lo5t")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qoha"]
-bg_color = Color(0, 0.403922, 0.188235, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7s6gk"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m77fe"]
-bg_color = Color(0, 0.65098, 0.317647, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n1t7s"]
+texture = ExtResource("6_jx826")
+modulate_color = Color(0.494118, 0.494118, 0.494118, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ips76"]
-bg_color = Color(0, 0.65098, 0.317647, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hxj0n"]
+texture = ExtResource("6_jx826")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8182n"]
+texture = ExtResource("6_jx826")
+modulate_color = Color(0.321569, 0.321569, 0.321569, 1)
 
 [sub_resource type="Theme" id="Theme_6k1na"]
-Button/styles/hover = SubResource("StyleBoxFlat_7qoha")
-Button/styles/normal = SubResource("StyleBoxFlat_m77fe")
-Button/styles/pressed = SubResource("StyleBoxFlat_ips76")
+Button/styles/focus = SubResource("StyleBoxEmpty_7s6gk")
+Button/styles/hover = SubResource("StyleBoxTexture_n1t7s")
+Button/styles/normal = SubResource("StyleBoxTexture_hxj0n")
+Button/styles/pressed = SubResource("StyleBoxTexture_8182n")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0x1bu"]
-bg_color = Color(0, 0.403922, 0.188235, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o43nu"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jm8xj"]
-bg_color = Color(0, 0.65098, 0.317647, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8cg2f"]
+texture = ExtResource("7_wjsxw")
+modulate_color = Color(0.494118, 0.494118, 0.494118, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jsox"]
-bg_color = Color(0, 0.65098, 0.317647, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d0qgq"]
+texture = ExtResource("7_wjsxw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jlbxt"]
+texture = ExtResource("7_wjsxw")
+modulate_color = Color(0.321569, 0.321569, 0.321569, 1)
 
 [sub_resource type="Theme" id="Theme_t0t5x"]
-Button/styles/hover = SubResource("StyleBoxFlat_0x1bu")
-Button/styles/normal = SubResource("StyleBoxFlat_jm8xj")
-Button/styles/pressed = SubResource("StyleBoxFlat_3jsox")
+Button/styles/focus = SubResource("StyleBoxEmpty_o43nu")
+Button/styles/hover = SubResource("StyleBoxTexture_8cg2f")
+Button/styles/normal = SubResource("StyleBoxTexture_d0qgq")
+Button/styles/pressed = SubResource("StyleBoxTexture_jlbxt")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ydf2"]
-bg_color = Color(0, 0.403922, 0.188235, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fn45b"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yikl6"]
-bg_color = Color(0, 0.65098, 0.317647, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cg33a"]
+texture = ExtResource("8_34hvn")
+modulate_color = Color(0.494118, 0.494118, 0.494118, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sk6si"]
-bg_color = Color(0, 0.65098, 0.317647, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i867l"]
+texture = ExtResource("8_34hvn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mjiej"]
+texture = ExtResource("8_34hvn")
+modulate_color = Color(0.321569, 0.321569, 0.321569, 1)
 
 [sub_resource type="Theme" id="Theme_m7c2n"]
-Button/styles/hover = SubResource("StyleBoxFlat_1ydf2")
-Button/styles/normal = SubResource("StyleBoxFlat_yikl6")
-Button/styles/pressed = SubResource("StyleBoxFlat_sk6si")
+Button/styles/focus = SubResource("StyleBoxEmpty_fn45b")
+Button/styles/hover = SubResource("StyleBoxTexture_cg33a")
+Button/styles/normal = SubResource("StyleBoxTexture_i867l")
+Button/styles/pressed = SubResource("StyleBoxTexture_mjiej")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ljw5"]
-bg_color = Color(0, 0.403922, 0.188235, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3mh7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtlmt"]
-bg_color = Color(0, 0.65098, 0.317647, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ieicm"]
+texture = ExtResource("9_0pl52")
+modulate_color = Color(0.494118, 0.494118, 0.494118, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuuk8"]
-bg_color = Color(0, 0.65098, 0.317647, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eviju"]
+texture = ExtResource("9_0pl52")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j4sfd"]
+texture = ExtResource("9_0pl52")
+modulate_color = Color(0.321569, 0.321569, 0.321569, 1)
 
 [sub_resource type="Theme" id="Theme_i6muf"]
-Button/styles/hover = SubResource("StyleBoxFlat_3ljw5")
-Button/styles/normal = SubResource("StyleBoxFlat_gtlmt")
-Button/styles/pressed = SubResource("StyleBoxFlat_tuuk8")
+Button/styles/focus = SubResource("StyleBoxEmpty_l3mh7")
+Button/styles/hover = SubResource("StyleBoxTexture_ieicm")
+Button/styles/normal = SubResource("StyleBoxTexture_eviju")
+Button/styles/pressed = SubResource("StyleBoxTexture_j4sfd")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tqtjv"]
 
@@ -244,21 +214,47 @@ scale = Vector2(1.00463, 0.756289)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -11.0
+offset_right = 159.0
+offset_bottom = 370.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 175.152
+offset_top = -11.0
+offset_right = 342.152
+offset_bottom = 370.0
+
+[node name="ColorRect3" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 359.299
+offset_top = -11.0
+offset_right = 526.299
+offset_bottom = 370.0
+
+[node name="ColorRect4" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 543.447
+offset_top = -11.0
+offset_right = 710.447
+offset_bottom = 370.0
+
+[node name="ColorRect5" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 726.599
+offset_top = -11.0
+offset_right = 893.599
+offset_bottom = 370.0
+
 [node name="Level1_btn" type="Button" parent="Control"]
 layout_mode = 0
 offset_right = 150.0
 offset_bottom = 360.0
 theme = SubResource("Theme_dpotj")
 disabled = true
-
-[node name="ColorRect" type="ColorRect" parent="Control/Level1_btn"]
-visible = false
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 145.0
-offset_bottom = 40.0
-color = Color(2.71939e-06, 0.404761, 0.187682, 1)
 
 [node name="Level-number" type="Label" parent="Control/Level1_btn"]
 layout_mode = 0
@@ -278,15 +274,6 @@ offset_bottom = 360.0
 theme = SubResource("Theme_6k1na")
 disabled = true
 
-[node name="ColorRect" type="ColorRect" parent="Control/Level2_btn"]
-visible = false
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 145.0
-offset_bottom = 40.0
-color = Color(2.71939e-06, 0.404761, 0.187682, 1)
-
 [node name="Level-number" type="Label" parent="Control/Level2_btn"]
 layout_mode = 0
 offset_left = 62.856
@@ -304,15 +291,6 @@ offset_right = 518.0
 offset_bottom = 360.0
 theme = SubResource("Theme_t0t5x")
 disabled = true
-
-[node name="ColorRect" type="ColorRect" parent="Control/Level3_btn"]
-visible = false
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 145.0
-offset_bottom = 40.0
-color = Color(2.71939e-06, 0.404761, 0.187682, 1)
 
 [node name="Level-number" type="Label" parent="Control/Level3_btn"]
 layout_mode = 0
@@ -332,15 +310,6 @@ offset_bottom = 360.0
 theme = SubResource("Theme_m7c2n")
 disabled = true
 
-[node name="ColorRect" type="ColorRect" parent="Control/Level4_btn"]
-visible = false
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 145.0
-offset_bottom = 40.0
-color = Color(2.71939e-06, 0.404761, 0.187682, 1)
-
 [node name="Level-number" type="Label" parent="Control/Level4_btn"]
 layout_mode = 0
 offset_left = 77.0847
@@ -358,15 +327,6 @@ offset_right = 886.0
 offset_bottom = 360.0
 theme = SubResource("Theme_i6muf")
 disabled = true
-
-[node name="ColorRect" type="ColorRect" parent="Control/Level5_btn"]
-visible = false
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 145.0
-offset_bottom = 40.0
-color = Color(2.71939e-06, 0.404761, 0.187682, 1)
 
 [node name="Level-number" type="Label" parent="Control/Level5_btn"]
 layout_mode = 0
