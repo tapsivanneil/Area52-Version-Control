@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dme81lukts124"]
+[gd_scene load_steps=32 format=3 uid="uid://dme81lukts124"]
 
 [ext_resource type="PackedScene" uid="uid://xnqbypxxfiob" path="res://scenes/buttons/menu_button.tscn" id="1_gxaiv"]
 [ext_resource type="Script" path="res://scripts/structure/tutorial.gd" id="1_mlan2"]
@@ -19,6 +19,46 @@
 [ext_resource type="Texture2D" uid="uid://bk2vynk0cug24" path="res://assets/tutorial/15.png" id="16_8ftfe"]
 [ext_resource type="Texture2D" uid="uid://bb0kh4ea3h2er" path="res://assets/tutorial/16.png" id="17_onm3q"]
 [ext_resource type="Texture2D" uid="uid://ns7htnvvjnq0" path="res://assets/tutorial/17.png" id="18_8wxp4"]
+[ext_resource type="Texture2D" uid="uid://dnl67swwe1bsp" path="res://assets/icons/next-icon-2.png" id="20_ru0us"]
+[ext_resource type="Texture2D" uid="uid://vedrkioq21sv" path="res://assets/icons/previous-icon.png" id="21_32kmp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_llgsr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_61ys8"]
+texture = ExtResource("20_ru0us")
+modulate_color = Color(0.494118, 0.494118, 0.494118, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kqc6d"]
+texture = ExtResource("20_ru0us")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ukh8d"]
+texture = ExtResource("20_ru0us")
+modulate_color = Color(0.321569, 0.321569, 0.321569, 1)
+
+[sub_resource type="Theme" id="Theme_lhkqk"]
+Button/styles/focus = SubResource("StyleBoxEmpty_llgsr")
+Button/styles/hover = SubResource("StyleBoxTexture_61ys8")
+Button/styles/normal = SubResource("StyleBoxTexture_kqc6d")
+Button/styles/pressed = SubResource("StyleBoxTexture_ukh8d")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhm47"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y6x2f"]
+texture = ExtResource("21_32kmp")
+modulate_color = Color(0.494118, 0.494118, 0.494118, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xqy2"]
+texture = ExtResource("21_32kmp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nffrp"]
+texture = ExtResource("21_32kmp")
+modulate_color = Color(0.321569, 0.321569, 0.321569, 1)
+
+[sub_resource type="Theme" id="Theme_ebiql"]
+Button/styles/focus = SubResource("StyleBoxEmpty_dhm47")
+Button/styles/hover = SubResource("StyleBoxTexture_y6x2f")
+Button/styles/normal = SubResource("StyleBoxTexture_6xqy2")
+Button/styles/pressed = SubResource("StyleBoxTexture_nffrp")
 
 [node name="Tutorial" type="Node2D"]
 script = ExtResource("1_mlan2")
@@ -115,20 +155,20 @@ position = Vector2(35, 24)
 scale = Vector2(0.318122, 0.315505)
 
 [node name="NextButton" type="Button" parent="."]
-offset_left = 997.0
-offset_top = 577.0
-offset_right = 1104.0
-offset_bottom = 625.0
+offset_left = 1048.0
+offset_top = 296.0
+offset_right = 1088.0
+offset_bottom = 356.0
 scale = Vector2(0.991896, 0.907763)
-text = "Next"
+theme = SubResource("Theme_lhkqk")
 
 [node name="PreviousButton" type="Button" parent="."]
-offset_left = 47.9999
-offset_top = 583.0
-offset_right = 155.0
-offset_bottom = 631.0
+offset_left = 72.0
+offset_top = 296.0
+offset_right = 112.0
+offset_bottom = 358.0
 scale = Vector2(0.991896, 0.907763)
-text = "Previous"
+theme = SubResource("Theme_ebiql")
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="PreviousButton" to="." method="_on_previous_button_pressed"]

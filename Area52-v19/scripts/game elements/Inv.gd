@@ -34,4 +34,3 @@ func _on_start_button_pressed():
 	progress_bar.visible = true
 	main_scene_timer.start()
 	emit_signal("selection_done")
-

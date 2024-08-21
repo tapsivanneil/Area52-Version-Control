@@ -147,4 +147,3 @@ func _on_pause_button_pressed():
 	for enemy_check in enemy_on_stage:
 		var stop_enemy = get_node("Enemies/Enemy" + str(enemy_check))
 		stop_enemy.speed = 0
-

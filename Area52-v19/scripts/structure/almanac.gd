@@ -68,4 +68,3 @@ func attacker_changeLabelDescription(character_name, character_health, character
 
 func defender_changeLabelDescription(character_name, character_health, character_damage, character_reload_time, character_attack_speed):
 	characterLabel.text = 'Name: ' + str(character_name) + '\nHealth: ' + str(character_health) + '\nDamage: ' + str(character_damage) + '\nAttack Speed: ' + str(character_damage) + '\nReload Time: ' + str(character_reload_time)
-
